@@ -1,19 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-/// <summary>
-/// Главный экран: временная страница разработки, настройки, достижения и выход.
-/// Кнопки автоматически подключаются по именам объектов в сцене.
-/// </summary>
 public class MainMenuController : MonoBehaviour
 {
-    [Header("Существующие панели")]
-    [SerializeField] private GameObject creditsPanel;
+    [Header("Панели")]
+    public GameObject creditsPanel;
 
     private Canvas rootCanvas;
     private GameObject runtimePanel;
-    private float previousVolume = 1f;
 
     private void Awake()
     {
@@ -24,30 +18,35 @@ public class MainMenuController : MonoBehaviour
 
     private void ConnectButtons()
     {
-        Button[] buttons = FindObjectsOfType<Button>(true);
-        foreach (Button button in buttons)
+        // В текущей сцене часть пунктов меню — только TMP-текст без компонента Button.
+        // Добавляем Button на тот же объект: TMP-графика станет областью нажатия.
+        Transform[] objects = FindObjectsOfType<Transform>(true);
+        foreach (Transform item in objects)
         {
-            switch (button.gameObject.name)
+            switch (item.name)
             {
                 case "Btn_Play":
-                    button.onClick.AddListener(OnPlayClicked);
+                    Bind(item.gameObject, OnPlayClicked);
                     break;
                 case "Btn_Continue":
-                    button.onClick.AddListener(OnContinueClicked);
+                    Bind(item.gameObject, OnContinueClicked);
                     break;
                 case "Btn_Settings":
-                    button.onClick.AddListener(OnSettingsClicked);
+                    Bind(item.gameObject, OnSettingsClicked);
                     break;
                 case "Btn_Achievements":
-                    button.onClick.AddListener(OnAchievementsClicked);
-                    break;
-                // Эти три кнопки уже подключены через события сцены.
-                case "Btn_Credits":
-                case "Btn_CloseCredits":
-                case "Btn_Quit":
+                    Bind(item.gameObject, OnAchievementsClicked);
                     break;
             }
         }
+    }
+
+    private static void Bind(GameObject target, UnityEngine.Events.UnityAction action)
+    {
+        Button button = target.GetComponent<Button>();
+        if (button == null) button = target.AddComponent<Button>();
+        button.onClick.RemoveListener(action);
+        button.onClick.AddListener(action);
     }
 
     public void OnPlayClicked() => ShowDevelopmentPage();
@@ -60,7 +59,27 @@ public class MainMenuController : MonoBehaviour
 
     public void OnSettingsClicked()
     {
-        ShowSettings();
+        GameObject panel = CreatePanel("Настройки");
+        if (panel == null) return;
+
+        CreateText(panel.transform, "Громкость", 26, new Vector2(0.5f, 0.58f), new Vector2(420, 60));
+
+        GameObject sliderObject = new GameObject("VolumeSlider", typeof(RectTransform), typeof(Image), typeof(Slider));
+        sliderObject.transform.SetParent(panel.transform, false);
+        RectTransform sliderRect = sliderObject.GetComponent<RectTransform>();
+        sliderRect.anchorMin = sliderRect.anchorMax = new Vector2(0.5f, 0.47f);
+        sliderRect.anchoredPosition = Vector2.zero;
+        sliderRect.sizeDelta = new Vector2(420, 28);
+        Image sliderImage = sliderObject.GetComponent<Image>();
+        sliderImage.color = new Color(0.35f, 0.35f, 0.4f, 1f);
+
+        Slider slider = sliderObject.GetComponent<Slider>();
+        slider.minValue = 0f;
+        slider.maxValue = 1f;
+        slider.value = AudioListener.volume;
+        slider.onValueChanged.AddListener(value => AudioListener.volume = value);
+
+        CreateButton(panel.transform, "Назад", new Vector2(0.5f, 0.30f), CloseRuntimePanel);
     }
 
     public void OnAchievementsClicked()
@@ -90,29 +109,9 @@ public class MainMenuController : MonoBehaviour
     private void ShowMessage(string heading, string message)
     {
         GameObject panel = CreatePanel(heading);
+        if (panel == null) return;
         CreateText(panel.transform, message, 26, new Vector2(0.5f, 0.55f), new Vector2(900, 120));
-        CreateButton(panel.transform, "Назад", new Vector2(0.5f, 0.30f), () => Destroy(runtimePanel));
-    }
-
-    private void ShowSettings()
-    {
-        GameObject panel = CreatePanel("Настройки");
-        CreateText(panel.transform, "Громкость", 25, new Vector2(0.5f, 0.58f), new Vector2(400, 55));
-
-        GameObject sliderObject = new GameObject("VolumeSlider", typeof(RectTransform), typeof(Slider));
-        sliderObject.transform.SetParent(panel.transform, false);
-        RectTransform sliderRect = sliderObject.GetComponent<RectTransform>();
-        sliderRect.anchorMin = sliderRect.anchorMax = new Vector2(0.5f, 0.48f);
-        sliderRect.anchoredPosition = Vector2.zero;
-        sliderRect.sizeDelta = new Vector2(420, 24);
-
-        Slider slider = sliderObject.GetComponent<Slider>();
-        slider.minValue = 0f;
-        slider.maxValue = 1f;
-        slider.value = AudioListener.volume;
-        slider.onValueChanged.AddListener(value => AudioListener.volume = value);
-
-        CreateButton(panel.transform, "Назад", new Vector2(0.5f, 0.30f), () => Destroy(runtimePanel));
+        CreateButton(panel.transform, "Назад", new Vector2(0.5f, 0.30f), CloseRuntimePanel);
     }
 
     private GameObject CreatePanel(string heading)
@@ -154,7 +153,6 @@ public class MainMenuController : MonoBehaviour
         text.fontSize = fontSize;
         text.alignment = TextAlignmentOptions.Center;
         text.color = Color.white;
-        text.textWrappingMode = TextWrappingModes.Normal;
     }
 
     private void CreateButton(Transform parent, string caption, Vector2 anchor, UnityEngine.Events.UnityAction action)
@@ -182,5 +180,10 @@ public class MainMenuController : MonoBehaviour
         label.fontSize = 26;
         label.alignment = TextAlignmentOptions.Center;
         label.color = Color.white;
+    }
+
+    private void CloseRuntimePanel()
+    {
+        if (runtimePanel != null) Destroy(runtimePanel);
     }
 }
