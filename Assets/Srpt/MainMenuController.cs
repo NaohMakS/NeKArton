@@ -9,11 +9,14 @@ public class MainMenuController : MonoBehaviour
 
     private Canvas rootCanvas;
     private GameObject runtimePanel;
+    private SceneLoader sceneLoader;
 
     private void Awake()
     {
         rootCanvas = GetComponentInParent<Canvas>();
         if (rootCanvas == null) rootCanvas = FindObjectOfType<Canvas>();
+        sceneLoader = GetComponent<SceneLoader>();
+        if (sceneLoader == null) sceneLoader = gameObject.AddComponent<SceneLoader>();
         ConnectButtons();
     }
 
@@ -50,7 +53,13 @@ public class MainMenuController : MonoBehaviour
         button.onClick.AddListener(action);
     }
 
-    public void OnPlayClicked() => ShowDevelopmentPage();
+    public void OnPlayClicked()
+    {
+        // Используем SceneLoader, уже добавленный в проект.
+        if (sceneLoader == null) sceneLoader = GetComponent<SceneLoader>();
+        if (sceneLoader == null) sceneLoader = gameObject.AddComponent<SceneLoader>();
+        sceneLoader.LoadGameScene();
+    }
     public void OnContinueClicked() => ShowDevelopmentPage();
 
     private void ShowDevelopmentPage()
