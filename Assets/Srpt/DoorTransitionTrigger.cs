@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using TMPro;
 
 [RequireComponent(typeof(Collider2D))]
@@ -22,7 +23,36 @@ public class DoorTransitionTrigger : MonoBehaviour
     private void Awake()
     {
         GetComponent<Collider2D>().isTrigger = true;
+        EnsureHintText();
         if (hintText != null) hintText.gameObject.SetActive(false);
+    }
+
+    private void EnsureHintText()
+    {
+        if (hintText != null) return;
+        Canvas canvas = FindObjectOfType<Canvas>();
+        if (canvas == null)
+        {
+            GameObject canvasObject = new GameObject("DoorHintCanvas", typeof(RectTransform),
+                typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+            canvas = canvasObject.GetComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvasObject.GetComponent<CanvasScaler>().uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        }
+
+        GameObject textObject = new GameObject("DoorEnterHint", typeof(RectTransform), typeof(TextMeshProUGUI));
+        textObject.transform.SetParent(canvas.transform, false);
+        RectTransform rect = textObject.GetComponent<RectTransform>();
+        rect.anchorMin = new Vector2(0.5f, 0f);
+        rect.anchorMax = new Vector2(0.5f, 0f);
+        rect.pivot = new Vector2(0.5f, 0f);
+        rect.anchoredPosition = new Vector2(0f, 36f);
+        rect.sizeDelta = new Vector2(900f, 90f);
+        hintText = textObject.GetComponent<TextMeshProUGUI>();
+        hintText.alignment = TextAlignmentOptions.Center;
+        hintText.fontSize = 28f;
+        hintText.color = Color.white;
+        hintText.raycastTarget = false;
     }
 
     private void Update()
@@ -47,7 +77,6 @@ public class DoorTransitionTrigger : MonoBehaviour
                     "' отсутствует в Build Settings. Добавь её через File > Build Profiles > Scene List.", this);
                 return;
             }
-
             loading = true;
             SceneManager.LoadScene(destinationScene);
         }
