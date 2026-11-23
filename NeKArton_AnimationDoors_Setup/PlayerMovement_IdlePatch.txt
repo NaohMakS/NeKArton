@@ -1,0 +1,19 @@
+// PATCH: Add this field next to walkFrames in PlayerMovement.cs:
+[SerializeField] private Sprite idleSprite;
+
+// In Awake(), replace the existing first-frame assignment with:
+if (spriteRenderer != null)
+    spriteRenderer.sprite = idleSprite != null
+        ? idleSprite
+        : (walkFrames != null && walkFrames.Length > 0 ? walkFrames[0] : null);
+
+// In UpdateWalkAnimation(), replace the idle branch with:
+if (Mathf.Abs(horizontalInput) < 0.01f)
+{
+    animationTimer = 0f;
+    animationFrame = 0;
+    spriteRenderer.sprite = idleSprite != null
+        ? idleSprite
+        : (walkFrames.Length > 0 ? walkFrames[0] : null);
+    return;
+}

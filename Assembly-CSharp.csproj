@@ -58,6 +58,7 @@
     <Compile Include="Assets\Srpt\SceneLoader.cs" />
     <Compile Include="Assets\Srpt\PlayerMovement.cs" />
     <Compile Include="Assets\Srpt\MainMenuController.cs" />
+    <Compile Include="Assets\Srpt\DoorTransitionTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
