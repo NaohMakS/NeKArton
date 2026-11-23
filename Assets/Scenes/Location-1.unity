@@ -185,7 +185,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 514940269636732695, guid: aeef2c529fd5f5146be897f3a31b824b, type: 3}
+  m_Sprite: {fileID: -7043589234551988725, guid: 955e043f92079e84fa90bd52e169bced, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -431,7 +431,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8777308074042869729, guid: d039314250b8dd44aa5dc04e819dfb2b, type: 3}
+  m_Sprite: {fileID: 4462304789593132545, guid: 60ca6ef90b7070f4a8c088b75bb90cd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -455,6 +455,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 5
   body: {fileID: 0}
+  spriteRenderer: {fileID: 3000000003}
+  walkFrames:
+  - {fileID: 4462304789593132545, guid: 60ca6ef90b7070f4a8c088b75bb90cd9, type: 3}
+  - {fileID: -3272336595441167070, guid: 60ca6ef90b7070f4a8c088b75bb90cd9, type: 3}
+  - {fileID: 5188005577741455078, guid: 60ca6ef90b7070f4a8c088b75bb90cd9, type: 3}
+  - {fileID: 57065972865373589, guid: 60ca6ef90b7070f4a8c088b75bb90cd9, type: 3}
+  - {fileID: 7874823093008535755, guid: 60ca6ef90b7070f4a8c088b75bb90cd9, type: 3}
+  - {fileID: -2315298556251137831, guid: 60ca6ef90b7070f4a8c088b75bb90cd9, type: 3}
+  animationFramesPerSecond: 9
+  followCamera: {fileID: 2101542524}
+  locationBounds: {fileID: 1151509911}
+  cameraOffset: {x: 0, y: 0, z: -10}
+  cameraSmoothTime: 0.12
   destinationScene: 
   fadeDuration: 0.6
   fadeOverlay: {fileID: 0}
