@@ -27,7 +27,6 @@ public static class NeKArtonAnimationAndDoorSetup
     {
         var importer = AssetImporter.GetAtPath(sourcePath) as TextureImporter;
         if (importer == null) throw new FileNotFoundException("Не найден спрайт-лист: " + sourcePath);
-        importer.textureType = TextureImporterType.Default;
         importer.isReadable = true;
         importer.alphaIsTransparency = true;
         importer.mipmapEnabled = false;
