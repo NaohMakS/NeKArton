@@ -55,6 +55,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (body == null) body = GetComponent<Rigidbody2D>();
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.enabled = true;
+            spriteRenderer.color = Color.white;
+            spriteRenderer.sortingOrder = 50;
+        }
         if (followCamera == null) followCamera = Camera.main;
         if (locationBounds == null)
         {
