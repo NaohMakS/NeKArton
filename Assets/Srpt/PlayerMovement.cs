@@ -16,6 +16,17 @@ public class PlayerMovement : MonoBehaviour
     [Header("Движение")]
     [SerializeField, Min(0.1f)] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D body;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    [Header("Анимация ходьбы")]
+    [SerializeField] private Sprite[] walkFrames;
+    [SerializeField, Min(1f)] private float animationFramesPerSecond = 9f;
+
+    [Header("Камера и границы локации")]
+    [SerializeField] private Camera followCamera;
+    [SerializeField] private SpriteRenderer locationBounds;
+    [SerializeField] private Vector3 cameraOffset = new Vector3(0f, 0f, -10f);
+    [SerializeField, Min(0.01f)] private float cameraSmoothTime = 0.12f;
 
     [Header("Переход между локациями")]
     [SerializeField] private string destinationScene;
@@ -34,10 +45,23 @@ public class PlayerMovement : MonoBehaviour
     private bool isTransitioning;
     private string activeFallbackPanel = string.Empty;
     private float horizontalInput;
+    private float animationTimer;
+    private int animationFrame;
+    private float cameraVelocityX;
+    private float cameraVelocityY;
 
     private void Awake()
     {
         if (body == null) body = GetComponent<Rigidbody2D>();
+        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+        if (followCamera == null) followCamera = Camera.main;
+        if (locationBounds == null)
+        {
+            GameObject boundsObject = GameObject.Find("Background_FirstLocation");
+            if (boundsObject != null) locationBounds = boundsObject.GetComponent<SpriteRenderer>();
+        }
+        if (spriteRenderer != null && walkFrames != null && walkFrames.Length > 0)
+            spriteRenderer.sprite = walkFrames[0];
         EnsureUi();
         SetPanel(statsPanel, false);
         SetPanel(inventoryPanel, false);
@@ -62,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = 0f;
         if (keyboard.aKey.isPressed) horizontalInput -= 1f;
         if (keyboard.dKey.isPressed) horizontalInput += 1f;
+        UpdateWalkAnimation(Time.deltaTime);
 
         if (keyboard.tabKey.wasPressedThisFrame) TogglePanel(statsPanel, "ХАРАКТЕРИСТИКИ");
         if (keyboard.iKey.wasPressedThisFrame) TogglePanel(inventoryPanel, "ИНВЕНТАРЬ");
@@ -79,16 +104,104 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isPaused || isTransitioning) return;
 
+        float nextX = transform.position.x + horizontalInput * moveSpeed * Time.fixedDeltaTime;
+        nextX = ClampPlayerX(nextX);
+
         if (body != null)
         {
             Vector2 velocity = body.linearVelocity;
             velocity.x = horizontalInput * moveSpeed;
             body.linearVelocity = velocity;
+            body.position = new Vector2(nextX, body.position.y);
         }
         else
         {
-            transform.position += Vector3.right * (horizontalInput * moveSpeed * Time.fixedDeltaTime);
+            transform.position = new Vector3(nextX, transform.position.y, transform.position.z);
         }
+    }
+
+    private float ClampPlayerX(float x)
+    {
+        if (locationBounds == null) return x;
+
+        Bounds bounds = locationBounds.bounds;
+        float halfWidth = GetPlayerHalfWidth();
+        float minX = bounds.min.x + halfWidth;
+        float maxX = bounds.max.x - halfWidth;
+
+        if (minX > maxX) return bounds.center.x;
+        return Mathf.Clamp(x, minX, maxX);
+    }
+
+    private float GetPlayerHalfWidth()
+    {
+        if (spriteRenderer == null) return 0f;
+
+        float maxHalfWidth = spriteRenderer.sprite != null
+            ? spriteRenderer.sprite.bounds.extents.x
+            : 0f;
+
+        if (walkFrames != null)
+        {
+            foreach (Sprite frame in walkFrames)
+                if (frame != null)
+                    maxHalfWidth = Mathf.Max(maxHalfWidth, frame.bounds.extents.x);
+        }
+
+        return maxHalfWidth * Mathf.Abs(transform.lossyScale.x);
+    }
+
+    private void UpdateWalkAnimation(float deltaTime)
+    {
+        if (spriteRenderer == null || walkFrames == null || walkFrames.Length == 0)
+            return;
+
+        if (Mathf.Abs(horizontalInput) < 0.01f)
+        {
+            animationTimer = 0f;
+            animationFrame = 0;
+            spriteRenderer.sprite = walkFrames[0];
+            return;
+        }
+
+        spriteRenderer.flipX = horizontalInput < 0f;
+        animationTimer += deltaTime;
+        float frameDuration = 1f / animationFramesPerSecond;
+
+        while (animationTimer >= frameDuration)
+        {
+            animationTimer -= frameDuration;
+            animationFrame = (animationFrame + 1) % walkFrames.Length;
+        }
+
+        spriteRenderer.sprite = walkFrames[animationFrame];
+    }
+
+    private void LateUpdate()
+    {
+        if (followCamera == null || locationBounds == null) return;
+
+        Bounds bounds = locationBounds.bounds;
+        float halfHeight = followCamera.orthographicSize;
+        float halfWidth = halfHeight * followCamera.aspect;
+
+        float minCameraX = bounds.min.x + halfWidth;
+        float maxCameraX = bounds.max.x - halfWidth;
+        float minCameraY = bounds.min.y + halfHeight;
+        float maxCameraY = bounds.max.y - halfHeight;
+
+        float targetX = minCameraX > maxCameraX
+            ? bounds.center.x
+            : Mathf.Clamp(transform.position.x + cameraOffset.x, minCameraX, maxCameraX);
+        float targetY = minCameraY > maxCameraY
+            ? bounds.center.y
+            : Mathf.Clamp(transform.position.y + cameraOffset.y, minCameraY, maxCameraY);
+
+        Vector3 cameraPosition = followCamera.transform.position;
+        cameraPosition.x = Mathf.SmoothDamp(cameraPosition.x, targetX, ref cameraVelocityX, cameraSmoothTime);
+        cameraPosition.y = Mathf.SmoothDamp(cameraPosition.y, targetY, ref cameraVelocityY, cameraSmoothTime);
+        cameraPosition.z = cameraOffset.z;
+        followCamera.transform.position = cameraPosition;
     }
 
     private void TogglePanel(GameObject panel, string title)
