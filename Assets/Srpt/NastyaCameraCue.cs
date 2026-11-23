@@ -26,13 +26,25 @@ public class NastyaCameraCue : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (targetCamera == null) targetCamera = Camera.main;
+        if (lampStopPoint == null)
+        {
+            GameObject lamp = GameObject.Find("NastyaLampStopPoint");
+            if (lamp != null) lampStopPoint = lamp.transform;
+        }
+        // Keep Nastya visible above the room background and start from her idle pose.
+        spriteRenderer.sortingOrder = 51;
+        spriteRenderer.color = Color.white;
         SetIdle();
     }
 
     private void Update()
     {
         if (hasArrived) return;
-        if (!hasStarted && IsInsideCamera()) hasStarted = true;
+        if (!hasStarted && IsInsideCamera())
+        {
+            hasStarted = true;
+            Debug.Log("Nastya: камера заметила персонажа, начинаю движение к лампе.", this);
+        }
         if (!hasStarted) return;
 
         MoveToLamp();
@@ -59,7 +71,12 @@ public class NastyaCameraCue : MonoBehaviour
 
     private void MoveToLamp()
     {
-        if (lampStopPoint == null) return;
+        if (lampStopPoint == null)
+        {
+            Debug.LogError("NastyaCameraCue: не назначена точка NastyaLampStopPoint.", this);
+            enabled = false;
+            return;
+        }
         Vector3 target = lampStopPoint.position;
         target.z = transform.position.z;
         transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
@@ -73,6 +90,7 @@ public class NastyaCameraCue : MonoBehaviour
     private void SetIdle()
     {
         if (spriteRenderer == null) return;
+        spriteRenderer.color = Color.white;
         if (idleSprite != null) spriteRenderer.sprite = idleSprite;
         else if (walkFrames != null && walkFrames.Length > 0) spriteRenderer.sprite = walkFrames[0];
     }
