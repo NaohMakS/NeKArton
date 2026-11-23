@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Анимация ходьбы")]
     [SerializeField] private Sprite[] walkFrames;
+    [SerializeField] private Sprite idleSprite;
     [SerializeField, Min(1f)] private float animationFramesPerSecond = 9f;
 
     [Header("Камера и границы локации")]
@@ -60,8 +61,8 @@ public class PlayerMovement : MonoBehaviour
             GameObject boundsObject = GameObject.Find("Background_FirstLocation");
             if (boundsObject != null) locationBounds = boundsObject.GetComponent<SpriteRenderer>();
         }
-        if (spriteRenderer != null && walkFrames != null && walkFrames.Length > 0)
-            spriteRenderer.sprite = walkFrames[0];
+        if (spriteRenderer != null)
+            spriteRenderer.sprite = idleSprite != null ? idleSprite : (walkFrames != null && walkFrames.Length > 0 ? walkFrames[0] : null);
         EnsureUi();
         SetPanel(statsPanel, false);
         SetPanel(inventoryPanel, false);
@@ -160,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animationTimer = 0f;
             animationFrame = 0;
-            spriteRenderer.sprite = walkFrames[0];
+            spriteRenderer.sprite = idleSprite != null ? idleSprite : walkFrames[0];
             return;
         }
 
