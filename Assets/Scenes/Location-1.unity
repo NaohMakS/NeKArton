@@ -129,14 +129,76 @@ GameObject:
   m_Component:
   - component: {fileID: 887715413}
   - component: {fileID: 887715412}
-  - component: {fileID: 887715414}
+  - component: {fileID: 887715411}
+  - component: {fileID: 887715410}
   m_Layer: 0
   m_Name: Idle (1)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &887715410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887715409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087024707fb04fe45a9a0e6423dd69be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorTransitionTrigger
+  destinationScene: 
+  hint: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 ENTER, \u0447\u0442\u043E\u0431\u044B \u0432\u043E\u0439\u0442\u0438"
+  hintText: {fileID: 0}
+--- !u!61 &887715411
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887715409}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.49, y: 3.05}
+    newSize: {x: 1.49, y: 3.05}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.6, y: 2.4}
+  m_EdgeRadius: 0
 --- !u!212 &887715412
 SpriteRenderer:
   serializedVersion: 3
@@ -197,58 +259,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &887715414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887715409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4a9b7c1d2f4a6e8b0c3d5f7a9b1c2d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 5
-  body: {fileID: 0}
-  spriteRenderer: {fileID: 887715412}
-  walkFrames:
-  - {fileID: 8051780188957950043, guid: ed11cbb00b6790f47bd6f86a5df967c9, type: 3}
-  - {fileID: 5695823929769056846, guid: 0242e3ac16fd93c409f48f774bcade60, type: 3}
-  - {fileID: 8887006134180644394, guid: d0e8f3e15bcc7d442b42ca0b0d92ef1a, type: 3}
-  - {fileID: -5684395763846510631, guid: 8c05ec3b6474bc6448e78fd5fb9a32ac, type: 3}
-  - {fileID: 1054974459868980372, guid: 431b6272fe652c64f95f52496f989551, type: 3}
-  - {fileID: -9153257304444426904, guid: f441f4e9dc3cade4a96aaf18fa0d00e0, type: 3}
-  - {fileID: 1834858180887452285, guid: 90be1514f96d73543b665ff73fd23f64, type: 3}
-  - {fileID: 1685589978077755936, guid: a5a5610ae4db293459e7702c9e9a4e22, type: 3}
-  - {fileID: 7909514532186419216, guid: 67c5385ebc294bd4fa964f77aa6ba0da, type: 3}
-  - {fileID: -2901318747940082284, guid: b4f184121f417a744a2ee6241b60ef81, type: 3}
-  - {fileID: 6646734700752008592, guid: 574c9e3fdbf95d2428e9822feffbddc3, type: 3}
-  - {fileID: -1058417239312587050, guid: 06f28f4cea462fd4893546beaf62e36f, type: 3}
-  - {fileID: 407074151086075640, guid: f2854929035646747a51aae5e7345ac8, type: 3}
-  - {fileID: -4680606009761191602, guid: 9182854bf96f59f43bc95851adad8059, type: 3}
-  - {fileID: 768893867134454671, guid: 3b7ce0804888ba14fa17eb68fc44653e, type: 3}
-  - {fileID: -1064954182103401833, guid: 68a91632c648d244abf49631c7a9d1ac, type: 3}
-  - {fileID: 1239407173332459589, guid: 8ad0df09b77d634478ce98fe149dd6e9, type: 3}
-  - {fileID: 3964660665495905104, guid: c83c381a3c47a1a469be5a77b6b65452, type: 3}
-  - {fileID: -4949310552555899083, guid: 2f9cedb8294147647a3d5bc245dd3d33, type: 3}
-  - {fileID: -8212902489829606218, guid: 0707c8bf8c0f74d41b5e1efe9cc45770, type: 3}
-  - {fileID: 547115967285668526, guid: 9ba4066be365ce84c9e09d4c3b5030d3, type: 3}
-  - {fileID: 9004673626768599442, guid: a242d7bcf5a8dfc4ebfeab165904a79f, type: 3}
-  - {fileID: -140143444907614325, guid: 9aacb9abfcc41164da13bd774e0ae168, type: 3}
-  idleSprite: {fileID: 4723107735738678597, guid: 80c4a64b3fb0a35499c4b95baf7a937a, type: 3}
-  animationFramesPerSecond: 9
-  followCamera: {fileID: 2101542524}
-  locationBounds: {fileID: 1151509911}
-  cameraOffset: {x: 0, y: 0, z: -10}
-  cameraSmoothTime: 0.12
-  destinationScene:
-  fadeDuration: 0.6
-  fadeOverlay: {fileID: 0}
-  statsPanel: {fileID: 0}
-  inventoryPanel: {fileID: 0}
-  pausePanel: {fileID: 0}
-
 --- !u!4 &887715413
 Transform:
   m_ObjectHideFlags: 0
