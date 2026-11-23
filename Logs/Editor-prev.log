@@ -1,24 +1,24 @@
-VBCSCompilerPreWarmer: watching VBCSCompiler (PID 21164)
-VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 22964)
-VBCSCompiler prewarm took 21.63 ms
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 5268)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 4312)
+VBCSCompiler prewarm took 25.75 ms
 [Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North" at "2026-11-23T18:34:44.0066568Z"
 Built from '6000.6/staging' branch; Version is '6000.6.10f1 (40e81493c67d) revision 4253716'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North" at "2026-11-23T18:09:39.9186711Z"
 OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 16311 MB
 BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-11-23T18:09:39Z
+Date: 2026-11-23T18:34:44Z
 [Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 26492, path: "C:/Program Files/WindowsApps/UnityTechnologies.UnityHub_4.0.1.65535_x64__2vrhnee42bhxm/app/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.19.0+4cc3dda
-  Session Id:              e8368c6fd90249de9efc361456ceb980
+  Session Id:              e254497141a14cf59a375093dada089d
   Correlation Id:          f61ea62301e46777df8a8963b92159ac
-  External correlation Id: 5978147906139843023
+  External correlation Id: 5864941500599024329
   Machine Id:              XTs0PD6xHqGasQXSRfb6s04M0II=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-North" (connect: 0.00s, validation: 0.00s, handshake: 0.07s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North-notifications" at "2026-11-23T18:09:39.9938054Z"
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-North" (connect: 0.00s, validation: 0.00s, handshake: 0.08s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North-notifications" at "2026-11-23T18:34:44.0883333Z"
 [Licensing::Client] Successfully updated the access token
 [Licensing::Module] Successfully updated the access token 3eqp93pkSv...
 [Licensing::Client] Successfully resolved entitlement details
@@ -29,7 +29,7 @@ Date: 2026-11-23T18:09:39Z
   Expiration: Unlimited
 [Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
 [Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] Licensing Background thread has ended after 0.08s
+[Licensing::Module] Licensing Background thread has ended after 0.10s
 
 COMMAND LINE ARGUMENTS:
 A:\Unity\Hub\Editor\6000.6.10f1\Editor\Unity.exe
@@ -85,18 +85,18 @@ A:/юинити/New_Start
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [21124]  Target information:
+Player connection [9032]  Target information:
 
-Player connection [21124]  * "[IP] 192.168.0.109 [Port] 55504 [Flags] 2 [Guid] 2184489660 [EditorId] 2184489660 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [9032]  * "[IP] 192.168.0.109 [Port] 55504 [Flags] 2 [Guid] 3382012659 [EditorId] 3382012659 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [21124]  * "[IP] 172.19.0.1 [Port] 55504 [Flags] 2 [Guid] 2184489660 [EditorId] 2184489660 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [9032]  * "[IP] 172.19.0.1 [Port] 55504 [Flags] 2 [Guid] 3382012659 [EditorId] 3382012659 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [21124] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [21124] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [9032] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [9032] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-23588" after 0.5 seconds.
+[Package Manager] Connected to IPC stream "Upm-9984" after 0.6 seconds.
 [Licensing::Client] Successfully resolved entitlement details
 Library Redirect Path: Library/
 Initialising UDS system complete:
@@ -143,7 +143,7 @@ Mono path[0] = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/Managed'
 Mono path[1] = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56984
 CodeReloadManager initialized
 ImportWorker Server TCP listen port: 0
 AcceleratorClientConnectionCallback - disconnected - :0
@@ -151,31 +151,30 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002595 seconds.
+Registered in 0.003667 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  1.162 seconds
-Domain Reload Profiling: 2203ms
-	BeginReloadAssembly (235ms)
-		CreateAndSetChildDomain (11ms)
-	RebuildCommonClasses (8ms)
-	RebuildNativeTypeToScriptingClass (34ms)
-	initialDomainReloadingComplete (123ms)
-	LoadAllAssembliesAndSetupDomain (640ms)
-		LoadAssemblies (224ms)
-		TypeCache.Refresh (454ms)
-			TypeCache.ScanAssembly (430ms)
+- Finished resetting the current domain, in  1.217 seconds
+Domain Reload Profiling: 2352ms
+	BeginReloadAssembly (277ms)
+		CreateAndSetChildDomain (14ms)
+	RebuildCommonClasses (14ms)
+	RebuildNativeTypeToScriptingClass (44ms)
+	initialDomainReloadingComplete (147ms)
+	LoadAllAssembliesAndSetupDomain (651ms)
+		LoadAssemblies (263ms)
+		TypeCache.Refresh (443ms)
+			TypeCache.ScanAssembly (417ms)
 		AnalyzeDomain (1ms)
-	FinalizeReload (1164ms)
+	FinalizeReload (1220ms)
 		SetupLoadedEditorAssemblies (0ms)
-			LogAssemblyErrors (3ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			BeforeProcessingInitializeOnLoad (230ms)
-			ProcessInitializeOnLoadAttributes (222ms)
-			ProcessInitializeOnLoadMethodAttributes (422ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			BeforeProcessingInitializeOnLoad (238ms)
+			ProcessInitializeOnLoadAttributes (219ms)
+			ProcessInitializeOnLoadMethodAttributes (449ms)
 [Licensing::Client] Successfully resolved entitlement details
 Application.AssetDatabase Initial Refresh Start
 [Package Manager] Restoring resolved packages state from cache
@@ -263,17 +262,44 @@ warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
       Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
 warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
       Assembly system.componentmodel.composition has duplicate hint path. Ignoring "A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
-ExitCode: 0 Duration: 1s496ms
+Starting: A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\DotNetSdk\dotnet.exe "A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: A:/юинити/New_Start
+ExitCode: 4 Duration: 1s35ms
 [ 969/1265  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
-[1261/1265  0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[ 978/1265  0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
 Assets\Srpt\MainMenuController.cs(17,46): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
 
 Assets\Srpt\CharacterAnimationSetupEditor.cs(46,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
 
 Assets\Srpt\MainMenuController.cs(27,31): warning CS0618: 'Object.FindObjectsOfType<T>(bool)' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
 
-Assets\Srpt\PlayerMovement.cs(309,20): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
-[1262/1265  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Assets\Srpt\PlayerMovement.cs(310,20): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+*** Tundra requires additional run (0.97 seconds), 2 items updated, 975 evaluated
+ExitCode: 0 Duration: 2s415ms
+Starting: A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: A:/юинити/New_Start
+ExitCode: 0 Duration: 4s886ms
+Finished compiling graph: 1278 nodes, 26836 flattened edges (22408 ToBuild, 204 ToUse), maximum node priority 1487
+[ 586/1275  0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[ 595/1275  0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp2
+[ 619/1275  0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll.mvfrm.rsp
+[ 641/1275  0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.UnityAdditionalFile.txt
+[ 680/1275  0s] WriteResponseFile Library/Bee/artifacts/rsp/2781082588993088484.rsp
+[ 683/1275  0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp
+[ 974/1275  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[1266/1275  0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets\Srpt\MainMenuController.cs(17,46): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+
+Assets\Srpt\MainMenuController.cs(27,31): warning CS0618: 'Object.FindObjectsOfType<T>(bool)' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+
+Assets\Srpt\DoorTransitionTrigger.cs(33,25): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+
+Assets\Srpt\CharacterAnimationSetupEditor.cs(46,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+
+Assets\Srpt\PlayerMovement.cs(310,20): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+[1267/1275  0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll.mvfrm
+[1268/1275  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
 Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 149 defines and 376 references
 
 processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
@@ -281,145 +307,168 @@ processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.Burst
 1 processor(s) skipped this assembly
 
 running Unity.Jobs.CodeGen.JobsILPostProcessor
-[1263/1265  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
-[1264/1265  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
-*** Tundra build success (1.44 seconds), 5 items updated, 1265 evaluated
+[1269/1275  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[1270/1275  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[1271/1275  3s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[1272/1275  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 147 defines and 399 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[1273/1275  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[1274/1275  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (4.85 seconds), 16 items updated, 1275 evaluated
 Assets\Srpt\MainMenuController.cs(17,46): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
 Assets\Srpt\CharacterAnimationSetupEditor.cs(46,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
 Assets\Srpt\MainMenuController.cs(27,31): warning CS0618: 'Object.FindObjectsOfType<T>(bool)' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
-Assets\Srpt\PlayerMovement.cs(309,20): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
-AssetDatabase: script compilation time: 2.361780s
+Assets\Srpt\PlayerMovement.cs(310,20): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+Assets\Srpt\MainMenuController.cs(17,46): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+Assets\Srpt\MainMenuController.cs(27,31): warning CS0618: 'Object.FindObjectsOfType<T>(bool)' is obsolete: 'Object.FindObjectsOfType has been deprecated. Use Object.FindObjectsByType instead which lets you decide whether you need the results sorted or not.  FindObjectsOfType sorts the results by InstanceID but if you do not need this using FindObjectSortMode.None is considerably faster.'
+Assets\Srpt\DoorTransitionTrigger.cs(33,25): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+Assets\Srpt\CharacterAnimationSetupEditor.cs(46,33): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+Assets\Srpt\PlayerMovement.cs(310,20): warning CS0618: 'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindAnyObjectByType instead.'
+AssetDatabase: script compilation time: 9.175521s
 Begin MonoManager ReloadAssembly
 Total cache size 196011468
-Total cache size after purge 196011468, took 00:00:00.4730621
+Total cache size after purge 196011468, took 00:00:00.4402426
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 3.47 ms, found 5 plugins.
+Importing 'GUID: e585a992713e7bf469bc90500a0cc4c9 - Path: Assets/Editor' with importer (DefaultImporter)
+Imported 'GUID: e585a992713e7bf469bc90500a0cc4c9' -> (Import Result ID: '8906aea9e414d8f194ac6064fab5f8bc') in 0.030 seconds [static dependencies only]. Details - ImportResultOutputID=ab8ec9c75f52ea55076f20c4d4a4dfad DependenciesID=d9235374fa01305ba4105ce14d9b1c56 StaticDependenciesID=3010e501ba28a89e34f56ffa8b510c90 
+Refreshing native plugins compatible for Editor in 4.97 ms, found 5 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  2.125 seconds
-Domain Reload Profiling: 4159ms
-	BeginReloadAssembly (501ms)
-		DisableScriptedObjects (55ms)
-		CreateAndSetChildDomain (77ms)
-	RebuildCommonClasses (18ms)
-	RebuildNativeTypeToScriptingClass (29ms)
-	initialDomainReloadingComplete (106ms)
-	LoadAllAssembliesAndSetupDomain (1378ms)
-		LoadAssemblies (667ms)
-		TypeCache.Refresh (395ms)
-			TypeCache.ScanAssembly (367ms)
-		AnalyzeDomain (218ms)
-			BuildScriptInfoCaches (198ms)
+- Finished resetting the current domain, in  1.983 seconds
+Domain Reload Profiling: 4052ms
+	BeginReloadAssembly (523ms)
+		DisableScriptedObjects (54ms)
+		CreateAndSetChildDomain (97ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (28ms)
+	initialDomainReloadingComplete (111ms)
+	LoadAllAssembliesAndSetupDomain (1389ms)
+		LoadAssemblies (642ms)
+		TypeCache.Refresh (407ms)
+			TypeCache.ScanAssembly (381ms)
+		AnalyzeDomain (248ms)
+			BuildScriptInfoCaches (228ms)
 			ResolveRequiredComponents (17ms)
-	FinalizeReload (2127ms)
+	FinalizeReload (1985ms)
 		SetupLoadedEditorAssemblies (0ms)
 			LogAssemblyErrors (4ms)
 			InitializePlatformSupportModulesInManaged (5ms)
-			BeforeProcessingInitializeOnLoad (300ms)
-			ProcessInitializeOnLoadAttributes (771ms)
-			ProcessInitializeOnLoadMethodAttributes (490ms)
-			AfterProcessingInitializeOnLoad (7ms)
-		AwakeInstancesAfterBackupRestoration (48ms)
+			BeforeProcessingInitializeOnLoad (249ms)
+			ProcessInitializeOnLoadAttributes (717ms)
+			ProcessInitializeOnLoadMethodAttributes (491ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (4ms)
+		AwakeInstancesAfterBackupRestoration (40ms)
 Starting new worker id: 0 with log in A:/юинити/New_Start/Logs/AssetImportWorkerHW0.log
-Refreshing native plugins compatible for Editor in 3.65 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 3.20 ms, found 5 plugins.
 
-Asset Pipeline Refresh (id=02c87af7b658a664481aecf37b88716f): Total: 8.220 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+Asset Pipeline Refresh (id=dd60d1ed677471f428d3d39acf51ccf2): Total: 15.425 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
 	(Values over 0.05ms)
 	Summary:
-		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=3074 ms
-		Asset DB Callback time: managed=472 ms, native=56 ms
-		Scripting: domain reloads=1, domain reload time=2135 ms, compile time=2365 ms, other=114 ms
-		Project Asset Count: scripts=1698, non-scripts=3359
-		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=11 ms, native=3023 ms
+		Asset DB Callback time: managed=874 ms, native=53 ms
+		Scripting: domain reloads=1, domain reload time=2165 ms, compile time=9179 ms, other=118 ms
+		Project Asset Count: scripts=1699, non-scripts=3360
+		Asset File Changes: new=3, changed=5, moved=0, deleted=0
 		Scan Filter Count: 0
-	InvokePackagesCallback: 43.998ms
-	ApplyChangesToAssetFolders: 1.161ms
-	Scan: 159.671ms
-	Collect global state as custom dependencies: 37.926ms
-	OnSourceAssetsModified: 1.511ms
-	CategorizeScriptCompilationAssets: 105.103ms
-	ProcessAssetsWithTransientArtifactChanges: 180.945ms
-	CategorizeAssets: 107.050ms
-	CompileScripts: 2364.659ms
-	ImportOutOfDateAssets: 2158.999ms (2140.816ms without children)
+	InvokePackagesCallback: 44.354ms
+	ApplyChangesToAssetFolders: 0.997ms
+	Scan: 226.937ms
+	Collect global state as custom dependencies: 39.561ms
+	OnSourceAssetsModified: 1.055ms
+	CategorizeScriptCompilationAssets: 106.688ms
+	ProcessAssetsWithTransientArtifactChanges: 171.760ms
+	CategorizeAssets: 97.164ms
+	CompileScripts: 9178.653ms
+	ImportOutOfDateAssets: 2054.557ms (2002.788ms without children)
+		ImportManagerImport: 32.807ms (1.921ms without children)
+			UpdateCategorizedAssets: 0.068ms
 		ReloadNativeAssets: 0.050ms
-		UnloadImportedAssets: 3.485ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.620ms
-		ImportSchedulerStart: 13.021ms
-	PostProcessAllAssets: 476.052ms
-		VCAutoAddAssetPostprocess 1.830ms
-		XRBuildSystem.XRAssetImported 1.124ms
-		PostProcessCallbackCreateDeferredMaterials 0.074ms
-		MonoPostProcessAllAssets: 471.697ms
-			AssetPostprocessor.OnPostprocessAllAssets 307.927ms
-			StyleCatalogPostProcessor.OnPostprocessAllAssets 31.412ms
-			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 29.635ms
-			SyncVS.PostprocessSyncProject 17.574ms
-			BuilderAssetPostprocessor.OnPostprocessAllAssets 11.488ms
-			AssetChangedListener.OnPostprocessAllAssets 8.964ms
-			SpriteSlicePostprocessor.OnPostprocessAllAssets 4.509ms
-			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 3.661ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.981ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.916ms
-			EditModeScopePostprocessor.OnPostprocessAllAssets 2.137ms
-			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 2.080ms
-			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 1.236ms
-			MaterialPostprocessor.OnPostprocessAllAssets 1.216ms
-			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 1.165ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.013ms
-			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.845ms
-			AudioMixerPostprocessor.OnPostprocessAllAssets 0.834ms
-			PostProcessor.OnPostprocessAllAssets 0.807ms
-			AssetProcessor.OnPostprocessAllAssets 0.769ms
-			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.740ms
-			TextAssetPostProcessor.OnPostprocessAllAssets 0.635ms
-			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.613ms
-			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.573ms
-			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.565ms
-			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.507ms
-			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.486ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.483ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.471ms
-			SpeedTreePostProcessor.OnPostprocessAllAssets 0.407ms
-			AssetEvents.OnPostprocessAllAssets 0.388ms
-			PSDImportPostProcessor.OnPostprocessAllAssets 0.364ms
-			SamplePostprocessor.OnPostprocessAllAssets 0.342ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.341ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 0.336ms
-			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.316ms
-			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.295ms
-			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.248ms
-			ThemePostprocessor.OnPostprocessAllAssets 0.247ms
-			AssetReloadNotifier.OnPostprocessAllAssets 0.227ms
-			AudioContainerPostProcessor.OnPostprocessAllAssets 0.165ms
-	PostAssetChangesProfiler: 10.742ms
-	UnloadStreamsBegin: 2.671ms
-	PersistCurrentRevisions: 0.252ms
-	GenerateScriptTypeHashes: 2.745ms
-	GenerateScriptTypeSerializationHashes: 4.783ms
-	Untracked: 2534.943ms
+		UnloadImportedAssets: 3.109ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.549ms
+		ImportSchedulerStart: 14.238ms
+	PostProcessAllAssets: 874.923ms
+		VCAutoAddAssetPostprocess 1.487ms
+		XRBuildSystem.XRAssetImported 0.894ms
+		VersionControlSettings.HiddenFilePostprocess 0.085ms
+		PostProcessCallbackCreateDeferredMaterials 0.083ms
+		SpriteAtlasDatabase.OnAssetPostprocessCallback 0.069ms
+		MonoPostProcessAllAssets: 871.179ms
+			SyncVS.PostprocessSyncProject 443.971ms
+			AssetPostprocessor.OnPostprocessAllAssets 260.513ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 47.941ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 30.284ms
+			AssetChangedListener.OnPostprocessAllAssets 14.820ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 10.121ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 5.334ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 4.984ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 3.805ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 3.110ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 2.069ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.394ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.341ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.142ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.946ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.915ms
+			AssetProcessor.OnPostprocessAllAssets 0.915ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.856ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 0.840ms
+			PostProcessor.OnPostprocessAllAssets 0.782ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.713ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.663ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.627ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.583ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.525ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.523ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.514ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.496ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.414ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.388ms
+			AssetEvents.OnPostprocessAllAssets 0.374ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.324ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.306ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.303ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.299ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.274ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.254ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.214ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.208ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.187ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.179ms
+	PostAssetChangesProfiler: 9.765ms
+	UnloadStreamsBegin: 3.552ms
+	PersistCurrentRevisions: 0.530ms
+	GenerateScriptTypeHashes: 2.697ms
+	GenerateScriptTypeSerializationHashes: 4.836ms
+	Untracked: 2586.617ms
 
 Application.AssetDatabase Initial Refresh End
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Scanning for USB devices : 6.817ms
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Scanning for USB devices : 6.663ms
 Initializing Unity extensions:
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-New_Start
-Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
 Loaded scene 'Assets/Scenes/Location-1.unity'
-	Deserialize:            12.746 ms
-	Integration:            39.987 ms
-	Integration of assets:  2.697 ms
-	Thread Wait Time:       0.753 ms
-	Total Operation Time:   56.183 ms
-Unloading 7585 unused Assets / (8.6 MB). Loaded Objects now: 8634.
-Memory consumption went from 461.3 MB to 452.7 MB.
-Total: 17.570100 ms (FindLiveObjects: 0.882800 ms CreateObjectMapping: 0.619200 ms MarkObjects: 10.700700 ms  DeleteObjects: 5.059500 ms)
+	Deserialize:            18.740 ms
+	Integration:            43.967 ms
+	Integration of assets:  3.037 ms
+	Thread Wait Time:       0.886 ms
+	Total Operation Time:   66.629 ms
+Unloading 7587 unused Assets / (9.3 MB). Loaded Objects now: 8683.
+Memory consumption went from 467.3 MB to 457.9 MB.
+Total: 23.987700 ms (FindLiveObjects: 0.992200 ms CreateObjectMapping: 1.136700 ms MarkObjects: 15.266200 ms  DeleteObjects: 6.291000 ms)
 
 [LAYOUT] About to load UserSettings\Layouts\default-6000.dwlt, keepMainWindow=False
 [LAYOUT] About to save layout A:\юинити\New_Start\UserSettings\Layouts\default-6000.dwlt
@@ -428,19 +477,19 @@ Total: 17.570100 ms (FindLiveObjects: 0.882800 ms CreateObjectMapping: 0.619200 
 [MODES] ModeService[default].RaiseModeChanged(default, default)
 <RI> Initializing input.
 Using Windows.Gaming.Input
-[Project] Loading completed in 15.156 seconds
-	Project init time: 				13.114 seconds
+[Project] Loading completed in 23.134 seconds
+	Project init time: 				20.694 seconds
 		Template init time: 		0.000 seconds
-		Package Manager init time: 		0.493 seconds
-		Asset Database init time: 		0.393 seconds
-		Global illumination init time: 	0.004 seconds
-		Assemblies load time: 			2.263 seconds
-		Unity extensions init time: 	0.044 seconds
-		Asset Database refresh time: 	8.220 seconds
-	Scene opening time: 			1.720 seconds
-##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1795457395039,"processId":23588,"projectLoad":15.156186199999999,"projectInit":13.1137894,"templateInit":0.0,"packageManagerInit":0.4929846,"assetDatabaseInit":0.39278,"globalIlluminationInit":0.0039513,"assembliesLoad":2.2634198,"unityExtensionsInit":0.0435415,"assetDatabaseRefresh":8.2200607,"sceneOpening":1.719673}
-##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1795457395039,"processId":23588,"editorVersion":"6000.6.10f1 (40e81493c67d)","branch":"6000.6/staging","buildType":"Release","platform":"Windows"}
-Asset Pipeline Refresh (id=6025cd3a4510e4045ad3747ed9bd9027): Total: 0.138 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+		Package Manager init time: 		0.580 seconds
+		Asset Database init time: 		0.480 seconds
+		Global illumination init time: 	0.003 seconds
+		Assemblies load time: 			2.420 seconds
+		Unity extensions init time: 	0.054 seconds
+		Asset Database refresh time: 	15.426 seconds
+	Scene opening time: 			2.053 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1795458907100,"processId":9984,"projectLoad":23.1336057,"projectInit":20.6939741,"templateInit":0.0,"packageManagerInit":0.579586,"assetDatabaseInit":0.480173,"globalIlluminationInit":0.0029716,"assembliesLoad":2.4196538,"unityExtensionsInit":0.0535927,"assetDatabaseRefresh":15.4257586,"sceneOpening":2.052994}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1795458907100,"processId":9984,"editorVersion":"6000.6.10f1 (40e81493c67d)","branch":"6000.6/staging","buildType":"Release","platform":"Windows"}
+Asset Pipeline Refresh (id=d607d33cd944e5b4e8818c47fa2402aa): Total: 0.157 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
 Worker ready: AssetImportWorkerHW0 0
 Start Indexing on Editor startup
 [Indexing] Starting Initial Indexing for Assets
@@ -449,125 +498,125 @@ Reloading assemblies after forced synchronous recompile.
 Begin MonoManager ReloadAssembly
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.46 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.51 ms, found 5 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  3.266 seconds
-Domain Reload Profiling: 4806ms
-	BeginReloadAssembly (932ms)
-		DisableScriptedObjects (232ms)
-		CreateAndSetChildDomain (356ms)
-	RebuildCommonClasses (19ms)
-	RebuildNativeTypeToScriptingClass (30ms)
-	initialDomainReloadingComplete (110ms)
-	LoadAllAssembliesAndSetupDomain (447ms)
-		LoadAssemblies (266ms)
-		TypeCache.Refresh (12ms)
-		AnalyzeDomain (54ms)
-			ResolveRequiredComponents (46ms)
-	FinalizeReload (3268ms)
+- Finished resetting the current domain, in  3.761 seconds
+Domain Reload Profiling: 5774ms
+	BeginReloadAssembly (1272ms)
+		DisableScriptedObjects (317ms)
+		CreateAndSetChildDomain (392ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (34ms)
+	initialDomainReloadingComplete (111ms)
+	LoadAllAssembliesAndSetupDomain (573ms)
+		LoadAssemblies (329ms)
+		TypeCache.Refresh (10ms)
+		AnalyzeDomain (67ms)
+			ResolveRequiredComponents (60ms)
+	FinalizeReload (3762ms)
 		SetupLoadedEditorAssemblies (0ms)
-			LogAssemblyErrors (5ms)
+			LogAssemblyErrors (4ms)
 			InitializePlatformSupportModulesInManaged (3ms)
-			BeforeProcessingInitializeOnLoad (428ms)
-			ProcessInitializeOnLoadAttributes (745ms)
+			BeforeProcessingInitializeOnLoad (490ms)
+			ProcessInitializeOnLoadAttributes (901ms)
 			ProcessInitializeOnLoadMethodAttributes (269ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (3ms)
-		AwakeInstancesAfterBackupRestoration (1021ms)
+		AwakeInstancesAfterBackupRestoration (1094ms)
 No restricted APIs configured; Validation skipped.
-Checking 18 assemblies for restricted APIs found 0 usage(s) in 6 ms
-Refreshing native plugins compatible for Editor in 4.09 ms, found 5 plugins.
+Checking 18 assemblies for restricted APIs found 0 usage(s) in 8 ms
+Refreshing native plugins compatible for Editor in 5.10 ms, found 5 plugins.
 
-Asset Pipeline Refresh (id=21a9d4935dc473f4c9715b4da1dedbea): Total: 7.818 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+Asset Pipeline Refresh (id=f398bf74029a6304b923253be8dee307): Total: 8.990 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
 	(Values over 0.05ms)
 	Summary:
 		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=3954 ms
-		Asset DB Callback time: managed=1832 ms, native=406 ms
-		Scripting: domain reloads=1, domain reload time=1621 ms, compile time=3 ms, other=0 ms
-		Project Asset Count: scripts=1698, non-scripts=3359
+		Asset DB Process Time: managed=0 ms, native=4595 ms
+		Asset DB Callback time: managed=1721 ms, native=549 ms
+		Scripting: domain reloads=1, domain reload time=2120 ms, compile time=3 ms, other=0 ms
+		Project Asset Count: scripts=1699, non-scripts=3360
 		Asset File Changes: new=0, changed=0, moved=0, deleted=0
 		Scan Filter Count: 0
-	InvokePackagesCallback: 2.417ms
-	ApplyChangesToAssetFolders: 0.463ms
-	Collect global state as custom dependencies: 4.916ms
-	ProcessAssetsWithTransientArtifactChanges: 472.974ms
-	CategorizeAssets: 108.213ms
-	CompileScripts: 2.994ms
-	ImportOutOfDateAssets: 3283.670ms (3278.105ms without children)
-		CollectScriptTypesHashes: 7.387ms
-		ReloadNativeAssets: 1.487ms
-		UnloadImportedAssets: 2.147ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.196ms
-		ImportSchedulerStart: 0.706ms
-	PostProcessAllAssets: 2216.006ms
-		AssemblyValidation.PostprocessAllAssets 50.495ms
-		PostprocessAssetsUpdateCachedIcon 38.147ms
-		SpriteAtlasDatabase.OnAssetPostprocessCallback 37.260ms
-		PostProcessCallbackCreateDeferredMaterials 35.869ms
-		RaytracingShaderImportPostprocess 20.164ms
-		ShaderAssetModifiedCallback 19.961ms
-		ComputeShaderImportPostprocess 18.278ms
-		SpeedTreeImporter.PostprocessAllAssets 15.153ms
-		LocalizationDatabase.AssetDatabasePostprocessCallback 7.304ms
-		BlockShaderImporter.PostprocessAllAssets 6.540ms
-		XRBuildSystem.XRAssetImported 0.643ms
-		MonoPostProcessAllAssets: 1822.359ms
-			SyncVS.PostprocessSyncProject 701.206ms
-			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 401.263ms
-			PostProcessor.OnPostprocessAllAssets 87.203ms
-			AssetPostprocessor.OnPostprocessAllAssets 81.160ms
-			MaterialPostprocessor.OnPostprocessAllAssets 74.593ms
-			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 69.116ms
-			InputActionAssetPostprocessor.OnPostprocessAllAssets 68.697ms
-			AssetChangedListener.OnPostprocessAllAssets 64.239ms
-			TextAssetPostProcessor.OnPostprocessAllAssets 45.481ms
-			SpriteSlicePostprocessor.OnPostprocessAllAssets 39.454ms
-			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 29.023ms
-			BuilderAssetPostprocessor.OnPostprocessAllAssets 9.694ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 9.199ms
-			SpeedTree9Postprocessor.OnPostprocessAllAssets 8.616ms
-			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 4.211ms
-			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.672ms
-			ProjectSettingsPostprocessor.OnPostprocessAllAssets 1.885ms
-			TMPro_TexturePostProcessor.OnPostprocessAllAssets 1.336ms
-			EditModeScopePostprocessor.OnPostprocessAllAssets 1.280ms
-			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 1.063ms
-			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.914ms
-			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.868ms
-			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.843ms
-			ThemePostprocessor.OnPostprocessAllAssets 0.732ms
-			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.706ms
-			SpeedTreePostProcessor.OnPostprocessAllAssets 0.702ms
-			AudioMixerPostprocessor.OnPostprocessAllAssets 0.495ms
-			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.442ms
-			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.434ms
-			AssetEvents.OnPostprocessAllAssets 0.420ms
-			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.327ms
-			PSDImportPostProcessor.OnPostprocessAllAssets 0.277ms
-			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.241ms
-			SamplePostprocessor.OnPostprocessAllAssets 0.233ms
-			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.212ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 0.200ms
-			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.174ms
-			AssetReloadNotifier.OnPostprocessAllAssets 0.170ms
-			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.160ms
-			AudioContainerPostProcessor.OnPostprocessAllAssets 0.137ms
-			AssetProcessor.OnPostprocessAllAssets 0.090ms
-	PostAssetChangesProfiler: 22.120ms
-	GatherAllCurrentPrimaryImportResultRevisions: 0.211ms
-	UnloadStreamsBegin: 2.424ms
-	PersistCurrentRevisions: 0.219ms
-	GenerateScriptTypeHashes: 7.611ms
-	GenerateScriptTypeSerializationHashes: 12.287ms
-	Untracked: 1677.602ms
+	InvokePackagesCallback: 2.371ms
+	ApplyChangesToAssetFolders: 1.579ms
+	Collect global state as custom dependencies: 5.683ms
+	ProcessAssetsWithTransientArtifactChanges: 612.841ms
+	CategorizeAssets: 117.142ms
+	CompileScripts: 3.053ms
+	ImportOutOfDateAssets: 3778.927ms (3773.307ms without children)
+		CollectScriptTypesHashes: 4.232ms
+		ReloadNativeAssets: 1.562ms
+		UnloadImportedAssets: 2.423ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.177ms
+		ImportSchedulerStart: 0.398ms
+	PostProcessAllAssets: 2256.603ms
+		AssemblyValidation.PostprocessAllAssets 50.526ms
+		PostProcessCallbackCreateDeferredMaterials 37.652ms
+		SpriteAtlasDatabase.OnAssetPostprocessCallback 34.447ms
+		PostprocessAssetsUpdateCachedIcon 34.205ms
+		ComputeShaderImportPostprocess 20.536ms
+		RaytracingShaderImportPostprocess 20.192ms
+		ShaderAssetModifiedCallback 18.723ms
+		SpeedTreeImporter.PostprocessAllAssets 15.392ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 9.480ms
+		BlockShaderImporter.PostprocessAllAssets 8.775ms
+		XRBuildSystem.XRAssetImported 0.991ms
+		MonoPostProcessAllAssets: 1716.322ms
+			SyncVS.PostprocessSyncProject 608.256ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 369.724ms
+			PostProcessor.OnPostprocessAllAssets 97.228ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 77.529ms
+			AssetPostprocessor.OnPostprocessAllAssets 75.218ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 70.265ms
+			MaterialPostprocessor.OnPostprocessAllAssets 66.687ms
+			AssetChangedListener.OnPostprocessAllAssets 64.016ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 52.671ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 50.846ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 29.980ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 12.246ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.445ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 9.799ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 3.711ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 3.066ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 2.066ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 1.928ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.825ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 1.807ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 1.345ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 1.040ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.929ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.827ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.803ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.768ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.718ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.595ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.553ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.499ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.465ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.403ms
+			AssetEvents.OnPostprocessAllAssets 0.402ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.389ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.336ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.319ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.274ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.206ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.177ms
+			AssetProcessor.OnPostprocessAllAssets 0.150ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.150ms
+	PostAssetChangesProfiler: 13.826ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.289ms
+	UnloadStreamsBegin: 3.543ms
+	PersistCurrentRevisions: 0.192ms
+	GenerateScriptTypeHashes: 6.701ms
+	GenerateScriptTypeSerializationHashes: 11.010ms
+	Untracked: 2172.086ms
 
-Created GICache directory at C:/Users/North/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.026s, timestamps: [15.352 - 15.378]
+Created GICache directory at C:/Users/North/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.030s, timestamps: [23.348 - 23.379]
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Client] Successfully updated the access token
@@ -576,258 +625,551 @@ Created GICache directory at C:/Users/North/AppData/LocalLow/Unity/Caches/GiCach
 [Licensing::Client] Successfully resolved entitlement details
 UPID Received '834a896b-17c0-46a2-9d0a-bc5a813dd67c'.
 [Licensing::Client] Successfully resolved entitlement details
-Asset Pipeline Refresh (id=dcea4ef0a63f967419a6cba6b9a7a4fa): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+TrimDiskCacheJob: Current cache size 0mb
+Asset Pipeline Refresh (id=d9f99c010df87e744a1a12dabd0a9c0e): Total: 0.006 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
 Importing 'GUID: 1e1f3ed434277ef42be1801cac6e6569 - Path: Assets/Sprite/движение_гг.png' with importer (TextureImporter)
-Imported 'GUID: 1e1f3ed434277ef42be1801cac6e6569' -> (Import Result ID: '96ca7d0e3d22ca1daca82f20d2f3c08b') in 0.188 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9d4110e27fc2ffae109a114096f38feb DependenciesID=a293b51b29bd383fadc3f2af5ff6f4fe StaticDependenciesID=f3a0cd87ee57e5121cc6288dfe06343e 
-Refreshing native plugins compatible for Editor in 3.95 ms, found 5 plugins.
+Imported 'GUID: 1e1f3ed434277ef42be1801cac6e6569' -> (Import Result ID: '3d5d19960e3544432596f01a503072e5') in 0.180 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e07a681acc82d4ab019e5373bae44cba DependenciesID=0946de5a085c0b10cc6c4c5603c076dc StaticDependenciesID=c879edab706638355a027e00ab93d6b0 
+Refreshing native plugins compatible for Editor in 2.87 ms, found 5 plugins.
 
-Asset Pipeline Refresh (id=8a00303a26c39774f95baabc02a36cb8): Total: 0.447 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=c39ad12e6c9471b4a9b5a0e371c0d16b): Total: 0.306 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 	(Values over 0.05ms)
 	Summary:
 		Imports: total=1 (actual=1, local cache=0, cache server=0)
-		Asset DB Process Time: managed=21 ms, native=260 ms
-		Asset DB Callback time: managed=159 ms, native=5 ms
+		Asset DB Process Time: managed=38 ms, native=221 ms
+		Asset DB Callback time: managed=12 ms, native=34 ms
 		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
-		Project Asset Count: scripts=1698, non-scripts=3359
+		Project Asset Count: scripts=1699, non-scripts=3360
 		Asset File Changes: new=0, changed=1, moved=0, deleted=0
 		Scan Filter Count: 3
-	ApplyChangesToAssetFolders: 0.277ms
-	Scan: 24.133ms
-	Collect global state as custom dependencies: 0.856ms
-	OnSourceAssetsModified: 1.032ms
-	ProcessAssetsWithTransientArtifactChanges: 0.289ms
-	CategorizeAssets: 39.982ms
-	ImportOutOfDateAssets: 195.676ms (0.205ms without children)
-		ImportManagerImport: 193.899ms (1.565ms without children)
-		ReloadNativeAssets: 0.050ms
-		UnloadImportedAssets: 0.272ms
-		ReloadImportedAssets: 3.559ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.772ms
-		ImportSchedulerStart: 0.468ms
-	PostProcessAllAssets: 12.437ms
-		XRBuildSystem.XRAssetImported 1.016ms
-		MonoPostProcessAllAssets: 11.075ms
-			SpriteSlicePostprocessor.OnPostprocessAllAssets 2.939ms
-			TMPro_TexturePostProcessor.OnPostprocessAllAssets 2.587ms
-			SyncVS.PostprocessSyncProject 2.040ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 1.758ms
-			TextAssetPostProcessor.OnPostprocessAllAssets 0.424ms
-			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.314ms
-			AssetChangedListener.OnPostprocessAllAssets 0.216ms
-			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.097ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.078ms
-			AssetPostprocessor.OnPostprocessAllAssets 0.067ms
-			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.060ms
-	PostAssetChangesProfiler: 151.834ms
-	GatherAllCurrentPrimaryImportResultRevisions: 0.240ms
-	PersistCurrentRevisions: 0.414ms
-	Untracked: 19.832ms
+	ApplyChangesToAssetFolders: 0.236ms
+	Scan: 20.875ms
+	Collect global state as custom dependencies: 0.769ms
+	OnSourceAssetsModified: 0.868ms
+	CategorizeScriptCompilationAssets: 0.055ms
+	ProcessAssetsWithTransientArtifactChanges: 0.294ms
+	CategorizeAssets: 31.299ms
+	ImportOutOfDateAssets: 186.561ms (0.225ms without children)
+		ImportManagerImport: 184.648ms (1.472ms without children)
+			UpdateCategorizedAssets: 0.050ms
+		ReloadNativeAssets: 0.052ms
+		UnloadImportedAssets: 0.388ms
+		ReloadImportedAssets: 2.137ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.774ms
+		ImportSchedulerStart: 0.465ms
+	PostProcessAllAssets: 12.374ms
+		XRBuildSystem.XRAssetImported 0.980ms
+		MonoPostProcessAllAssets: 11.199ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 3.477ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 2.568ms
+			SyncVS.PostprocessSyncProject 1.418ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 1.131ms
+			AssetChangedListener.OnPostprocessAllAssets 0.723ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.586ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.377ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.143ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.092ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.069ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.051ms
+	PostAssetChangesProfiler: 32.989ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.208ms
+	PersistCurrentRevisions: 0.380ms
+	Untracked: 18.523ms
 
-[NeKArton] Нарезан Assets/Sprite/движение_гг.png: 2048x682, 24 кадров.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-NeKArtonCharacterAnimationSetup:SliceWithUnity6Api (string,int,string) (at Assets/Srpt/CharacterAnimationSetupEditor.cs:166)
-NeKArtonCharacterAnimationSetup:Setup () (at Assets/Srpt/CharacterAnimationSetupEditor.cs:27)
-
-(Filename: Assets/Srpt/CharacterAnimationSetupEditor.cs Line: 166)
-
-Importing 'GUID: d9b6014c27781b042b90d523f24a34fa - Path: Assets/Sprite/движение_насти.png' with importer (TextureImporter)
-Imported 'GUID: d9b6014c27781b042b90d523f24a34fa' -> (Import Result ID: '4fc507dafd5d477d37fb85cec6cb4e96') in 0.178 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5fd20e442b090e8405985890e638f272 DependenciesID=62dbc054dbafd1bb13cfbec23c82d282 StaticDependenciesID=1a48b63ef08869e66a46b42421d74adb 
-Refreshing native plugins compatible for Editor in 2.60 ms, found 5 plugins.
-Asset Pipeline Refresh (id=7d7bf886db8a31742bd05cf89894cf96): Total: 0.261 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-[NeKArton] Нарезан Assets/Sprite/движение_насти.png: 2048x682, 22 кадров.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-NeKArtonCharacterAnimationSetup:SliceWithUnity6Api (string,int,string) (at Assets/Srpt/CharacterAnimationSetupEditor.cs:166)
-NeKArtonCharacterAnimationSetup:Setup () (at Assets/Srpt/CharacterAnimationSetupEditor.cs:27)
-
-(Filename: Assets/Srpt/CharacterAnimationSetupEditor.cs Line: 166)
-
-Asset Pipeline Refresh (id=00ed3ac8c57cddc45ac873f652da2684): Total: 0.011 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
-[NeKArton] Спрайты в Assets/Sprite/движение_гг.png: GG_22, GG_07, GG_14, GG_06, GG_05, GG_24, GG_15, GG_12, GG_13, GG_21, GG_09, GG_17, GG_19, GG_20, GG_23, GG_18, GG_10, GG_11, GG_08, GG_16, GG_01, GG_02, GG_03, GG_04
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-NeKArtonCharacterAnimationSetup:LoadFrames (string,string) (at Assets/Srpt/CharacterAnimationSetupEditor.cs:176)
-NeKArtonCharacterAnimationSetup:Setup () (at Assets/Srpt/CharacterAnimationSetupEditor.cs:33)
-
-(Filename: Assets/Srpt/CharacterAnimationSetupEditor.cs Line: 176)
-
-[NeKArton] Спрайты в Assets/Sprite/движение_насти.png: Nastya_10, Nastya_19, Nastya_07, Nastya_16, Nastya_20, Nastya_15, Nastya_05, Nastya_22, Nastya_08, Nastya_11, Nastya_21, Nastya_14, Nastya_18, Nastya_09, Nastya_13, Nastya_12, Nastya_06, Nastya_03, Nastya_17, Nastya_02, Nastya_01, Nastya_04
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-NeKArtonCharacterAnimationSetup:LoadFrames (string,string) (at Assets/Srpt/CharacterAnimationSetupEditor.cs:176)
-NeKArtonCharacterAnimationSetup:Setup () (at Assets/Srpt/CharacterAnimationSetupEditor.cs:34)
-
-(Filename: Assets/Srpt/CharacterAnimationSetupEditor.cs Line: 176)
-
-Importing 'GUID: 00000000000000009000000000000000 - Path: ProjectSettings/QualitySettings.asset' with importer (LibraryAssetImporter)
-Imported 'GUID: 00000000000000009000000000000000' -> (Import Result ID: 'ad6ca2034549a8dd6f88c2e2fb528c97') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=2a108b3da874f726c62fbe5f12be4a8a DependenciesID=1aedbe56ae62f321fe459982db2fa012 StaticDependenciesID=e9a43e809c5953780a851aff477bfce8 
-Refreshing native plugins compatible for Editor in 2.75 ms, found 5 plugins.
-Asset Pipeline Refresh (id=72c23a6a9f2d2524dbaab29d791fbb82): Total: 0.027 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity' with importer (DefaultImporter)
-Imported 'GUID: f0e7c751bdb501a429b4f431ff78e18d' -> (Import Result ID: 'e7e58404ea7bb96cafb1c4aaa9b56239') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6463d6a1513956972eba81e60c71c998 DependenciesID=cb94f1c283acbc66ced5385552737193 StaticDependenciesID=abfc6c77e5b42d5a8211b799d30c8ce9 
-Refreshing native plugins compatible for Editor in 2.87 ms, found 5 plugins.
-Asset Pipeline Refresh (id=668d57da76519d740b74d56e6c0d6c3d): Total: 0.058 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-TrimDiskCacheJob: Current cache size 0mb
-Importing 'GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity' with importer (DefaultImporter)
-Imported 'GUID: f0e7c751bdb501a429b4f431ff78e18d' -> (Import Result ID: '9f337c02150d1ec105cab9d5ae06afcd') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6463d6a1513956972eba81e60c71c998 DependenciesID=c9585a842cdbec9055b533b26946258f StaticDependenciesID=a4ed07b12c7dd8736626657eddebc44e 
+Importing 'GUID: 878db88fb41a17d48a0b67cb1a83b382 - Path: Assets/Generated' with importer (DefaultImporter)
+Imported 'GUID: 878db88fb41a17d48a0b67cb1a83b382' -> (Import Result ID: 'e0f6c82394f65e7d0a5e285433bdc906') in 0.012 seconds [static dependencies only]. Details - ImportResultOutputID=bc9eb47324277e2bfc7e39db0371219c DependenciesID=404f9cee397485e5560304f754303107 StaticDependenciesID=d60b7ff1ccaa2def0ed129cedb41f3e9 
+Importing 'GUID: 538c10895c0910d46a4a710826a9b583 - Path: Assets/Generated/Player' with importer (DefaultImporter)
+Imported 'GUID: 538c10895c0910d46a4a710826a9b583' -> (Import Result ID: '2c8012bb79fc35af6ebe0b83f43227fe') in 0.010 seconds [static dependencies only]. Details - ImportResultOutputID=5920465795f3482e9e6883b3f804f58a DependenciesID=fd4cba061104cc0572ea4795b4773bc0 StaticDependenciesID=f55ddaefee0cf9ae8b7ee56b49e6a853 
+Importing 'GUID: 80c4a64b3fb0a35499c4b95baf7a937a - Path: Assets/Generated/Player/Idle.png' with importer (TextureImporter)
+Imported 'GUID: 80c4a64b3fb0a35499c4b95baf7a937a' -> (Import Result ID: 'cc3ea54d5b96b923599d1499139f25c1') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e36b29f2bdf8c8c9d42cc03c9f63eee1 DependenciesID=6cb6e5bff3fb60ffdc5c84a61b043768 StaticDependenciesID=558e5a1c869759345d15676dc7cd022b 
+Refreshing native plugins compatible for Editor in 2.69 ms, found 5 plugins.
+Asset Pipeline Refresh (id=02eeef944331b8f488d3d85d2760496d): Total: 0.120 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 80c4a64b3fb0a35499c4b95baf7a937a - Path: Assets/Generated/Player/Idle.png' with importer (TextureImporter)
+Imported 'GUID: 80c4a64b3fb0a35499c4b95baf7a937a' -> (Import Result ID: 'efb86c96fb9209e61f7396e4d175ec81') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=47c97eefde299cc9620a4b009f521de0 DependenciesID=bb15695bf1c54dbd129f35ebcad07dba StaticDependenciesID=8bf234861409f3c944a1a2a57b5f1acb 
+Refreshing native plugins compatible for Editor in 2.76 ms, found 5 plugins.
+Asset Pipeline Refresh (id=31d8c825803feee4f88e1a6f86ebc762): Total: 0.104 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: ed11cbb00b6790f47bd6f86a5df967c9 - Path: Assets/Generated/Player/Walk_00.png' with importer (TextureImporter)
+Imported 'GUID: ed11cbb00b6790f47bd6f86a5df967c9' -> (Import Result ID: '8187f49b92e7cac66ab4351aca816a85') in 0.053 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f3809af2702a821217c0e47aff77f6ee DependenciesID=5b36d0c14a7d7dec2a45599e3756ac33 StaticDependenciesID=f0f223ccbee6e6675c8cb092358046e1 
+Refreshing native plugins compatible for Editor in 2.21 ms, found 5 plugins.
+Asset Pipeline Refresh (id=027cd0b5cb00f5b4585dd54ebf270081): Total: 0.128 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: ed11cbb00b6790f47bd6f86a5df967c9 - Path: Assets/Generated/Player/Walk_00.png' with importer (TextureImporter)
+Imported 'GUID: ed11cbb00b6790f47bd6f86a5df967c9' -> (Import Result ID: 'a133f159b311d46ef66eaac14235ba83') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9ba72bac2dded9a1890faf6a3d86b454 DependenciesID=3dd176e37356088060d22024934e9235 StaticDependenciesID=4bfba8fdbe4c9f7a3356c24a31a3fa3d 
+Refreshing native plugins compatible for Editor in 2.73 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c322fcdc0be7d8f44ab4dbb9d07e19b0): Total: 0.102 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 0242e3ac16fd93c409f48f774bcade60 - Path: Assets/Generated/Player/Walk_01.png' with importer (TextureImporter)
+Imported 'GUID: 0242e3ac16fd93c409f48f774bcade60' -> (Import Result ID: 'd6e0ad7ca86169721ce7279c232a51b7') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a8c596068e368795ab63139e1d32f600 DependenciesID=76e7dd31f711092b04ee48823fd23d96 StaticDependenciesID=125b212722519918b2701e0c6accd560 
+Refreshing native plugins compatible for Editor in 2.30 ms, found 5 plugins.
+Asset Pipeline Refresh (id=138d4f83d550045458c1d49108fb7d15): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 0242e3ac16fd93c409f48f774bcade60 - Path: Assets/Generated/Player/Walk_01.png' with importer (TextureImporter)
+Imported 'GUID: 0242e3ac16fd93c409f48f774bcade60' -> (Import Result ID: '3e3e64e6a7cc6a8e790f12a15e4bbbee') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c93f41d9f18385595553d1f0576c5410 DependenciesID=8ee6f0d96ccc5a449104feb8655eea0b StaticDependenciesID=69ed63c5aa8d26c41db1f0a96c63d7ed 
+Refreshing native plugins compatible for Editor in 3.09 ms, found 5 plugins.
+Asset Pipeline Refresh (id=9e0631eb0eda4ed4faf5551e690fa30e): Total: 0.093 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: d0e8f3e15bcc7d442b42ca0b0d92ef1a - Path: Assets/Generated/Player/Walk_02.png' with importer (TextureImporter)
+Imported 'GUID: d0e8f3e15bcc7d442b42ca0b0d92ef1a' -> (Import Result ID: '89268dfacf0b9fd59659e6fd9aab113a') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=689d3b842d05605635e205fbb3de0355 DependenciesID=83e6a983d5adc473542d1c27671c9ed3 StaticDependenciesID=dbcd11492466761d17f3966d0ce5fa17 
+Refreshing native plugins compatible for Editor in 2.83 ms, found 5 plugins.
+Asset Pipeline Refresh (id=32efd27d6108f384a86fc61bfe36b566): Total: 0.083 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: d0e8f3e15bcc7d442b42ca0b0d92ef1a - Path: Assets/Generated/Player/Walk_02.png' with importer (TextureImporter)
+Imported 'GUID: d0e8f3e15bcc7d442b42ca0b0d92ef1a' -> (Import Result ID: 'cc0b49813fff736529f320dd7ce09196') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dab9d1ed26e0c73e2bec14abc320ba2b DependenciesID=d7c62a7ecf7bcebfae2c464d674c6721 StaticDependenciesID=008b1464b9f692fada793bb8c85f2397 
+Refreshing native plugins compatible for Editor in 3.04 ms, found 5 plugins.
+Asset Pipeline Refresh (id=7ad0c70d75f8c764e8957d7aa130299a): Total: 0.103 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8c05ec3b6474bc6448e78fd5fb9a32ac - Path: Assets/Generated/Player/Walk_03.png' with importer (TextureImporter)
+Imported 'GUID: 8c05ec3b6474bc6448e78fd5fb9a32ac' -> (Import Result ID: '138e608dea4526269054394891ef74a9') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=60c75592976ee6918c0ece992f0374ed DependenciesID=4cf9bfd01dfebdecad687519c2e660ee StaticDependenciesID=7df8f15dc6598fee52053de64107566b 
+Refreshing native plugins compatible for Editor in 2.09 ms, found 5 plugins.
+Asset Pipeline Refresh (id=6b853faec9a9bbb49a52ceb3b7e78726): Total: 0.102 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8c05ec3b6474bc6448e78fd5fb9a32ac - Path: Assets/Generated/Player/Walk_03.png' with importer (TextureImporter)
+Imported 'GUID: 8c05ec3b6474bc6448e78fd5fb9a32ac' -> (Import Result ID: 'c84043d50e1fe797f0e4ab2be32459c0') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6b5306bf8ed6bd7e0b0c699986b24c2e DependenciesID=5fa3b8de3c7a3e1d15c00780a671d719 StaticDependenciesID=4649739d00d9992d150b38156b800772 
+Refreshing native plugins compatible for Editor in 2.53 ms, found 5 plugins.
+Asset Pipeline Refresh (id=0d7433cab3883ba4d8d387cefc4c0e51): Total: 0.086 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 431b6272fe652c64f95f52496f989551 - Path: Assets/Generated/Player/Walk_04.png' with importer (TextureImporter)
+Imported 'GUID: 431b6272fe652c64f95f52496f989551' -> (Import Result ID: 'e14ff0d84b280c9e69ba8e73a428583d') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=450d70c1e076d2dc08aa8585dd54bd00 DependenciesID=2eb0ae5a04d604b7350ccc2448a648e6 StaticDependenciesID=efb97ec80f1d637ae7fac2fe041c1342 
+Refreshing native plugins compatible for Editor in 2.70 ms, found 5 plugins.
+Asset Pipeline Refresh (id=1402adbe636988a42968d611cddeac3c): Total: 0.113 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 431b6272fe652c64f95f52496f989551 - Path: Assets/Generated/Player/Walk_04.png' with importer (TextureImporter)
+Imported 'GUID: 431b6272fe652c64f95f52496f989551' -> (Import Result ID: '00242abf2fa7a8987bedd4626cf3aaac') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=de1d3fde1764fc2ccc970e44d698a2c2 DependenciesID=456bf8f4059567c639c6e4c8742068bf StaticDependenciesID=19ce70163dde46ad9fd8006a12072559 
+Refreshing native plugins compatible for Editor in 2.33 ms, found 5 plugins.
+Asset Pipeline Refresh (id=040ca914d40f9144ba9453fa2c0e72f1): Total: 0.089 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f441f4e9dc3cade4a96aaf18fa0d00e0 - Path: Assets/Generated/Player/Walk_05.png' with importer (TextureImporter)
+Imported 'GUID: f441f4e9dc3cade4a96aaf18fa0d00e0' -> (Import Result ID: 'f3ddf2c9b5e79c5d245bf9bb7a482b97') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f71f0c313191901afbc5aa5b6256e617 DependenciesID=b96b125c40225f7135c9d05c96051c23 StaticDependenciesID=a08e50d91f50f7198f5b8169e7166955 
+Refreshing native plugins compatible for Editor in 2.66 ms, found 5 plugins.
+Asset Pipeline Refresh (id=4238a254702e12645b5bd2dc87b30e11): Total: 0.105 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f441f4e9dc3cade4a96aaf18fa0d00e0 - Path: Assets/Generated/Player/Walk_05.png' with importer (TextureImporter)
+Imported 'GUID: f441f4e9dc3cade4a96aaf18fa0d00e0' -> (Import Result ID: '0d93444b2296e0e7deb95326af178ecf') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7a52fab2747b594489efaaa4cb81de55 DependenciesID=c3082ecea1275f00958558b0f02df132 StaticDependenciesID=25579fad8a6f43181667922ab536b1e0 
+Refreshing native plugins compatible for Editor in 2.64 ms, found 5 plugins.
+Asset Pipeline Refresh (id=5e012dc0826b4d048a74466d38a65619): Total: 0.089 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 90be1514f96d73543b665ff73fd23f64 - Path: Assets/Generated/Player/Walk_06.png' with importer (TextureImporter)
+Imported 'GUID: 90be1514f96d73543b665ff73fd23f64' -> (Import Result ID: 'db2abd413f0cffb8f574dbeeb713f25b') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b23abe3f95743ab393de654bf4d1bf48 DependenciesID=bf32c49b7a7712189f6b7ce5e74e5a46 StaticDependenciesID=26aaa16b315b1e39609624de8e96f43d 
+Refreshing native plugins compatible for Editor in 2.45 ms, found 5 plugins.
+Asset Pipeline Refresh (id=b13c5b4bb1754f141be117c60a187273): Total: 0.082 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 90be1514f96d73543b665ff73fd23f64 - Path: Assets/Generated/Player/Walk_06.png' with importer (TextureImporter)
+Imported 'GUID: 90be1514f96d73543b665ff73fd23f64' -> (Import Result ID: 'f1be7edbf1d09127d38e1910d26f6d9f') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6a7cfe3dc4ba3b02a106b72af225e747 DependenciesID=2f04256cc2ac23b3b0283ef9022d0e0d StaticDependenciesID=6d94eb85320a7fa7207dd1ae441ed3fd 
+Refreshing native plugins compatible for Editor in 3.36 ms, found 5 plugins.
+Asset Pipeline Refresh (id=e3e42a1beeac67e4580b16155f685e75): Total: 0.093 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: a5a5610ae4db293459e7702c9e9a4e22 - Path: Assets/Generated/Player/Walk_07.png' with importer (TextureImporter)
+Imported 'GUID: a5a5610ae4db293459e7702c9e9a4e22' -> (Import Result ID: '6e10250cb3bca8bd12464b187d534965') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a41d2094a464a50709eecf4aba00c882 DependenciesID=df22cacf7a9ef121467cdb42d52be2f8 StaticDependenciesID=fc1c1b6a684180be41dc21ee467f86d6 
+Refreshing native plugins compatible for Editor in 2.64 ms, found 5 plugins.
+Asset Pipeline Refresh (id=208a37b6e7cc9e64795392202b334175): Total: 0.093 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: a5a5610ae4db293459e7702c9e9a4e22 - Path: Assets/Generated/Player/Walk_07.png' with importer (TextureImporter)
+Imported 'GUID: a5a5610ae4db293459e7702c9e9a4e22' -> (Import Result ID: 'eb26d08f31f5a75ce61b1b0319cd03f0') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=57ee49e4949f4462f0cba8d77e1d188b DependenciesID=7c3d19dd4997f93aebbd5395cba66b69 StaticDependenciesID=d6c626b37d4af9144841a88ea33af432 
+Refreshing native plugins compatible for Editor in 2.20 ms, found 5 plugins.
+Asset Pipeline Refresh (id=8c4d821eb0ae6554eb2486f15e2ead55): Total: 0.089 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 67c5385ebc294bd4fa964f77aa6ba0da - Path: Assets/Generated/Player/Walk_08.png' with importer (TextureImporter)
+Imported 'GUID: 67c5385ebc294bd4fa964f77aa6ba0da' -> (Import Result ID: '989d031278730057703fba75301641b1') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ec2777b56460140dbb45c17a0dda3636 DependenciesID=b4dd2164bd622766af9595b9df00d8bc StaticDependenciesID=dee86cdcdc3dab4ea585935d1b98964f 
+Refreshing native plugins compatible for Editor in 2.52 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c9f832920a54617458ce3b43ce468768): Total: 0.083 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 67c5385ebc294bd4fa964f77aa6ba0da - Path: Assets/Generated/Player/Walk_08.png' with importer (TextureImporter)
+Imported 'GUID: 67c5385ebc294bd4fa964f77aa6ba0da' -> (Import Result ID: '7ac89a8445fef3ddaa61e4176665b71e') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5f2319d57cf29f6fccf97583c1305718 DependenciesID=a39c2cd3521673066aefac0bd839b354 StaticDependenciesID=50f8f50fdb8af6d0c3c582765f7c35fb 
+Refreshing native plugins compatible for Editor in 2.15 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c7b5dc0ceef0f0d498ec060ed7f75b4f): Total: 0.090 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b4f184121f417a744a2ee6241b60ef81 - Path: Assets/Generated/Player/Walk_09.png' with importer (TextureImporter)
+Imported 'GUID: b4f184121f417a744a2ee6241b60ef81' -> (Import Result ID: '01c1ce033e889779f4e8c92dc4b7c0c1') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5aeb03c238832041c57c15da63abbb84 DependenciesID=9a4f5c39f7a54cc3611ae09ccefc8106 StaticDependenciesID=c9d11b17195aff3e0aaf8e6d21ada3b7 
+Refreshing native plugins compatible for Editor in 2.31 ms, found 5 plugins.
+Asset Pipeline Refresh (id=d70bdd69d3f03bf488c64f98b9a2d5c6): Total: 0.105 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b4f184121f417a744a2ee6241b60ef81 - Path: Assets/Generated/Player/Walk_09.png' with importer (TextureImporter)
+Imported 'GUID: b4f184121f417a744a2ee6241b60ef81' -> (Import Result ID: 'b5fe0dacc36ccbf43e3ba4c7382487d5') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4343ea823831342260fdc35c8cd748ff DependenciesID=2e0e28a349c8377315cb90e7346afdb1 StaticDependenciesID=418376611878a4cf8297a137eccc13ce 
+Refreshing native plugins compatible for Editor in 2.58 ms, found 5 plugins.
+Asset Pipeline Refresh (id=21d26f8c9edc79549a1822d638ca3b31): Total: 0.093 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 574c9e3fdbf95d2428e9822feffbddc3 - Path: Assets/Generated/Player/Walk_10.png' with importer (TextureImporter)
+Imported 'GUID: 574c9e3fdbf95d2428e9822feffbddc3' -> (Import Result ID: 'f6e40e0decb812330edb595696537f40') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d4e626b99704ce87671469aeb0f708fb DependenciesID=a8e40d0b59fce9a50a05e3ed3392d724 StaticDependenciesID=e3dc27e399d834058d5a2b1a3e3ed08a 
+Refreshing native plugins compatible for Editor in 2.46 ms, found 5 plugins.
+Asset Pipeline Refresh (id=5d847f7ee4182004d93a3e28daac3d33): Total: 0.080 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 574c9e3fdbf95d2428e9822feffbddc3 - Path: Assets/Generated/Player/Walk_10.png' with importer (TextureImporter)
+Imported 'GUID: 574c9e3fdbf95d2428e9822feffbddc3' -> (Import Result ID: '9b55fab392a80d8f7403182729daf7ec') in 0.022 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=21b54e2ab170fc321406145618b33b29 DependenciesID=6c343c33560f2017bd0db0ac0cdb6fe3 StaticDependenciesID=a7f8d70f0596b6d1fe73b24d0f304f9c 
+Refreshing native plugins compatible for Editor in 2.24 ms, found 5 plugins.
+Asset Pipeline Refresh (id=9111c8395e39e594fbbc4443415946ff): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 06f28f4cea462fd4893546beaf62e36f - Path: Assets/Generated/Player/Walk_11.png' with importer (TextureImporter)
+Imported 'GUID: 06f28f4cea462fd4893546beaf62e36f' -> (Import Result ID: '5240210660f40b1738c28b2b359121fc') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=13f4a02f5921fa285a8c1a820a342f9e DependenciesID=67bf2e2829f989f737b46d05edb4d25c StaticDependenciesID=754deafc44829b4f531f16d7a84f6dc6 
+Refreshing native plugins compatible for Editor in 2.55 ms, found 5 plugins.
+Asset Pipeline Refresh (id=b051cfaf8c2df3844911477ee6931067): Total: 0.101 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 06f28f4cea462fd4893546beaf62e36f - Path: Assets/Generated/Player/Walk_11.png' with importer (TextureImporter)
+Imported 'GUID: 06f28f4cea462fd4893546beaf62e36f' -> (Import Result ID: '89b0362be8f014c5068d7da664c3e767') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4ed8c6a8b1b8e58333af3224ee6f834e DependenciesID=e40bb891113d67d5d4946708e3cdcbe0 StaticDependenciesID=6169dd08564e1ec7c55f749ef8d9cc40 
+Refreshing native plugins compatible for Editor in 3.26 ms, found 5 plugins.
+Asset Pipeline Refresh (id=08c1abf9000fd0643a77d657f71e56eb): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f2854929035646747a51aae5e7345ac8 - Path: Assets/Generated/Player/Walk_12.png' with importer (TextureImporter)
+Imported 'GUID: f2854929035646747a51aae5e7345ac8' -> (Import Result ID: 'b8cfbbfdd0a9f008b96c6c4d1dde4450') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c4091d8ed3e488d5df89d03c2ba3f4c4 DependenciesID=50d3e903e22effb7800ec77fd4a25fc2 StaticDependenciesID=af6141a0f2861a899fe9d70e6c436b5e 
+Refreshing native plugins compatible for Editor in 2.73 ms, found 5 plugins.
+Asset Pipeline Refresh (id=d27ed36eb5866154d906e97fe86c148d): Total: 0.082 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f2854929035646747a51aae5e7345ac8 - Path: Assets/Generated/Player/Walk_12.png' with importer (TextureImporter)
+Imported 'GUID: f2854929035646747a51aae5e7345ac8' -> (Import Result ID: 'a90276e7a5eb2935ca0fb7856d754a51') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9a525f7e37d7410ff11f254cc173f594 DependenciesID=f68a1012be159b71b7edb9f6f67af9f3 StaticDependenciesID=9b205ea45259263ab71b307292daac0d 
 Refreshing native plugins compatible for Editor in 2.25 ms, found 5 plugins.
-Asset Pipeline Refresh (id=a530cc32e3100f848a97affc2a564ed3): Total: 0.055 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Opening scene 'Assets/Scenes/SampleScene.unity'
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-Loaded scene 'Assets/Scenes/SampleScene.unity'
-	Deserialize:            42.702 ms
-	Integration:            101.266 ms
-	Integration of assets:  3.484 ms
-	Thread Wait Time:       0.012 ms
-	Total Operation Time:   147.463 ms
-Unloading 7054 unused Assets / (25.4 MB). Loaded Objects now: 9930.
-Memory consumption went from 0.64 GB to 0.61 GB.
-Total: 34.994300 ms (FindLiveObjects: 2.157000 ms CreateObjectMapping: 1.050600 ms MarkObjects: 23.821800 ms  DeleteObjects: 7.634500 ms)
-
-Asset Pipeline Refresh (id=73d6053a7dd7c064b8890032367d8b5c): Total: 0.039 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=86d9db88e6807a749a166d7f3b2f1fb2): Total: 0.089 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 9182854bf96f59f43bc95851adad8059 - Path: Assets/Generated/Player/Walk_13.png' with importer (TextureImporter)
+Imported 'GUID: 9182854bf96f59f43bc95851adad8059' -> (Import Result ID: '9739dda3c0d6f0731d0c1f6d6fa71f5a') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=97a529aeec05b6f0238c3d6efa4deffc DependenciesID=e36523e2f7a34dc3345ff92a2a1d5adf StaticDependenciesID=7519d9fee34b3a186a1edd61deaefae2 
+Refreshing native plugins compatible for Editor in 2.24 ms, found 5 plugins.
+Asset Pipeline Refresh (id=1425abd22c574024480b075dc32f9b29): Total: 0.100 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 9182854bf96f59f43bc95851adad8059 - Path: Assets/Generated/Player/Walk_13.png' with importer (TextureImporter)
+Imported 'GUID: 9182854bf96f59f43bc95851adad8059' -> (Import Result ID: '1b241c2d97e6b4730ab6fec2e7142fa2') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6ffec3de029afdb0dbd2420a7ad0f461 DependenciesID=31a58e4cf86702a6b5f7180d78664b7c StaticDependenciesID=8b1b0556d13baf731a6bfe32dcd24a08 
+Refreshing native plugins compatible for Editor in 2.22 ms, found 5 plugins.
+Asset Pipeline Refresh (id=d28ca637e187b774baa8ea8c57e54f11): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 3b7ce0804888ba14fa17eb68fc44653e - Path: Assets/Generated/Player/Walk_14.png' with importer (TextureImporter)
+Imported 'GUID: 3b7ce0804888ba14fa17eb68fc44653e' -> (Import Result ID: 'd718c97bf3d529bc2b73f135b8ec90ee') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=029189aa738424aaabed628d5e611b62 DependenciesID=bb77aea3f0cdaa65626851d9233ad1e5 StaticDependenciesID=abb4bdf4c6a4ecc3a43855cfb50b2bfb 
+Refreshing native plugins compatible for Editor in 2.38 ms, found 5 plugins.
+Asset Pipeline Refresh (id=35bca037dff92a94fa544698906f8571): Total: 0.081 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 3b7ce0804888ba14fa17eb68fc44653e - Path: Assets/Generated/Player/Walk_14.png' with importer (TextureImporter)
+Imported 'GUID: 3b7ce0804888ba14fa17eb68fc44653e' -> (Import Result ID: 'b9b74f68951cb12eb169745791e100a4') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1be7e1369282cf05414283193ac0df69 DependenciesID=56570170274fcdb6316c87941cb88f97 StaticDependenciesID=b4b081be0c4475e86cea0dfa76378dab 
+Refreshing native plugins compatible for Editor in 2.49 ms, found 5 plugins.
+Asset Pipeline Refresh (id=5bcbdfbaf888edb42a4e5c8e1f1b7bd3): Total: 0.088 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 68a91632c648d244abf49631c7a9d1ac - Path: Assets/Generated/Player/Walk_15.png' with importer (TextureImporter)
+Imported 'GUID: 68a91632c648d244abf49631c7a9d1ac' -> (Import Result ID: '8a6d0aed119062522aa1850d7f7a369c') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d58251ed4156dfc83f248468daffc95b DependenciesID=c81caef3a10e7b4b3463f76231d086a2 StaticDependenciesID=a77cc69b6f7124943b1ed9a9175031a2 
+Refreshing native plugins compatible for Editor in 2.49 ms, found 5 plugins.
+Asset Pipeline Refresh (id=0207181cbf355e248aee52c1019595b3): Total: 0.098 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 68a91632c648d244abf49631c7a9d1ac - Path: Assets/Generated/Player/Walk_15.png' with importer (TextureImporter)
+Imported 'GUID: 68a91632c648d244abf49631c7a9d1ac' -> (Import Result ID: '032ffa6f02563e55f1bce6970f5bc1df') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=60e3b15bca7316cfb0553638f354a3b9 DependenciesID=32c8ecbcf333a1f676d14d3583901a5f StaticDependenciesID=bf9f6af0621bc379673e1741507a1a6b 
+Refreshing native plugins compatible for Editor in 2.45 ms, found 5 plugins.
+Asset Pipeline Refresh (id=26ada96eba51a8d42a24d34117d5241c): Total: 0.084 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8ad0df09b77d634478ce98fe149dd6e9 - Path: Assets/Generated/Player/Walk_16.png' with importer (TextureImporter)
+Imported 'GUID: 8ad0df09b77d634478ce98fe149dd6e9' -> (Import Result ID: '37668b6be9249b7c39f6cb535ebcfff4') in 0.063 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7f78892b99fd33b94bdcb8955575ab50 DependenciesID=d8135a74aeae87e05b585804a09aac53 StaticDependenciesID=089298fafa4aa4a7e3e123632932af94 
+Refreshing native plugins compatible for Editor in 2.83 ms, found 5 plugins.
+Asset Pipeline Refresh (id=1502acab6d9cfd143a8ce42fa3040087): Total: 0.149 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8ad0df09b77d634478ce98fe149dd6e9 - Path: Assets/Generated/Player/Walk_16.png' with importer (TextureImporter)
+Imported 'GUID: 8ad0df09b77d634478ce98fe149dd6e9' -> (Import Result ID: 'c2d90be45bb1c50429ba2e3c44bae3de') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cf400baf3df51869dbc49524bf4f45b6 DependenciesID=4d12ff17b48e1b888190f75369e15058 StaticDependenciesID=36d2789b917ce747b4a79e715b45acc7 
+Refreshing native plugins compatible for Editor in 3.00 ms, found 5 plugins.
+Asset Pipeline Refresh (id=fb5e7535e205d9c4b851900ab15cb180): Total: 0.106 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: c83c381a3c47a1a469be5a77b6b65452 - Path: Assets/Generated/Player/Walk_17.png' with importer (TextureImporter)
+Imported 'GUID: c83c381a3c47a1a469be5a77b6b65452' -> (Import Result ID: '93cf29bb1137a49d023664ac644cd88f') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=872ecdaf8376a98a5a06eef39282d80e DependenciesID=9f7aebc908edc2e7b7cef306334c637a StaticDependenciesID=db6f767d3275974ce1aee9e60e8b19c7 
+Refreshing native plugins compatible for Editor in 2.78 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c0ee9adf11f0aff4db6f4a4292231778): Total: 0.101 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: c83c381a3c47a1a469be5a77b6b65452 - Path: Assets/Generated/Player/Walk_17.png' with importer (TextureImporter)
+Imported 'GUID: c83c381a3c47a1a469be5a77b6b65452' -> (Import Result ID: 'e6688292ee13febedec9eaab57fb946d') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0859951ccee7351af4fbe3a71dcfa5ec DependenciesID=e060c303b257a76a0ca53a84bdaff1c4 StaticDependenciesID=f2d986b3b36b3d697a412b4cfed616a2 
+Refreshing native plugins compatible for Editor in 3.04 ms, found 5 plugins.
+Asset Pipeline Refresh (id=e4906d22434682048b0e432afbf427e4): Total: 0.090 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 2f9cedb8294147647a3d5bc245dd3d33 - Path: Assets/Generated/Player/Walk_18.png' with importer (TextureImporter)
+Imported 'GUID: 2f9cedb8294147647a3d5bc245dd3d33' -> (Import Result ID: 'b7e838fd75a08b847554c2336a0659b3') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=825819bc25a0f4d5c54b0d34c9741bfc DependenciesID=4a796a35635700b92ecd01434c06554b StaticDependenciesID=b6fcc297eb2b61007c14ef119f5a831f 
+Refreshing native plugins compatible for Editor in 2.54 ms, found 5 plugins.
+Asset Pipeline Refresh (id=2186c17daf8d3d74c867ec06be9c300e): Total: 0.080 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 2f9cedb8294147647a3d5bc245dd3d33 - Path: Assets/Generated/Player/Walk_18.png' with importer (TextureImporter)
+Imported 'GUID: 2f9cedb8294147647a3d5bc245dd3d33' -> (Import Result ID: '38331cd779cab2bbb6f1dffa91304eab') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=abe2f400c75d652ad51b87ad94a59c76 DependenciesID=4eab0de38936f01b18fe20d991f60298 StaticDependenciesID=31d3bf90373ca66d8d16e9ed8e67a705 
+Refreshing native plugins compatible for Editor in 2.50 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c105a3d8131d9d0439b4c194e0881a1d): Total: 0.089 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 0707c8bf8c0f74d41b5e1efe9cc45770 - Path: Assets/Generated/Player/Walk_19.png' with importer (TextureImporter)
+Imported 'GUID: 0707c8bf8c0f74d41b5e1efe9cc45770' -> (Import Result ID: '26e4dadc2327d592e6d42d1f23142376') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=83f57bf11b1365f527c75e3bb7ea0566 DependenciesID=dab21f37707070034f265758e2a0d655 StaticDependenciesID=e2f14dd17d6e97dc481bdfb0af0dc2e5 
+Refreshing native plugins compatible for Editor in 2.31 ms, found 5 plugins.
+Asset Pipeline Refresh (id=ebfaca7c741215342ad118db7c00626a): Total: 0.108 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 0707c8bf8c0f74d41b5e1efe9cc45770 - Path: Assets/Generated/Player/Walk_19.png' with importer (TextureImporter)
+Imported 'GUID: 0707c8bf8c0f74d41b5e1efe9cc45770' -> (Import Result ID: '4864135faac265ea029c24e6817b4754') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=84443cbbdf75c91aad2577b3a527a9eb DependenciesID=b3724f44485e1e2959530ca11ff0d4c1 StaticDependenciesID=b8d0f6e1623aa1c7d9f1cf4af45bbee9 
+Refreshing native plugins compatible for Editor in 2.14 ms, found 5 plugins.
+Asset Pipeline Refresh (id=8b17aaa497e9b8148b537c2187ff6ae7): Total: 0.086 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 9ba4066be365ce84c9e09d4c3b5030d3 - Path: Assets/Generated/Player/Walk_20.png' with importer (TextureImporter)
+Imported 'GUID: 9ba4066be365ce84c9e09d4c3b5030d3' -> (Import Result ID: 'b71f06ebf221eb7d2daaae27a0f3c57b') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8731cde166f8972de02a57164d3d3e80 DependenciesID=22eef5edad3c1d365ef233416392519e StaticDependenciesID=c707c809905d97f783ff969c3df290a7 
+Refreshing native plugins compatible for Editor in 2.49 ms, found 5 plugins.
+Asset Pipeline Refresh (id=dde58207a025a1945971189e6fcced57): Total: 0.082 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 9ba4066be365ce84c9e09d4c3b5030d3 - Path: Assets/Generated/Player/Walk_20.png' with importer (TextureImporter)
+Imported 'GUID: 9ba4066be365ce84c9e09d4c3b5030d3' -> (Import Result ID: '736acf4b8bff143d2b66d7aef4eeef9a') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fe8faa33b1c97fc44159b567e1b5220f DependenciesID=2dcd7ad07e9b3c228c7e71f35202f989 StaticDependenciesID=fa32a65db4936fd80810f5d22b389d2d 
+Refreshing native plugins compatible for Editor in 2.47 ms, found 5 plugins.
+Asset Pipeline Refresh (id=2f3506229936af64b81d38ffed8e04e7): Total: 0.090 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: a242d7bcf5a8dfc4ebfeab165904a79f - Path: Assets/Generated/Player/Walk_21.png' with importer (TextureImporter)
+Imported 'GUID: a242d7bcf5a8dfc4ebfeab165904a79f' -> (Import Result ID: '8437266e23e504d881ae114e6e152251') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=367489010362136e07139265fc8fd952 DependenciesID=d940dc4b996d90f1fb1f850ecdccebe5 StaticDependenciesID=ec151d54cb8e920ccba40af4f6746938 
+Refreshing native plugins compatible for Editor in 2.77 ms, found 5 plugins.
+Asset Pipeline Refresh (id=4750f3009b81250459fc83c65e7828e0): Total: 0.096 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: a242d7bcf5a8dfc4ebfeab165904a79f - Path: Assets/Generated/Player/Walk_21.png' with importer (TextureImporter)
+Imported 'GUID: a242d7bcf5a8dfc4ebfeab165904a79f' -> (Import Result ID: 'fd256cdd8fa5480732571cf78b3c614e') in 0.025 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ca05521ae128a6313f90e7d496816404 DependenciesID=225786e36faae3edb37d0b956789866f StaticDependenciesID=fea611e3389fb14a9392d208d1a6d7d9 
+Refreshing native plugins compatible for Editor in 3.54 ms, found 5 plugins.
+Asset Pipeline Refresh (id=19bbe0fffff0f1b43b7de569111b4095): Total: 0.117 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 9aacb9abfcc41164da13bd774e0ae168 - Path: Assets/Generated/Player/Walk_22.png' with importer (TextureImporter)
+Imported 'GUID: 9aacb9abfcc41164da13bd774e0ae168' -> (Import Result ID: 'b3083cb4f09c727524ad44aae0b6556c') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8afc00a03bd8f89eb868152fa38a2b4e DependenciesID=c0ac9e0247308411e9f52a988f205176 StaticDependenciesID=bc462a82cc008825c03bd47e96e36811 
+Refreshing native plugins compatible for Editor in 2.55 ms, found 5 plugins.
+Asset Pipeline Refresh (id=8900cd83676456248a11d0f203ee5d72): Total: 0.082 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 9aacb9abfcc41164da13bd774e0ae168 - Path: Assets/Generated/Player/Walk_22.png' with importer (TextureImporter)
+Imported 'GUID: 9aacb9abfcc41164da13bd774e0ae168' -> (Import Result ID: '85ffc9cce3f23c2b1b3ce21e9fce2521') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c62c309a400214b3599f0d5345d62cf9 DependenciesID=15efc19b678345b66f7432285b0f0a76 StaticDependenciesID=f96f3eb2261e80208e0258623bf02b3a 
+Refreshing native plugins compatible for Editor in 2.70 ms, found 5 plugins.
+Asset Pipeline Refresh (id=62abdf8321975e3459a99860e9ad846b): Total: 0.090 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: d9b6014c27781b042b90d523f24a34fa - Path: Assets/Sprite/движение_насти.png' with importer (TextureImporter)
+Imported 'GUID: d9b6014c27781b042b90d523f24a34fa' -> (Import Result ID: 'ca6cc60a8e83664cf3b6f348fe86ebd9') in 0.147 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f9cd8ede5acc7a5a279c57977f2ccfe9 DependenciesID=ba50d53e98f1ebf725bf8e0dfc65906f StaticDependenciesID=d11da39dcdbafdcaf36ca985371436de 
+Refreshing native plugins compatible for Editor in 2.65 ms, found 5 plugins.
+Asset Pipeline Refresh (id=66c011c925899ef40b80b2a7fc9701bc): Total: 0.224 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8271a718ac3358a4eb9cb8ebff1c81fc - Path: Assets/Generated/Nastya' with importer (DefaultImporter)
+Imported 'GUID: 8271a718ac3358a4eb9cb8ebff1c81fc' -> (Import Result ID: '9b040543c1e05e0685d66fc370e79124') in 0.009 seconds [static dependencies only]. Details - ImportResultOutputID=c32cd6ee70463c69d1972d104c649238 DependenciesID=7990b029def57a91e80e19614d211cd7 StaticDependenciesID=eb72f3b84b68f090cc66fed136057e53 
+Importing 'GUID: f737c491e9340674fa75eedc9b9c0895 - Path: Assets/Generated/Nastya/Idle.png' with importer (TextureImporter)
+Imported 'GUID: f737c491e9340674fa75eedc9b9c0895' -> (Import Result ID: '4af1f8926581de30243273665349fd06') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3adfab1636d097401a28fddac1e593f4 DependenciesID=0bd1e31e72dc705016370640c1978238 StaticDependenciesID=10c300a061ac20b557488ab3951091aa 
+Refreshing native plugins compatible for Editor in 2.69 ms, found 5 plugins.
+Asset Pipeline Refresh (id=04d6856513e91024aa7b5f6cc2865ed9): Total: 0.102 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f737c491e9340674fa75eedc9b9c0895 - Path: Assets/Generated/Nastya/Idle.png' with importer (TextureImporter)
+Imported 'GUID: f737c491e9340674fa75eedc9b9c0895' -> (Import Result ID: 'e9c2918556ccefbef0138fd6069862d7') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f91c34fabeacc6f7b0fb04fab8313adb DependenciesID=80e3c3b4213e7fc60954f841614972e8 StaticDependenciesID=5743f2ea63298a3e676d21fb6e99d3c7 
+Refreshing native plugins compatible for Editor in 2.54 ms, found 5 plugins.
+Asset Pipeline Refresh (id=35a1ad50a8118444c8d29c2648efbc75): Total: 0.090 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: d6e02fb620ad4f2439f7699ee0dccc03 - Path: Assets/Generated/Nastya/Walk_00.png' with importer (TextureImporter)
+Imported 'GUID: d6e02fb620ad4f2439f7699ee0dccc03' -> (Import Result ID: '6a61472ad02c5a89b2e2739b397373d6') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0513612a33be3c491be1b656f312a1b2 DependenciesID=616c5d89995b99c9da52d2a36082c755 StaticDependenciesID=bf2b7062c06f447d914429ec72cf5634 
+Refreshing native plugins compatible for Editor in 2.50 ms, found 5 plugins.
+Asset Pipeline Refresh (id=d93f9fa0c7ad8f54f8e3c1b0c9c457f9): Total: 0.105 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: d6e02fb620ad4f2439f7699ee0dccc03 - Path: Assets/Generated/Nastya/Walk_00.png' with importer (TextureImporter)
+Imported 'GUID: d6e02fb620ad4f2439f7699ee0dccc03' -> (Import Result ID: '583bd73116ce10a85f7edd92bdc18f51') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ce2b3191e17424ebeb5f32c42edefed4 DependenciesID=0cea896e7ce898ce79f0b4be951e6be1 StaticDependenciesID=466935eaf27c1c213e89073f5e9d5dad 
+Refreshing native plugins compatible for Editor in 2.56 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c24ad1191ff518649905d92cba1fc961): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 5959791da9f37384b84219764af7ec97 - Path: Assets/Generated/Nastya/Walk_01.png' with importer (TextureImporter)
+Imported 'GUID: 5959791da9f37384b84219764af7ec97' -> (Import Result ID: 'c04fd8c82fb76f695271a17ccfefa085') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5e701ce25c7976678c40564b20218d1e DependenciesID=1fa63ef5da49189b41d20ae0ddf1532c StaticDependenciesID=3f186bc6cf322464faf5ebe05f364070 
+Refreshing native plugins compatible for Editor in 2.39 ms, found 5 plugins.
+Asset Pipeline Refresh (id=45cb767559dcaba43971b7be7ed8aee3): Total: 0.081 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 5959791da9f37384b84219764af7ec97 - Path: Assets/Generated/Nastya/Walk_01.png' with importer (TextureImporter)
+Imported 'GUID: 5959791da9f37384b84219764af7ec97' -> (Import Result ID: 'd04254c4dca82ef1bf11ace42dcb73fc') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e3cea920f77447b30f3929fbddec1047 DependenciesID=b45e493c8e446b261cba5b67b1d66479 StaticDependenciesID=418d83fc37b6055ae9051e6c63b3eed4 
+Refreshing native plugins compatible for Editor in 2.41 ms, found 5 plugins.
+Asset Pipeline Refresh (id=683d70c4972884e4f947bb7709d8e68e): Total: 0.089 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: ce7d8069f5cb0f04f986f380bd3be622 - Path: Assets/Generated/Nastya/Walk_02.png' with importer (TextureImporter)
+Imported 'GUID: ce7d8069f5cb0f04f986f380bd3be622' -> (Import Result ID: '893672784754d46eac6a3c2ce033e8a0') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1e16444d7d6aef01b3e5fbbb7ba15e07 DependenciesID=9b106d065f34245c97beda55b2a4a038 StaticDependenciesID=8bf5d80cf0befa7b38b42cb0191f96d6 
+Refreshing native plugins compatible for Editor in 2.50 ms, found 5 plugins.
+Asset Pipeline Refresh (id=5f66b2838c930a14688244d72a7676c8): Total: 0.123 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: ce7d8069f5cb0f04f986f380bd3be622 - Path: Assets/Generated/Nastya/Walk_02.png' with importer (TextureImporter)
+Imported 'GUID: ce7d8069f5cb0f04f986f380bd3be622' -> (Import Result ID: '502b8b8faed839dcab89d43174782f14') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5bff865b646c5083f81cce9a8444e7af DependenciesID=d6832681398d2e7239e97a427c34a5f0 StaticDependenciesID=bca4fc4f1907347bbc8265830e5ef633 
+Refreshing native plugins compatible for Editor in 2.09 ms, found 5 plugins.
+Asset Pipeline Refresh (id=9f81a8ff57b8a90459c7d4221ee1a05f): Total: 0.087 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: abab866fd38a4be47b2744ec3480287c - Path: Assets/Generated/Nastya/Walk_03.png' with importer (TextureImporter)
+Imported 'GUID: abab866fd38a4be47b2744ec3480287c' -> (Import Result ID: '2e24c6ff917bef3126838a153bb90a8d') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b6d9245aeed3f30128c295918b136552 DependenciesID=3d883504a28fabf76ab4209e97e6487e StaticDependenciesID=cabc5be8127b42b5aa8aacd588ea778b 
+Refreshing native plugins compatible for Editor in 2.20 ms, found 5 plugins.
+Asset Pipeline Refresh (id=7ea09c37326087e458a501197117efb8): Total: 0.083 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: abab866fd38a4be47b2744ec3480287c - Path: Assets/Generated/Nastya/Walk_03.png' with importer (TextureImporter)
+Imported 'GUID: abab866fd38a4be47b2744ec3480287c' -> (Import Result ID: '5f32bf3e772c7283f1980d2d5830a1bc') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2d1fbabe4948a686a9eb0fa35a33d557 DependenciesID=10271e51904584c76a8627e1fce51a76 StaticDependenciesID=2824b022ba5e020900c18fadd62cb3d9 
+Refreshing native plugins compatible for Editor in 2.87 ms, found 5 plugins.
+Asset Pipeline Refresh (id=8ec55c48d90316643918994d88204fb6): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 073beb112b5a6cf4d9ae1f148f0f4513 - Path: Assets/Generated/Nastya/Walk_04.png' with importer (TextureImporter)
+Imported 'GUID: 073beb112b5a6cf4d9ae1f148f0f4513' -> (Import Result ID: 'c31398afe6e11659f9e62d1145333000') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b926c24da899c2faee7293538fb1df5a DependenciesID=326e05c4289197a6355f6a61464963dd StaticDependenciesID=0c6e9973894e704117a9341b32a85a32 
+Refreshing native plugins compatible for Editor in 2.82 ms, found 5 plugins.
+Asset Pipeline Refresh (id=038d4a0a3789f6046b2ebc6e1eb4d7f8): Total: 0.108 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 073beb112b5a6cf4d9ae1f148f0f4513 - Path: Assets/Generated/Nastya/Walk_04.png' with importer (TextureImporter)
+Imported 'GUID: 073beb112b5a6cf4d9ae1f148f0f4513' -> (Import Result ID: '2bd1a2eb7cdc1e0a89732e7ee6974c25') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=98a4f92d68c7d248af483beea3ccb300 DependenciesID=9aabf05749f7e9563f1d64dedfc3ec4a StaticDependenciesID=69239b56e7d8197a883f195f82ec1b6e 
+Refreshing native plugins compatible for Editor in 2.88 ms, found 5 plugins.
+Asset Pipeline Refresh (id=ce7350d2326dc474ca52e86ee06bee67): Total: 0.088 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 53201a8c8a82ecb4db05f07251a0269e - Path: Assets/Generated/Nastya/Walk_05.png' with importer (TextureImporter)
+Imported 'GUID: 53201a8c8a82ecb4db05f07251a0269e' -> (Import Result ID: 'b0401843fbba8a31d5c95d6e66964b35') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5326b652d1e1022d7b1203b8d57706e1 DependenciesID=315229d62e1e25f8a6b91eddd0ac165f StaticDependenciesID=eceb2295a2d4301f2af56c00d501fd53 
+Refreshing native plugins compatible for Editor in 2.25 ms, found 5 plugins.
+Asset Pipeline Refresh (id=854649b1b48a0744eb5ddfc7d7f7e5e2): Total: 0.081 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 53201a8c8a82ecb4db05f07251a0269e - Path: Assets/Generated/Nastya/Walk_05.png' with importer (TextureImporter)
+Imported 'GUID: 53201a8c8a82ecb4db05f07251a0269e' -> (Import Result ID: 'aeb8a3cbf49abab7861263f8ff58f6a5') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=be7585fbb7ac8cf33f6d315f43a1dab2 DependenciesID=ae62724103e2d9508593a3e6c5cbbb38 StaticDependenciesID=133ed51bdb7a626d467a0c8442f197ff 
+Refreshing native plugins compatible for Editor in 2.10 ms, found 5 plugins.
+Asset Pipeline Refresh (id=aadcc298b2917b549a92a321d199d69c): Total: 0.087 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b517489581debad4b993b72349fae939 - Path: Assets/Generated/Nastya/Walk_06.png' with importer (TextureImporter)
+Imported 'GUID: b517489581debad4b993b72349fae939' -> (Import Result ID: 'e43ad3167e337af022d6c03d4506f16b') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ac19bc59cd9d31abd270df7ed544e9a DependenciesID=34e3547ed8222164765bca52e7cc780b StaticDependenciesID=3961b035d74b8db77065782f877f8e07 
+Refreshing native plugins compatible for Editor in 2.56 ms, found 5 plugins.
+Asset Pipeline Refresh (id=5ef102f6415f6f041a0b8813edfb771e): Total: 0.102 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b517489581debad4b993b72349fae939 - Path: Assets/Generated/Nastya/Walk_06.png' with importer (TextureImporter)
+Imported 'GUID: b517489581debad4b993b72349fae939' -> (Import Result ID: 'be415a24c622a4213a181b7bf4a41050') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=85bcfecaa2f013a0ec35f319eb7e64ee DependenciesID=a57ba2066c80fe915b2f892f3e038ead StaticDependenciesID=8f96ba50d6113f944647231e316a7b48 
+Refreshing native plugins compatible for Editor in 2.48 ms, found 5 plugins.
+Asset Pipeline Refresh (id=a960187bdd228c244b307e4da5997664): Total: 0.100 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: c6ac6efe0883ca64fb3eed45be4c9a51 - Path: Assets/Generated/Nastya/Walk_07.png' with importer (TextureImporter)
+Imported 'GUID: c6ac6efe0883ca64fb3eed45be4c9a51' -> (Import Result ID: 'ee9ae922a5cb2b6ade86529f687da06b') in 0.022 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d8784930aab19a48edec525599199c37 DependenciesID=6c277f26bcf1c048e6c0477d0ed8ace6 StaticDependenciesID=dc1db3003de72c791b206c11c234dd43 
+Refreshing native plugins compatible for Editor in 2.74 ms, found 5 plugins.
+Asset Pipeline Refresh (id=7d3f6141e48bd6140b48f1215c31408e): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: c6ac6efe0883ca64fb3eed45be4c9a51 - Path: Assets/Generated/Nastya/Walk_07.png' with importer (TextureImporter)
+Imported 'GUID: c6ac6efe0883ca64fb3eed45be4c9a51' -> (Import Result ID: 'f0bff58a88a0edab1cbda758d6aa0b21') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1dd8a13cbea3c77b24031ad4a754d115 DependenciesID=903b74d1a1fa348f5b65ba11fd2a0d8b StaticDependenciesID=abf25e61d69644c823c1eaa7a3d46812 
+Refreshing native plugins compatible for Editor in 2.26 ms, found 5 plugins.
+Asset Pipeline Refresh (id=f851929529c11f540953bcd3906dacaf): Total: 0.100 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 6b7fad4f4e918704f97da9a637360223 - Path: Assets/Generated/Nastya/Walk_08.png' with importer (TextureImporter)
+Imported 'GUID: 6b7fad4f4e918704f97da9a637360223' -> (Import Result ID: 'b1bb5ed1597f4be3db94dea2911e8602') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b505fd2c70f5130bb1438ade4476e6e9 DependenciesID=d3b08ebf0ce1866847684ff2ee8ab4b4 StaticDependenciesID=0a4ee75ed96b9d5b2e16cd41faa704ee 
+Refreshing native plugins compatible for Editor in 2.45 ms, found 5 plugins.
+Asset Pipeline Refresh (id=9dd5d1c349a258b4eaf3ebb785b9b85e): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 6b7fad4f4e918704f97da9a637360223 - Path: Assets/Generated/Nastya/Walk_08.png' with importer (TextureImporter)
+Imported 'GUID: 6b7fad4f4e918704f97da9a637360223' -> (Import Result ID: '1894d04a12efcd16edd2ca6a5482f254') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7247b08a41be5288c15f19730c504fbe DependenciesID=ada691b57f519ba2b422d5ca22ebbc6a StaticDependenciesID=a3f93964b8a13cd5e8880582ad250cff 
+Refreshing native plugins compatible for Editor in 2.41 ms, found 5 plugins.
+Asset Pipeline Refresh (id=15e9c9f7d134c5b4b8b3acd8fd94971c): Total: 0.089 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: e05eb33c4ec0df045a47a0fa69047ea5 - Path: Assets/Generated/Nastya/Walk_09.png' with importer (TextureImporter)
+Imported 'GUID: e05eb33c4ec0df045a47a0fa69047ea5' -> (Import Result ID: '0c105373b20a39598f9d0ed549765f1f') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=82cfa769360c43157c4ca0c2beccaf58 DependenciesID=cc1daf8c83f90f56a84174253e69b969 StaticDependenciesID=069992f733aa624a232ed7098d4736b5 
+Refreshing native plugins compatible for Editor in 2.78 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c409ae5008aac8f44bfba10f5234f657): Total: 0.081 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: e05eb33c4ec0df045a47a0fa69047ea5 - Path: Assets/Generated/Nastya/Walk_09.png' with importer (TextureImporter)
+Imported 'GUID: e05eb33c4ec0df045a47a0fa69047ea5' -> (Import Result ID: '0f2ecd9da7bbd52c16fe3ebc75435617') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=11a4bc2c61aa4c9faba9cf31c504f691 DependenciesID=e6c518e606b430b8449ee58f39f94596 StaticDependenciesID=dae19932536b8e8a35ed816d4d4a5b0e 
+Refreshing native plugins compatible for Editor in 3.19 ms, found 5 plugins.
+Asset Pipeline Refresh (id=94f22bf4c973df04386f529851349ce1): Total: 0.090 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 182ad3afccb0d814aa95c6c1444b2333 - Path: Assets/Generated/Nastya/Walk_10.png' with importer (TextureImporter)
+Imported 'GUID: 182ad3afccb0d814aa95c6c1444b2333' -> (Import Result ID: '3854654065905e4539952ece5bf058dd') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ed3b09f8c59c0cbdbb13e45be189611 DependenciesID=ca7acb3f47364cebd46c475a29d41dd9 StaticDependenciesID=829a93c133a11af689e1b9761804be78 
+Refreshing native plugins compatible for Editor in 2.52 ms, found 5 plugins.
+Asset Pipeline Refresh (id=66412ba447d4eb2428a2066dc7f443d3): Total: 0.103 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 182ad3afccb0d814aa95c6c1444b2333 - Path: Assets/Generated/Nastya/Walk_10.png' with importer (TextureImporter)
+Imported 'GUID: 182ad3afccb0d814aa95c6c1444b2333' -> (Import Result ID: '06f19e0759251ea7bd6a32de28e185fd') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eb817ea070747c9b4e70d7ad33cb42cb DependenciesID=9ef63a3c5a06d8e1d62db4bf987a9c4d StaticDependenciesID=51763dd5787f32570e6a4f5fcfb50a53 
+Refreshing native plugins compatible for Editor in 2.77 ms, found 5 plugins.
+Asset Pipeline Refresh (id=28f4818a51dddd54bbae916b31e8c531): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: e545e97809429604fbd39f022b7e79f3 - Path: Assets/Generated/Nastya/Walk_11.png' with importer (TextureImporter)
+Imported 'GUID: e545e97809429604fbd39f022b7e79f3' -> (Import Result ID: '794b913adf3ae18d7563ecbdb927049a') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ceb204b17fdc5cd0f7296c469ccf13f DependenciesID=6ba00bb5d6779fa78bf144f9e7fd2818 StaticDependenciesID=c9cf9240255c652bdc8d1fa24b421131 
+Refreshing native plugins compatible for Editor in 2.15 ms, found 5 plugins.
+Asset Pipeline Refresh (id=6859e267e112f3e41995b46f54588e82): Total: 0.081 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: e545e97809429604fbd39f022b7e79f3 - Path: Assets/Generated/Nastya/Walk_11.png' with importer (TextureImporter)
+Imported 'GUID: e545e97809429604fbd39f022b7e79f3' -> (Import Result ID: '5a224d61ba0327cd2869799aa174027b') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=593e44dd39620f3d32ebf3ce35916ad3 DependenciesID=fa4ba8c9d963c647d9f6d0e33e43fec4 StaticDependenciesID=f162ba7dbd08b93f91651d7b6a154b00 
+Refreshing native plugins compatible for Editor in 2.49 ms, found 5 plugins.
+Asset Pipeline Refresh (id=49ba982dba6fa5f4480955324221a852): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 9e15188fc4ffe694f95da27f74c46b3e - Path: Assets/Generated/Nastya/Walk_12.png' with importer (TextureImporter)
+Imported 'GUID: 9e15188fc4ffe694f95da27f74c46b3e' -> (Import Result ID: 'd10fd5293d22ff1ed65b5e49bee4070d') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=50ff9d34424e8f2fd45ccfe78dbb9325 DependenciesID=68e0d3c426b6a546026e8e3ba5abcac8 StaticDependenciesID=270e6c4aa2faeacdde4016fc4c2d959e 
+Refreshing native plugins compatible for Editor in 2.46 ms, found 5 plugins.
+Asset Pipeline Refresh (id=8f4a2c7dd4eba1940833c8ef9f933ae2): Total: 0.105 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 9e15188fc4ffe694f95da27f74c46b3e - Path: Assets/Generated/Nastya/Walk_12.png' with importer (TextureImporter)
+Imported 'GUID: 9e15188fc4ffe694f95da27f74c46b3e' -> (Import Result ID: '5c93d3f35636360a6bca244622e33928') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d004e8375de5eff86c902d4063a4b007 DependenciesID=d3f456fd36bf0af2c5a43394515bd6fc StaticDependenciesID=3664bf07892aee80e9c0b2e2dc1b5395 
+Refreshing native plugins compatible for Editor in 12.29 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c5b2dbd5d2a45314a8a397e0e7831562): Total: 0.109 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b14ee9d4c5b36a04faaa1cd6e0658dce - Path: Assets/Generated/Nastya/Walk_13.png' with importer (TextureImporter)
+Imported 'GUID: b14ee9d4c5b36a04faaa1cd6e0658dce' -> (Import Result ID: '2d71189064ce6b282942629393b8fd8a') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a88961d64ac32ce46aa9cb86ef817a00 DependenciesID=f1057a693448f5660ee0d8feb766153e StaticDependenciesID=b8259fd996442d91fa039acc021551a5 
+Refreshing native plugins compatible for Editor in 2.82 ms, found 5 plugins.
+Asset Pipeline Refresh (id=360273ce820931542b523e2cad3abbf8): Total: 0.128 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b14ee9d4c5b36a04faaa1cd6e0658dce - Path: Assets/Generated/Nastya/Walk_13.png' with importer (TextureImporter)
+Imported 'GUID: b14ee9d4c5b36a04faaa1cd6e0658dce' -> (Import Result ID: 'a9dbd0e0d76228d83dfc53d479a424d9') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=87c460397e6b587713713d595ac049fe DependenciesID=a33014cb3d7cd44efa1f7a642f579622 StaticDependenciesID=751ffaddd4814fe14465c1bbbd76c30e 
+Refreshing native plugins compatible for Editor in 2.77 ms, found 5 plugins.
+Asset Pipeline Refresh (id=678f3ceaa40111d4881e8438b06018cc): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: ef663f998c3dc174d99071086e9dd2d7 - Path: Assets/Generated/Nastya/Walk_14.png' with importer (TextureImporter)
+Imported 'GUID: ef663f998c3dc174d99071086e9dd2d7' -> (Import Result ID: 'a016eff9d06ecd8945cad0f598eb959a') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ff455d8159c2171aef7e1a91af636fd0 DependenciesID=0105fd52694afe9cd7900db2dc59ff89 StaticDependenciesID=02ca4ebbf27e140dc1d6980ef43ab9ed 
+Refreshing native plugins compatible for Editor in 2.48 ms, found 5 plugins.
+Asset Pipeline Refresh (id=31a9b0ee99069324badc85fe5e2ecc10): Total: 0.127 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: ef663f998c3dc174d99071086e9dd2d7 - Path: Assets/Generated/Nastya/Walk_14.png' with importer (TextureImporter)
+Imported 'GUID: ef663f998c3dc174d99071086e9dd2d7' -> (Import Result ID: 'be0f44e0a8d53d03620862d9fb41b949') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=96fe4b5186d4b23ee84c8b6006726d44 DependenciesID=3b715d33c8d5a79b2f2f1da55759eeea StaticDependenciesID=1b7c52838386161d1e9030580a5597bc 
+Refreshing native plugins compatible for Editor in 2.93 ms, found 5 plugins.
+Asset Pipeline Refresh (id=25fbb52ec2d562a46a57334c5c455e37): Total: 0.096 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f29fb12f0e5683b4092d780864532b5e - Path: Assets/Generated/Nastya/Walk_15.png' with importer (TextureImporter)
+Imported 'GUID: f29fb12f0e5683b4092d780864532b5e' -> (Import Result ID: '59ad8d4bb31d20d20b81420f8f6409b2') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=92140fb10b9e61c3b13077528625370e DependenciesID=d66dcdc7ad8e018291974dcb3fac5943 StaticDependenciesID=e9a8abea6181deca083a8788151d257a 
+Refreshing native plugins compatible for Editor in 2.29 ms, found 5 plugins.
+Asset Pipeline Refresh (id=4730518e7c269ef4fb5e912bc658f049): Total: 0.106 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f29fb12f0e5683b4092d780864532b5e - Path: Assets/Generated/Nastya/Walk_15.png' with importer (TextureImporter)
+Imported 'GUID: f29fb12f0e5683b4092d780864532b5e' -> (Import Result ID: 'c2246cf873cecab21cbfccfe39a47069') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6b153356fe410f24c5ca17bc6b468bca DependenciesID=fd396e0bdb39748694317d006620786e StaticDependenciesID=9c64a65202d18462e605cc702ac344f2 
+Refreshing native plugins compatible for Editor in 2.59 ms, found 5 plugins.
+Asset Pipeline Refresh (id=9ce5d68260e887541b7c0078884d5a83): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8dbd774a5cd8c15409e5d44defef27a9 - Path: Assets/Generated/Nastya/Walk_16.png' with importer (TextureImporter)
+Imported 'GUID: 8dbd774a5cd8c15409e5d44defef27a9' -> (Import Result ID: '14e933e272b997163623ba75a228473f') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c746c039f72508195684b1fc36237ec4 DependenciesID=1dfc4d1943baf10a6df0e408d37c44b6 StaticDependenciesID=46cfdfaaf56c7f265320c0d4226ce384 
+Refreshing native plugins compatible for Editor in 2.39 ms, found 5 plugins.
+Asset Pipeline Refresh (id=bc6e8c591875b0e45956b7d0741ff3ff): Total: 0.212 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8dbd774a5cd8c15409e5d44defef27a9 - Path: Assets/Generated/Nastya/Walk_16.png' with importer (TextureImporter)
+Imported 'GUID: 8dbd774a5cd8c15409e5d44defef27a9' -> (Import Result ID: '63050ceabe109dd024ba8228bd93c350') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6b8732fa10f8b7c1e2d4a6f4c9aa9fe6 DependenciesID=446689efef58fa6e56651fc6fb0844c0 StaticDependenciesID=3b3c074c09c836f9fdb96f98f8a2fe93 
+Refreshing native plugins compatible for Editor in 2.68 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c5064f51663e5f14590dbed82bd3ba77): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b4a91ef8b634a134db4c18aa4f5ddd5f - Path: Assets/Generated/Nastya/Walk_17.png' with importer (TextureImporter)
+Imported 'GUID: b4a91ef8b634a134db4c18aa4f5ddd5f' -> (Import Result ID: '470028a4a219997f1ce237a146c34b03') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d812ac0cb6c48e97ffb10dd61c1f3cb2 DependenciesID=47f6c32a9351de2f2ca8760468ef3310 StaticDependenciesID=13ee63e0a33a8462f7673870fce0e7ea 
+Refreshing native plugins compatible for Editor in 2.29 ms, found 5 plugins.
+Asset Pipeline Refresh (id=a64b281a0a11c4346b239dd586717402): Total: 0.081 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b4a91ef8b634a134db4c18aa4f5ddd5f - Path: Assets/Generated/Nastya/Walk_17.png' with importer (TextureImporter)
+Imported 'GUID: b4a91ef8b634a134db4c18aa4f5ddd5f' -> (Import Result ID: 'aca164231dcea6bae4ad3e817974c52b') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=11ff2349a5930269be6451ed7203cdc6 DependenciesID=ebb829028205a8399992bcb7960cd606 StaticDependenciesID=75b4065ba26f3eb2c53cf75b2ec69a34 
+Refreshing native plugins compatible for Editor in 3.11 ms, found 5 plugins.
+Asset Pipeline Refresh (id=1df06e02f4fece84a879fa050ff9d60a): Total: 0.109 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1b56e55ceeebea9439f688a6a60b40ca - Path: Assets/Generated/Nastya/Walk_18.png' with importer (TextureImporter)
+Imported 'GUID: 1b56e55ceeebea9439f688a6a60b40ca' -> (Import Result ID: '402c6ffd02a3e7fe93abc498da3b2381') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=397d3116b58d1cafbc56f46166447ee8 DependenciesID=24b1fe93e8b07a235bfd4f40e23be560 StaticDependenciesID=128d09821a729b6ae1ed740c1041e105 
+Refreshing native plugins compatible for Editor in 2.55 ms, found 5 plugins.
+Asset Pipeline Refresh (id=ccc1a0b2de37fd04a9a97802b4565369): Total: 0.189 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1b56e55ceeebea9439f688a6a60b40ca - Path: Assets/Generated/Nastya/Walk_18.png' with importer (TextureImporter)
+Imported 'GUID: 1b56e55ceeebea9439f688a6a60b40ca' -> (Import Result ID: 'cadf4eecf9101384fe456b839fb4a3cd') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a1bf8552142ee0f0cc59a1ddb88dcf84 DependenciesID=40c68da75cd6d8f3026438d4f00a194b StaticDependenciesID=291469268b45ec5f09394f455567d6f8 
+Refreshing native plugins compatible for Editor in 2.60 ms, found 5 plugins.
+Asset Pipeline Refresh (id=71c9b66409d514c4fb57e558728c8892): Total: 0.096 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd - Path: Assets/Generated/Nastya/Walk_19.png' with importer (TextureImporter)
+Imported 'GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd' -> (Import Result ID: '0a8ca34e57672cb2f65be18d8beeaedc') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e1fe9060f12c11ab8701303ae20443a1 DependenciesID=537f00b7a8a5ff7bd1d3c9e729ba7d1a StaticDependenciesID=e32db537223f86cb87fe4dc74a985081 
+Refreshing native plugins compatible for Editor in 3.64 ms, found 5 plugins.
+Asset Pipeline Refresh (id=1e878c2b065f1c94f97ddc4e808cf43d): Total: 0.082 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd - Path: Assets/Generated/Nastya/Walk_19.png' with importer (TextureImporter)
+Imported 'GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd' -> (Import Result ID: '836323801e072f02455189754e2f294f') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e05dd0067fabe4a746b7c808314c9d16 DependenciesID=4d883388a33d582f6dca12e83743c04a StaticDependenciesID=45fd68c0245891fccbfd68d8bba017b6 
+Refreshing native plugins compatible for Editor in 2.92 ms, found 5 plugins.
+Asset Pipeline Refresh (id=13f30876cf7df834fa0631bb54d33e37): Total: 0.086 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 99b8c3b55b667694c96e936c67c38a66 - Path: Assets/Generated/Nastya/Walk_20.png' with importer (TextureImporter)
+Imported 'GUID: 99b8c3b55b667694c96e936c67c38a66' -> (Import Result ID: '7bba4141faa1f8a6e35b0c518c6d06e2') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=db291009d786c6cbfe0017454896bc7a DependenciesID=70e4434c15d76cea70bcb8c723b20383 StaticDependenciesID=fedc2cff098aff6b016b7aec190c554f 
+Refreshing native plugins compatible for Editor in 2.30 ms, found 5 plugins.
+Asset Pipeline Refresh (id=a2ba7ffe368a29d4cb95b8cad7bcd42d): Total: 0.103 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 99b8c3b55b667694c96e936c67c38a66 - Path: Assets/Generated/Nastya/Walk_20.png' with importer (TextureImporter)
+Imported 'GUID: 99b8c3b55b667694c96e936c67c38a66' -> (Import Result ID: '6d1c9746c4e53297e8e20a1b25984b2c') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c187818518e80d46ac5bbe731cf0007f DependenciesID=cb089c64a4273094634597bce38a954e StaticDependenciesID=64543e3a4a5c7617ccde2955818f9000 
+Refreshing native plugins compatible for Editor in 3.00 ms, found 5 plugins.
+Asset Pipeline Refresh (id=3778c9df6253d0f4f83bcbb67a148063): Total: 0.089 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ef04fb8c6f2475541bad0eddf9068c40): Total: 0.012 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=b0017f71be7c3e94281b0b2316a59763): Total: 0.006 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
 Starting new worker id: 1 with log in A:/юинити/New_Start/Logs/AssetImportWorkerHW1.log
-[Worker0] Imported GUID: 1e1f3ed434277ef42be1801cac6e6569 - Path: Assets/Sprite/движение_гг.png - Importer: PreviewImporter -> (ImportResultId: '0ca6f93b71709d855adc11408cbccb0c') in 0.3465079 seconds
-[Worker0] Imported GUID: d9b6014c27781b042b90d523f24a34fa - Path: Assets/Sprite/движение_насти.png - Importer: PreviewImporter -> (ImportResultId: '6ec98f2d8c447f0ca43a84615311cd6c') in 0.1067496 seconds
+[Worker0] Imported GUID: 1e1f3ed434277ef42be1801cac6e6569 - Path: Assets/Sprite/движение_гг.png - Importer: PreviewImporter -> (ImportResultId: 'c40e5fc7d53a6bd2a497fc724e21e090') in 0.2990946 seconds
+[Worker0] Imported GUID: d9b6014c27781b042b90d523f24a34fa - Path: Assets/Sprite/движение_насти.png - Importer: PreviewImporter -> (ImportResultId: 'cdeea605b46be626a73ee3f6f8e0a16e') in 0.2242381 seconds
 Worker ready: AssetImportWorkerHW1 1
-Asset Pipeline Refresh (id=e8661408c4c387f46ba58c9645ff868d): Total: 0.007 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
-Importing 'GUID: fbb7a022151923442a61c7c1b46c08ee - Path: Assets/Sprite/главный фон.png' with importer (TextureImporter)
-Imported 'GUID: fbb7a022151923442a61c7c1b46c08ee' -> (Import Result ID: 'a59ad31447c05c12d44528a481e5f8c8') in 0.263 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5de61cd4b87ddf6b9e4a063549ce0cc7 DependenciesID=8d5c9b768fa0d556d3d422f910af5bb2 StaticDependenciesID=f44811fef38c636f5431cacaf04c71af 
-Refreshing native plugins compatible for Editor in 3.50 ms, found 5 plugins.
-
-Asset Pipeline Refresh (id=cb9272fcfc989c444ba34154ee89e08f): Total: 0.371 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
-	(Values over 0.05ms)
-	Summary:
-		Imports: total=1 (actual=1, local cache=0, cache server=0)
-		Asset DB Process Time: managed=1 ms, native=344 ms
-		Asset DB Callback time: managed=12 ms, native=12 ms
-		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
-		Project Asset Count: scripts=1698, non-scripts=3360
-		Asset File Changes: new=1, changed=1, moved=0, deleted=0
-		Scan Filter Count: 0
-	ApplyChangesToAssetFolders: 0.237ms
-	Scan: 18.482ms
-	Collect global state as custom dependencies: 0.458ms
-	OnSourceAssetsModified: 0.071ms
-	ProcessAssetsWithTransientArtifactChanges: 0.119ms
-	CategorizeAssets: 30.041ms
-	ImportOutOfDateAssets: 265.707ms (0.297ms without children)
-		ImportManagerImport: 263.956ms (0.398ms without children)
-		UnloadImportedAssets: 0.235ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.765ms
-		ImportSchedulerStart: 0.397ms
-	PostProcessAllAssets: 13.767ms
-		XRBuildSystem.XRAssetImported 7.495ms
-		MonoPostProcessAllAssets: 5.937ms
-			SyncVS.PostprocessSyncProject 1.752ms
-			ConfigAssetsTracker.OnPostprocessAllAssets 0.912ms
-			AssetChangedListener.OnPostprocessAllAssets 0.742ms
-			SpriteSlicePostprocessor.OnPostprocessAllAssets 0.697ms
-			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.412ms
-			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.329ms
-			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.141ms
-			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.121ms
-			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.098ms
-			AssetPostprocessor.OnPostprocessAllAssets 0.090ms
-	PostAssetChangesProfiler: 11.601ms
-	GatherAllCurrentPrimaryImportResultRevisions: 0.385ms
-	UnloadStreamsBegin: 0.132ms
-	PersistCurrentRevisions: 0.295ms
-	Untracked: 29.491ms
-
-[Worker0] Imported GUID: fbb7a022151923442a61c7c1b46c08ee - Path: Assets/Sprite/главный фон.png - Importer: PreviewImporter -> (ImportResultId: '1bd116720f75687ff07b963f555dd5cf') in 0.1358842 seconds
-Asset Pipeline Refresh (id=a85897ab2003bcb45bf3c6c89e987696): Total: 0.014 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
-SpriteAtlasPacking completed in 0.007053 sec
-Entering Playmode with Reload Domain disabled.
-If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
-Loaded scene 'Temp/__Backupscenes/0.backup'
-	Deserialize:            6.643 ms
-	Integration:            675.511 ms
-	Integration of assets:  0.121 ms
-	Thread Wait Time:       0.016 ms
-	Total Operation Time:   682.291 ms
-Unloading 45 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 8.977900 ms
-Loaded scene 'Assets/Scenes/Location-1.unity'
-	Deserialize:            10.848 ms
-	Integration:            44.523 ms
-	Integration of assets:  0.350 ms
-	Thread Wait Time:       6.139 ms
-	Total Operation Time:   61.861 ms
-Unloading 59 unused Assets / (1.7 MB). Loaded Objects now: 10105.
-Memory consumption went from 0.64 GB to 0.64 GB.
-Total: 43.715800 ms (FindLiveObjects: 1.521400 ms CreateObjectMapping: 0.552600 ms MarkObjects: 40.509000 ms  DeleteObjects: 0.686300 ms)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.682100 ms
-Loaded scene 'Assets/Scenes/Location-1.unity'
-	Deserialize:            1.811 ms
-	Integration:            35.560 ms
-	Integration of assets:  0.002 ms
-	Thread Wait Time:       0.015 ms
-	Total Operation Time:   37.388 ms
-Unloading 1 unused Assets / (2.6 KB). Loaded Objects now: 10105.
-Memory consumption went from 0.64 GB to 0.64 GB.
-Total: 43.654500 ms (FindLiveObjects: 1.147100 ms CreateObjectMapping: 0.617100 ms MarkObjects: 41.229800 ms  DeleteObjects: 0.354400 ms)
-
-Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
-Loaded scene 'Temp/__Backupscenes/0.backup'
-	Deserialize:            4.068 ms
-	Integration:            33.543 ms
-	Integration of assets:  0.321 ms
-	Thread Wait Time:       0.007 ms
-	Total Operation Time:   37.939 ms
-Unloading 25 unused Assets / (9.5 MB). Loaded Objects now: 10072.
-Memory consumption went from 0.64 GB to 0.63 GB.
-Total: 40.359900 ms (FindLiveObjects: 1.462000 ms CreateObjectMapping: 0.653800 ms MarkObjects: 37.729400 ms  DeleteObjects: 0.213500 ms)
-
-[Licensing::Client] Successfully resolved entitlement details
+[Worker0] Imported GUID: 8271a718ac3358a4eb9cb8ebff1c81fc - Path: Assets/Generated/Nastya - Importer: PreviewImporter -> (ImportResultId: 'c420c297c1dfcc57394fe8b7c10b10ce') in 0.0221667 seconds
+[Worker0] Imported GUID: f737c491e9340674fa75eedc9b9c0895 - Path: Assets/Generated/Nastya/Idle.png - Importer: PreviewImporter -> (ImportResultId: 'cc684910267b00747231132d090f8dd1') in 0.0515489 seconds
+[Worker0] Imported GUID: ef663f998c3dc174d99071086e9dd2d7 - Path: Assets/Generated/Nastya/Walk_14.png - Importer: PreviewImporter -> (ImportResultId: 'e4b226fd5fb9a99c291fc81540ae981d') in 0.1153058 seconds
+[Worker0] Imported GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd - Path: Assets/Generated/Nastya/Walk_19.png - Importer: PreviewImporter -> (ImportResultId: '586a0b910f3cd52e8f3bb993f5a3e086') in 0.0676251 seconds
+[Worker1] Imported GUID: d6e02fb620ad4f2439f7699ee0dccc03 - Path: Assets/Generated/Nastya/Walk_00.png - Importer: PreviewImporter -> (ImportResultId: 'a27871949b7ff4c3f315763827313bf1') in 0.2688425 seconds
+[Worker0] Imported GUID: 9e15188fc4ffe694f95da27f74c46b3e - Path: Assets/Generated/Nastya/Walk_12.png - Importer: PreviewImporter -> (ImportResultId: '24f7cde1dd3e7dc7eae0d4ae2fe1fd9e') in 0.0375227 seconds
+[Worker1] Imported GUID: f29fb12f0e5683b4092d780864532b5e - Path: Assets/Generated/Nastya/Walk_15.png - Importer: PreviewImporter -> (ImportResultId: '479c2fe0b45b4f68c4a8e7b250b4fd71') in 0.0366094 seconds
+[Worker0] Imported GUID: 073beb112b5a6cf4d9ae1f148f0f4513 - Path: Assets/Generated/Nastya/Walk_04.png - Importer: PreviewImporter -> (ImportResultId: 'd7eb37903dd564520ef86d467900fe9b') in 0.0334083 seconds
+[Worker1] Imported GUID: 53201a8c8a82ecb4db05f07251a0269e - Path: Assets/Generated/Nastya/Walk_05.png - Importer: PreviewImporter -> (ImportResultId: 'd781b4580f04cd45926fc66ff38f4674') in 0.0312087 seconds
+[Worker0] Imported GUID: 5959791da9f37384b84219764af7ec97 - Path: Assets/Generated/Nastya/Walk_01.png - Importer: PreviewImporter -> (ImportResultId: '2db8b8fa3240111c43efe4d366d890ab') in 0.0297812 seconds
+[Worker1] Imported GUID: c6ac6efe0883ca64fb3eed45be4c9a51 - Path: Assets/Generated/Nastya/Walk_07.png - Importer: PreviewImporter -> (ImportResultId: '9a1e10219441d541a4614f66c463b2ce') in 0.0371023 seconds
+[Worker0] Imported GUID: 6b7fad4f4e918704f97da9a637360223 - Path: Assets/Generated/Nastya/Walk_08.png - Importer: PreviewImporter -> (ImportResultId: '195c5d1ea1f7a479dd1cc9c101370c24') in 0.0360355 seconds
+[Worker1] Imported GUID: b14ee9d4c5b36a04faaa1cd6e0658dce - Path: Assets/Generated/Nastya/Walk_13.png - Importer: PreviewImporter -> (ImportResultId: '429f817cc247eadbdd95b3ab8e937fea') in 0.0352499 seconds
+[Worker0] Imported GUID: e05eb33c4ec0df045a47a0fa69047ea5 - Path: Assets/Generated/Nastya/Walk_09.png - Importer: PreviewImporter -> (ImportResultId: '0cadd3f6565cbacef054bba4283ed4f1') in 0.0357629 seconds
+[Worker1] Imported GUID: 99b8c3b55b667694c96e936c67c38a66 - Path: Assets/Generated/Nastya/Walk_20.png - Importer: PreviewImporter -> (ImportResultId: 'd64ce1ca329f344e93b7dec7781b6638') in 0.032628 seconds
+[Worker0] Imported GUID: abab866fd38a4be47b2744ec3480287c - Path: Assets/Generated/Nastya/Walk_03.png - Importer: PreviewImporter -> (ImportResultId: '08bf0e9504dc0c31fe32e7354adf8670') in 0.0330198 seconds
+[Worker1] Imported GUID: ce7d8069f5cb0f04f986f380bd3be622 - Path: Assets/Generated/Nastya/Walk_02.png - Importer: PreviewImporter -> (ImportResultId: '8102b88cbb43287542403ba6ea2c9d9e') in 0.0356441 seconds
+[Worker0] Imported GUID: b517489581debad4b993b72349fae939 - Path: Assets/Generated/Nastya/Walk_06.png - Importer: PreviewImporter -> (ImportResultId: '91ea09d4ea07ed2e9878c038ec72c97d') in 0.0354072 seconds
+[Worker1] Imported GUID: 182ad3afccb0d814aa95c6c1444b2333 - Path: Assets/Generated/Nastya/Walk_10.png - Importer: PreviewImporter -> (ImportResultId: '3d67b77a999f5bcc40dbe080a4ba2f92') in 0.0374867 seconds
+[Worker0] Imported GUID: e545e97809429604fbd39f022b7e79f3 - Path: Assets/Generated/Nastya/Walk_11.png - Importer: PreviewImporter -> (ImportResultId: 'b457cfcf5c62cc29dfc4b5906fb43e8b') in 0.0382974 seconds
+[Worker1] Imported GUID: b4a91ef8b634a134db4c18aa4f5ddd5f - Path: Assets/Generated/Nastya/Walk_17.png - Importer: PreviewImporter -> (ImportResultId: '0340c5b47d6317822dbe8e4663a83264') in 0.0360616 seconds
+[Worker0] Imported GUID: 8dbd774a5cd8c15409e5d44defef27a9 - Path: Assets/Generated/Nastya/Walk_16.png - Importer: PreviewImporter -> (ImportResultId: '4544ad149466b9bd061fb60c2b1e103c') in 0.0383025 seconds
+[Worker1] Imported GUID: 1b56e55ceeebea9439f688a6a60b40ca - Path: Assets/Generated/Nastya/Walk_18.png - Importer: PreviewImporter -> (ImportResultId: '0069e9e7818270779f1df7044aff6542') in 0.0348732 seconds
+[Worker0] Imported GUID: 80c4a64b3fb0a35499c4b95baf7a937a - Path: Assets/Generated/Player/Idle.png - Importer: PreviewImporter -> (ImportResultId: '0f497e9ed2ad41e8ccc7ddf954445d8b') in 0.0587433 seconds
+[Worker1] Imported GUID: ed11cbb00b6790f47bd6f86a5df967c9 - Path: Assets/Generated/Player/Walk_00.png - Importer: PreviewImporter -> (ImportResultId: '3302f96b8ff4bbfaedd8f4b5439932fd') in 0.0588794 seconds
+[Worker0] Imported GUID: 8c05ec3b6474bc6448e78fd5fb9a32ac - Path: Assets/Generated/Player/Walk_03.png - Importer: PreviewImporter -> (ImportResultId: '29dc8cfe03b410d3ac5b77dd31b0496b') in 0.0591183 seconds
+[Worker1] Imported GUID: 9aacb9abfcc41164da13bd774e0ae168 - Path: Assets/Generated/Player/Walk_22.png - Importer: PreviewImporter -> (ImportResultId: 'a42317959a9ba497e4166cfb5b0c511a') in 0.0603741 seconds
+[Worker0] Imported GUID: 67c5385ebc294bd4fa964f77aa6ba0da - Path: Assets/Generated/Player/Walk_08.png - Importer: PreviewImporter -> (ImportResultId: 'ec4e7ef9f476d71d3275917a87559ebb') in 0.0296248 seconds
+[Worker1] Imported GUID: 90be1514f96d73543b665ff73fd23f64 - Path: Assets/Generated/Player/Walk_06.png - Importer: PreviewImporter -> (ImportResultId: '278f67504c88098daee58f11eb087481') in 0.0311095 seconds
+[Worker0] Imported GUID: 06f28f4cea462fd4893546beaf62e36f - Path: Assets/Generated/Player/Walk_11.png - Importer: PreviewImporter -> (ImportResultId: '9b02c37e406dd6ae42108e377e71f724') in 0.0350563 seconds
+[Worker1] Imported GUID: 3b7ce0804888ba14fa17eb68fc44653e - Path: Assets/Generated/Player/Walk_14.png - Importer: PreviewImporter -> (ImportResultId: 'cb15f5b03a60996c682325de6a6983b9') in 0.0378824 seconds
+[Worker1] Imported GUID: 68a91632c648d244abf49631c7a9d1ac - Path: Assets/Generated/Player/Walk_15.png - Importer: PreviewImporter -> (ImportResultId: 'a768fcfb7be60ccc5c9d35e76bf4ecb5') in 0.0367677 seconds
+[Worker0] Imported GUID: 0242e3ac16fd93c409f48f774bcade60 - Path: Assets/Generated/Player/Walk_01.png - Importer: PreviewImporter -> (ImportResultId: '3a721a396883c24fc82a5d4badda9190') in 0.0428735 seconds
+[Worker1] Imported GUID: 0707c8bf8c0f74d41b5e1efe9cc45770 - Path: Assets/Generated/Player/Walk_19.png - Importer: PreviewImporter -> (ImportResultId: '4fae710d3c44827d014061b212dc1d58') in 0.0353275 seconds
+[Worker0] Imported GUID: 8ad0df09b77d634478ce98fe149dd6e9 - Path: Assets/Generated/Player/Walk_16.png - Importer: PreviewImporter -> (ImportResultId: '7ea611621155966b38f52ef038fcaa16') in 0.03638 seconds
+[Worker1] Imported GUID: f2854929035646747a51aae5e7345ac8 - Path: Assets/Generated/Player/Walk_12.png - Importer: PreviewImporter -> (ImportResultId: '01dd61f17754b99b8a31169b23eae92b') in 0.0397924 seconds
+[Worker0] Imported GUID: 431b6272fe652c64f95f52496f989551 - Path: Assets/Generated/Player/Walk_04.png - Importer: PreviewImporter -> (ImportResultId: '9eec8251a952d9efaeccce6ca631670f') in 0.0430106 seconds
+[Worker1] Imported GUID: d0e8f3e15bcc7d442b42ca0b0d92ef1a - Path: Assets/Generated/Player/Walk_02.png - Importer: PreviewImporter -> (ImportResultId: 'e4e596b4e662dde3ed7bc0c189f18bb2') in 0.0470123 seconds
+[Worker0] Imported GUID: 9182854bf96f59f43bc95851adad8059 - Path: Assets/Generated/Player/Walk_13.png - Importer: PreviewImporter -> (ImportResultId: '12543ef7f3370607b0b4a1d26ee51eac') in 0.047309 seconds
+[Worker1] Imported GUID: f441f4e9dc3cade4a96aaf18fa0d00e0 - Path: Assets/Generated/Player/Walk_05.png - Importer: PreviewImporter -> (ImportResultId: '1c63fd90cf853f0aa3c24c0243de8635') in 0.037958 seconds
+[Worker0] Imported GUID: c83c381a3c47a1a469be5a77b6b65452 - Path: Assets/Generated/Player/Walk_17.png - Importer: PreviewImporter -> (ImportResultId: 'c2493fbe3cd27c60801ecb7ae84c1b4a') in 0.0367553 seconds
+[Worker1] Imported GUID: 2f9cedb8294147647a3d5bc245dd3d33 - Path: Assets/Generated/Player/Walk_18.png - Importer: PreviewImporter -> (ImportResultId: 'ae21817ee2c82afd2ea964acec482b17') in 0.0393614 seconds
+[Worker0] Imported GUID: 9ba4066be365ce84c9e09d4c3b5030d3 - Path: Assets/Generated/Player/Walk_20.png - Importer: PreviewImporter -> (ImportResultId: '28f462810c8ace36548bd1f6aff600d0') in 0.0413418 seconds
+[Worker1] Imported GUID: a5a5610ae4db293459e7702c9e9a4e22 - Path: Assets/Generated/Player/Walk_07.png - Importer: PreviewImporter -> (ImportResultId: 'e34568ebc3a4355103e9e8ae6d828ac0') in 0.0378689 seconds
+[Worker0] Imported GUID: 574c9e3fdbf95d2428e9822feffbddc3 - Path: Assets/Generated/Player/Walk_10.png - Importer: PreviewImporter -> (ImportResultId: '3231b385ac78a8c84dde53c17484ff45') in 0.0378382 seconds
+[Worker1] Imported GUID: a242d7bcf5a8dfc4ebfeab165904a79f - Path: Assets/Generated/Player/Walk_21.png - Importer: PreviewImporter -> (ImportResultId: '699d25bb26472e084245fbe50467ae36') in 0.0371004 seconds
+[Worker0] Imported GUID: b4f184121f417a744a2ee6241b60ef81 - Path: Assets/Generated/Player/Walk_09.png - Importer: PreviewImporter -> (ImportResultId: '807852db09a9e6df3a17c3127cdd4efe') in 0.0368994 seconds
+Asset Pipeline Refresh (id=938d1fb6bbd3caf44b3db8546c8c7172): Total: 0.009 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=6caeb0b88e408fd43a0882a8d89aac0e): Total: 0.007 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=5c2b7c045da68e9469f9fa2f210db8b8): Total: 0.006 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
 Importing 'GUID: 00000000000000009000000000000000 - Path: ProjectSettings/QualitySettings.asset' with importer (LibraryAssetImporter)
 Imported 'GUID: 00000000000000009000000000000000' -> (Import Result ID: 'ad6ca2034549a8dd6f88c2e2fb528c97') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2a108b3da874f726c62fbe5f12be4a8a DependenciesID=1aedbe56ae62f321fe459982db2fa012 StaticDependenciesID=e9a43e809c5953780a851aff477bfce8 
-Importing 'GUID: 2e498d1c8094910479dc3e1b768306a4 - Path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset' with importer (NativeFormatImporter)
-Imported 'GUID: 2e498d1c8094910479dc3e1b768306a4' -> (Import Result ID: 'd7b7988875c133fa127c6d02fed7a4f1') in 0.005 seconds [static dependencies only]. Details - ImportResultOutputID=15c8c079d336d28f621b2cb41a27d1c5 DependenciesID=b898131b2ff9766dd6b73a527ba02f37 StaticDependenciesID=8dc6b5400127394e8dddc22cc3431358 
-Refreshing native plugins compatible for Editor in 2.90 ms, found 5 plugins.
-Asset Pipeline Refresh (id=a28dbcc2203b08a4ab2f96a39b5ec85e): Total: 0.075 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-Importing 'GUID: 8c9cfa26abfee488c85f1582747f6a02 - Path: Assets/Scenes/SampleScene.unity' with importer (DefaultImporter)
-Imported 'GUID: 8c9cfa26abfee488c85f1582747f6a02' -> (Import Result ID: '19832c03ea5ab7901ec0b01ed89d40a4') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=024c942fddc2cb857ccb9edff708c760 DependenciesID=c2ac951ca29eb90a2fe506974859e8bf StaticDependenciesID=881f0ae9755dbef4800aea8063689314 
-Refreshing native plugins compatible for Editor in 3.36 ms, found 5 plugins.
-Asset Pipeline Refresh (id=971fbd4e52474c742bcf82a831b25d7a): Total: 0.072 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-[Worker0] Imported GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: PreviewImporter -> (ImportResultId: '5cf0f0f3e1127d83df15c744accd52e9') in 0.026287 seconds
-Opening scene 'Assets/Scenes/Location-1.unity'
-Unloading 45 Unused Serialized files (Serialized files now loaded: 0)
-Loaded scene 'Assets/Scenes/Location-1.unity'
-	Deserialize:            2.426 ms
-	Integration:            37.875 ms
-	Integration of assets:  0.738 ms
-	Thread Wait Time:       0.023 ms
-	Total Operation Time:   41.061 ms
-Unloading 189 unused Assets / (0.5 MB). Loaded Objects now: 10053.
-Memory consumption went from 0.65 GB to 0.65 GB.
-Total: 45.272800 ms (FindLiveObjects: 1.425700 ms CreateObjectMapping: 0.660900 ms MarkObjects: 42.439100 ms  DeleteObjects: 0.435800 ms)
+Refreshing native plugins compatible for Editor in 3.00 ms, found 5 plugins.
+Asset Pipeline Refresh (id=c98176af01581ac40890f19ebace0e77): Total: 0.032 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity' with importer (DefaultImporter)
+Imported 'GUID: f0e7c751bdb501a429b4f431ff78e18d' -> (Import Result ID: 'd678240a768cc5397d43706686f4f2a9') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6463d6a1513956972eba81e60c71c998 DependenciesID=df6ebaed3716294e2cc258c3abf0c17c StaticDependenciesID=8d5ef4d32aab9c2e913609a26c821b52 
+Refreshing native plugins compatible for Editor in 2.77 ms, found 5 plugins.
+Asset Pipeline Refresh (id=7d55d91f8dbad174db1507c0c982d89e): Total: 0.060 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Worker0] Imported GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: PreviewImporter -> (ImportResultId: '62b93cdff4a080b99ae1d8f2270f897c') in 0.0264077 seconds
+[Worker0] Imported GUID: 8c9cfa26abfee488c85f1582747f6a02 - Path: Assets/Scenes/SampleScene.unity - Importer: PreviewImporter -> (ImportResultId: '750af900e00882ad5f6752fdd14e5f10') in 0.0273687 seconds
+Opening scene 'Assets/Scenes/SampleScene.unity'
+Unloading 62 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/SampleScene.unity'
+	Deserialize:            39.811 ms
+	Integration:            90.600 ms
+	Integration of assets:  1.739 ms
+	Thread Wait Time:       0.021 ms
+	Total Operation Time:   132.171 ms
+Unloading 7123 unused Assets / (20.0 MB). Loaded Objects now: 10081.
+Memory consumption went from 0.65 GB to 0.63 GB.
+Total: 34.330800 ms (FindLiveObjects: 2.046500 ms CreateObjectMapping: 0.993900 ms MarkObjects: 23.813700 ms  DeleteObjects: 7.152700 ms)
 
-Asset Pipeline Refresh (id=ea4cd70c6d1230b46a4909d58ad9e898): Total: 0.038 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
-Asset Pipeline Refresh (id=61ea78d655af827488b14aba51d4a322): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
-Asset Pipeline Refresh (id=d6f62683321355144a9ebe56d2322a24): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
-Asset Pipeline Refresh (id=608d22935c2bcb5479709b11bee3a4ef): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
-Asset Pipeline Refresh (id=575aed6c0a032714b990883fb7d8019d): Total: 0.006 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
-Asset Pipeline Refresh (id=bd03d654d538a7e4f95706a6a3f690ea): Total: 0.009 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
-Asset Pipeline Refresh (id=c98d3bbe9514b8e4cac1389416634d85): Total: 0.006 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Opening scene 'Assets/Scenes/Location-1.unity'
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Location-1.unity'
+	Deserialize:            2.234 ms
+	Integration:            44.252 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.044 ms
+	Total Operation Time:   46.534 ms
+Unloading 22 unused Assets / (4.7 MB). Loaded Objects now: 10003.
+Memory consumption went from 0.62 GB to 0.61 GB.
+Total: 25.312700 ms (FindLiveObjects: 1.428900 ms CreateObjectMapping: 0.538800 ms MarkObjects: 22.944500 ms  DeleteObjects: 0.131500 ms)
+
+Opening scene 'Assets/Scenes/Location-1.unity'
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Location-1.unity'
+	Deserialize:            1.988 ms
+	Integration:            21.058 ms
+	Integration of assets:  0.005 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   23.059 ms
+Unloading 0 unused Assets / (193.4 KB). Loaded Objects now: 10000.
+Memory consumption went from 0.61 GB to 0.61 GB.
+Total: 29.493800 ms (FindLiveObjects: 1.124600 ms CreateObjectMapping: 0.366100 ms MarkObjects: 27.694200 ms  DeleteObjects: 0.043700 ms)
+
+Opening scene 'Assets/Scenes/Location-1.unity'
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Location-1.unity'
+	Deserialize:            1.445 ms
+	Integration:            21.857 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   23.313 ms
+Unloading 0 unused Assets / (Unknown). Loaded Objects now: 10000.
+Memory consumption went from 0.61 GB to 0.61 GB.
+Total: 29.802600 ms (FindLiveObjects: 1.214100 ms CreateObjectMapping: 0.674200 ms MarkObjects: 27.614500 ms  DeleteObjects: 0.031800 ms)
+
+Asset Pipeline Refresh (id=e0792ce1eb3c5fc44a297dfbd903f376): Total: 0.029 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=ed413cabb10cec94591c2c8827efb3db): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=d2038b5a1af4de34296d2be451a303d4): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
 GetVirtualKey: Could not map char: n (110) to any virtual key
 GetVirtualKey: Could not map char: o (111) to any virtual key
 GetVirtualKey: Could not map char: s (115) to any virtual key
@@ -868,11 +1210,382 @@ GetVirtualKey: Could not map char: a (97) to any virtual key
 GetVirtualKey: Could not map char: a (97) to any virtual key
 GetVirtualKey: Could not map char: c (99) to any virtual key
 GetVirtualKey: Could not map char: u (117) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+Asset Pipeline Refresh (id=f152cc46e4773bc47a21966c57cd3198): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=884b96d1b87f05f4d8aff4faa7299933): Total: 0.006 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=ed0bd02a6038ee84183e2825adb4d7a2): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=09221f2487e89cc45ae06d111faf0ec7): Total: 0.004 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=b5fc0fa6ecdbb9f42b5e7fe290e09257): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=9c279e3397f8c6341b756cf8afd9c5fb): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=f9f31e3121499b2479783e45293bf98c): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+[Worker0] Imported GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ecb4850eca0f7f1b62b8f8421b60f8ae') in 0.1316367 seconds
+[Worker1] Imported GUID: 68a91632c648d244abf49631c7a9d1ac - Path: Assets/Generated/Player/Walk_15.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '73dd45e9d23726c28e364e772e0483e4') in 0.2485972 seconds
+[Worker0] Imported GUID: f441f4e9dc3cade4a96aaf18fa0d00e0 - Path: Assets/Generated/Player/Walk_05.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'cafdb1eae37a7fb85a03eb25ee39b5ad') in 0.1394807 seconds
+[Worker1] Imported GUID: 9aacb9abfcc41164da13bd774e0ae168 - Path: Assets/Generated/Player/Walk_22.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '91572015c33db184573b5becdbf92b27') in 0.0384011 seconds
+[Worker0] Imported GUID: 9182854bf96f59f43bc95851adad8059 - Path: Assets/Generated/Player/Walk_13.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0a4fd862f169308261c157cc7344e735') in 0.0374025 seconds
+[Worker1] Imported GUID: c83c381a3c47a1a469be5a77b6b65452 - Path: Assets/Generated/Player/Walk_17.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '25cefa3541601354abc93c298dc023ed') in 0.0355876 seconds
+[Worker0] Imported GUID: 1b56e55ceeebea9439f688a6a60b40ca - Path: Assets/Generated/Nastya/Walk_18.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd506814d99e9afb900b99b8b9234464d') in 0.0457217 seconds
+[Worker1] Imported GUID: fbb7a022151923442a61c7c1b46c08ee - Path: Assets/Sprite/главный фон.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'cd2d880941b87c593915d3c47be83934') in 0.0512016 seconds
+[Worker0] Imported GUID: ed11cbb00b6790f47bd6f86a5df967c9 - Path: Assets/Generated/Player/Walk_00.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1d698bf72bb92afc20b827568553f728') in 0.0377452 seconds
+[Worker1] Imported GUID: 538c10895c0910d46a4a710826a9b583 - Path: Assets/Generated/Player - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'f969a38e9ce63ae2c2ac91793e2d1c3a') in 0.0303876 seconds
+[Worker0] Imported GUID: 8ad0df09b77d634478ce98fe149dd6e9 - Path: Assets/Generated/Player/Walk_16.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6579b62448637a0e51b680b1cc91b5e2') in 0.0326846 seconds
+[Worker1] Imported GUID: 9e15188fc4ffe694f95da27f74c46b3e - Path: Assets/Generated/Nastya/Walk_12.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '2a0295f04cca7ab8c7868467f1926650') in 0.0331985 seconds
+[Worker0] Imported GUID: 8c9cfa26abfee488c85f1582747f6a02 - Path: Assets/Scenes/SampleScene.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '069ede7ef9f8c5aaf4a9d4b3baddb148') in 0.0286039 seconds
+[Worker1] Imported GUID: ef663f998c3dc174d99071086e9dd2d7 - Path: Assets/Generated/Nastya/Walk_14.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd8670ead8d99242ffffa538bb9d9a3c8') in 0.0360209 seconds
+[Worker0] Imported GUID: 90be1514f96d73543b665ff73fd23f64 - Path: Assets/Generated/Player/Walk_06.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd8f86512f78c0cf2c6a74df1f37ebb6c') in 0.0373831 seconds
+[Worker1] Imported GUID: 6b7fad4f4e918704f97da9a637360223 - Path: Assets/Generated/Nastya/Walk_08.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3bfe762fa6a8dcfa3f55f4a4d268f0db') in 0.0366802 seconds
+[Worker0] Imported GUID: d0e8f3e15bcc7d442b42ca0b0d92ef1a - Path: Assets/Generated/Player/Walk_02.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '57029eacc59b30bdf2a35d9e865db288') in 0.0386086 seconds
+[Worker0] Imported GUID: 574c9e3fdbf95d2428e9822feffbddc3 - Path: Assets/Generated/Player/Walk_10.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '75dbacf67e9d8b14dccd5db51dcdd44b') in 0.0383496 seconds
+[Worker1] Imported GUID: 1e1f3ed434277ef42be1801cac6e6569 - Path: Assets/Sprite/движение_гг.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7f15d6052359f2334400379630c5f405') in 0.077749 seconds
+[Worker0] Imported GUID: e05eb33c4ec0df045a47a0fa69047ea5 - Path: Assets/Generated/Nastya/Walk_09.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ac8f9be05659a3375749e74d88967b37') in 0.039117 seconds
+[Worker1] Imported GUID: e585a992713e7bf469bc90500a0cc4c9 - Path: Assets/Editor - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '941783012e5de1b21206fde0437a9444') in 0.0295984 seconds
+[Worker0] Imported GUID: f2854929035646747a51aae5e7345ac8 - Path: Assets/Generated/Player/Walk_12.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '0a478203cc19550b3f7d61295ab17474') in 0.0361442 seconds
+[Worker1] Imported GUID: a5a5610ae4db293459e7702c9e9a4e22 - Path: Assets/Generated/Player/Walk_07.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '89dbea79a6daa29417d7411e47fe76e6') in 0.040746 seconds
+[Worker0] Imported GUID: 087024707fb04fe45a9a0e6423dd69be - Path: Assets/Srpt/DoorTransitionTrigger.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c9e0d136a39c90d7ea3350f28e2a5c4a') in 0.0336757 seconds
+[Worker1] Imported GUID: b14ee9d4c5b36a04faaa1cd6e0658dce - Path: Assets/Generated/Nastya/Walk_13.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'ec5af7a63e998cf6ed37017d93fbdd39') in 0.0374695 seconds
+[Worker0] Imported GUID: 889cb6445fbe76c41ae6ad5c69d79c20 - Path: Assets/Srpt/CharacterAnimationSetupEditor.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'faeaa480a19a1c2926be5faae66ed733') in 0.0297125 seconds
+[Worker1] Imported GUID: d6e02fb620ad4f2439f7699ee0dccc03 - Path: Assets/Generated/Nastya/Walk_00.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e277df16579f0ae616d7edf12e2635c4') in 0.0349059 seconds
+[Worker0] Imported GUID: 0242e3ac16fd93c409f48f774bcade60 - Path: Assets/Generated/Player/Walk_01.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '9df4dddcb4ffb9f0f6cbc2276ae6fa80') in 0.0409288 seconds
+[Worker1] Imported GUID: f737c491e9340674fa75eedc9b9c0895 - Path: Assets/Generated/Nastya/Idle.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4e33cce345fef956874f5736054d3ed5') in 0.0442935 seconds
+[Worker0] Imported GUID: b4f184121f417a744a2ee6241b60ef81 - Path: Assets/Generated/Player/Walk_09.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1fc8001e26b1a7e0c4c0eb47d59749bd') in 0.0374724 seconds
+[Worker1] Imported GUID: 8c05ec3b6474bc6448e78fd5fb9a32ac - Path: Assets/Generated/Player/Walk_03.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '30961fb091efbc10235413856662fff7') in 0.0392039 seconds
+[Worker0] Imported GUID: 8271a718ac3358a4eb9cb8ebff1c81fc - Path: Assets/Generated/Nastya - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd8b060ff9835b13f89f0790e0241a697') in 0.028717 seconds
+[Worker1] Imported GUID: ce7d8069f5cb0f04f986f380bd3be622 - Path: Assets/Generated/Nastya/Walk_02.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4c04995c65373bc51062c64bf05f41c3') in 0.0356688 seconds
+[Worker0] Imported GUID: 182ad3afccb0d814aa95c6c1444b2333 - Path: Assets/Generated/Nastya/Walk_10.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '96ea1ecf3116c035a60d12f85121c0fb') in 0.0352651 seconds
+[Worker0] Imported GUID: 7b3fc4284fde06346ba0122fc35f02f1 - Path: Assets/Srpt/NastyaCameraCue.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '850b0168ac80aeb9daf3eddf333c8c06') in 0.0269876 seconds
+[Worker1] Imported GUID: 06f28f4cea462fd4893546beaf62e36f - Path: Assets/Generated/Player/Walk_11.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '70f813747aed96a000b12ed91d7e2c70') in 0.0357745 seconds
+[Worker0] Imported GUID: 80c4a64b3fb0a35499c4b95baf7a937a - Path: Assets/Generated/Player/Idle.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5aa7777e8954366048d8c93ca36040cd') in 0.034464 seconds
+[Worker1] Imported GUID: 67c5385ebc294bd4fa964f77aa6ba0da - Path: Assets/Generated/Player/Walk_08.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '482e95d98ec82e0dee2b88b63a08433e') in 0.0410276 seconds
+[Worker1] Imported GUID: 53201a8c8a82ecb4db05f07251a0269e - Path: Assets/Generated/Nastya/Walk_05.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6b10a3cb64b3c69e9ce001b2737b6337') in 0.0405157 seconds
+[Worker0] Imported GUID: d9b6014c27781b042b90d523f24a34fa - Path: Assets/Sprite/движение_насти.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1ce600f4fc5c5f1c28c40687138b30e5') in 0.0702444 seconds
+[Worker1] Imported GUID: 3b7ce0804888ba14fa17eb68fc44653e - Path: Assets/Generated/Player/Walk_14.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5008b337716ce520546b7d446f362762') in 0.0376332 seconds
+[Worker0] Imported GUID: 5959791da9f37384b84219764af7ec97 - Path: Assets/Generated/Nastya/Walk_01.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '85ba342433ad1c950bef03e3c3a3f496') in 0.0405838 seconds
+[Worker1] Imported GUID: 2f9cedb8294147647a3d5bc245dd3d33 - Path: Assets/Generated/Player/Walk_18.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '75b819df89cb04a05a8fbb92c5be8827') in 0.038382 seconds
+[Worker0] Imported GUID: b517489581debad4b993b72349fae939 - Path: Assets/Generated/Nastya/Walk_06.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'daad4fe5caf97066dcc3cdb430e57b01') in 0.0357973 seconds
+[Worker1] Imported GUID: 99b8c3b55b667694c96e936c67c38a66 - Path: Assets/Generated/Nastya/Walk_20.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '776360e32c326b8ec452cbe0d7223957') in 0.0391836 seconds
+[Worker0] Imported GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd - Path: Assets/Generated/Nastya/Walk_19.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'cacb9a919b942d67f75ef9f9279601a6') in 0.0413088 seconds
+[Worker1] Imported GUID: 5e4a9b7c1d2f4a6e8b0c3d5f7a9b1c2d - Path: Assets/Srpt/PlayerMovement.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '80627f8de7e19c97b0202cd63175d8dc') in 0.0315922 seconds
+[Worker0] Imported GUID: 9ba4066be365ce84c9e09d4c3b5030d3 - Path: Assets/Generated/Player/Walk_20.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd9ed89e2051cf1e0e821129389214959') in 0.0394759 seconds
+[Worker1] Imported GUID: b4a91ef8b634a134db4c18aa4f5ddd5f - Path: Assets/Generated/Nastya/Walk_17.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '6b6a3c576ded14cfdef7e0c22928f6ab') in 0.0379275 seconds
+[Worker0] Imported GUID: 7f38fbb5f1127fe4cbb4f3d3d979e0cb - Path: Assets/Editor/NeKArtonAnimationAndDoorSetup.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4267695dcb1fdeadeded83044c5169a8') in 0.0315478 seconds
+[Worker1] Imported GUID: e545e97809429604fbd39f022b7e79f3 - Path: Assets/Generated/Nastya/Walk_11.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '1559d88da314a24032fb379caae5346f') in 0.036696 seconds
+[Worker0] Imported GUID: 878db88fb41a17d48a0b67cb1a83b382 - Path: Assets/Generated - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '076123fde72c4f54220ed00b73348565') in 0.0305277 seconds
+[Worker1] Imported GUID: c6ac6efe0883ca64fb3eed45be4c9a51 - Path: Assets/Generated/Nastya/Walk_07.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '989db426da19acb53b70a90d69c5e4d8') in 0.036826 seconds
+[Worker0] Imported GUID: abab866fd38a4be47b2744ec3480287c - Path: Assets/Generated/Nastya/Walk_03.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'd73f3f93d3bc3cfac49153f1b30ffca8') in 0.0386846 seconds
+[Worker1] Imported GUID: a242d7bcf5a8dfc4ebfeab165904a79f - Path: Assets/Generated/Player/Walk_21.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'b0dea6bd8919954b7e2939782f4b00d8') in 0.0401719 seconds
+[Worker0] Imported GUID: 0707c8bf8c0f74d41b5e1efe9cc45770 - Path: Assets/Generated/Player/Walk_19.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'e35c811a0d2415084b02dd1b866be8f9') in 0.0381754 seconds
+[Worker1] Imported GUID: 8dbd774a5cd8c15409e5d44defef27a9 - Path: Assets/Generated/Nastya/Walk_16.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '4f32dbb412e295acb1cdfb96c0b182a7') in 0.0418408 seconds
+[Worker0] Imported GUID: 431b6272fe652c64f95f52496f989551 - Path: Assets/Generated/Player/Walk_04.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '8a073e2478eeead190306f97581bb085') in 0.0440449 seconds
+[Worker1] Imported GUID: f29fb12f0e5683b4092d780864532b5e - Path: Assets/Generated/Nastya/Walk_15.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '7ea1e2db98f0578960cacb5161c9d40f') in 0.0388404 seconds
+[Worker0] Imported GUID: 073beb112b5a6cf4d9ae1f148f0f4513 - Path: Assets/Generated/Nastya/Walk_04.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'c90fa301521240ca176577275bbe38dc') in 0.0449501 seconds
+Importing 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity' with importer (DefaultImporter)
+Imported 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf' -> (Import Result ID: '95679d2f430a6a52c53c06885add1cc9') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=8f222ce9915a84d228bd61a220adf4a8 DependenciesID=ba6ad40767299536b989f44ce51809f2 StaticDependenciesID=8312ac5ffe0b240ccd9b0710bae6e815 
+Refreshing native plugins compatible for Editor in 2.42 ms, found 5 plugins.
+Asset Pipeline Refresh (id=4b4f763345c8b5b479f3a48a67d66e3b): Total: 0.074 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Worker0] Imported GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: PreviewImporter -> (ImportResultId: '1b28209b0665c4d0bc48546e258b285c') in 0.0247034 seconds
+[Worker0] Imported GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: 'bfd59cd87c467fb9a68b504648d65f81') in 0.0256847 seconds
+Importing 'GUID: 2e498d1c8094910479dc3e1b768306a4 - Path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 2e498d1c8094910479dc3e1b768306a4' -> (Import Result ID: 'd7b7988875c133fa127c6d02fed7a4f1') in 0.004 seconds [static dependencies only]. Details - ImportResultOutputID=15c8c079d336d28f621b2cb41a27d1c5 DependenciesID=b898131b2ff9766dd6b73a527ba02f37 StaticDependenciesID=8dc6b5400127394e8dddc22cc3431358 
+Refreshing native plugins compatible for Editor in 2.84 ms, found 5 plugins.
+Asset Pipeline Refresh (id=ad2cd82be7c98d2468af89b1c4f285c8): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Importing 'GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity' with importer (DefaultImporter)
-Imported 'GUID: f0e7c751bdb501a429b4f431ff78e18d' -> (Import Result ID: '18356daefa63ad4c8749fb51fe5bf313') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=6463d6a1513956972eba81e60c71c998 DependenciesID=753895432886bc7f6866e32a629541ca StaticDependenciesID=2ddbb7681d4809fabb141e0967d4aea2 
-Refreshing native plugins compatible for Editor in 2.89 ms, found 5 plugins.
-Asset Pipeline Refresh (id=b1495146db339d74c8f03324a348955d): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
-MonoPathRemapper: Attempts to remap: 48925; Successful remaps: 24384
+Imported 'GUID: f0e7c751bdb501a429b4f431ff78e18d' -> (Import Result ID: '5207dd787e37991098878fafc55b4390') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6463d6a1513956972eba81e60c71c998 DependenciesID=88bbcd3ad3b658cde5b218667eba6bef StaticDependenciesID=cbeaba2fdb38b35916a2d67bd2c4e182 
+Refreshing native plugins compatible for Editor in 2.30 ms, found 5 plugins.
+Asset Pipeline Refresh (id=ba3e6311b3dbc2e4b826c6461cd5536c): Total: 0.057 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Opening scene 'Assets/Scenes/outplace.unity'
+Unloading 26 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/outplace.unity'
+	Deserialize:            0.608 ms
+	Integration:            21.483 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.006 ms
+	Total Operation Time:   22.100 ms
+Unloading 178 unused Assets / (10.2 MB). Loaded Objects now: 9989.
+Memory consumption went from 0.63 GB to 0.62 GB.
+Total: 32.241500 ms (FindLiveObjects: 1.651600 ms CreateObjectMapping: 0.781400 ms MarkObjects: 29.089400 ms  DeleteObjects: 0.448300 ms)
+
+[Worker0] Imported GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '66904221c690350b4b3c19b2bf47a7e8') in 0.0300391 seconds
+[Worker1] Imported GUID: 2e498d1c8094910479dc3e1b768306a4 - Path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '87ff40e3681bfeec35ff21b9d01a148d') in 0.1090921 seconds
+Asset Pipeline Refresh (id=ae352f940abbbd142a178aee46bbe1a9): Total: 0.035 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=ca70488342b58424fb04a0d5c8b49639): Total: 0.004 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=70c95e5fbb914b544882a0320c6be891): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Importing 'GUID: 83b551f3406390a41a785788ecb5de25 - Path: Assets/Sprite/улица.png' with importer (TextureImporter)
+Imported 'GUID: 83b551f3406390a41a785788ecb5de25' -> (Import Result ID: 'eb41ce494e727fb3659d7627c00bfc35') in 0.246 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c95bf93ee454cb79ea47912afe8d8fe3 DependenciesID=69517e46a78b6e220ba9c93d7ef2b113 StaticDependenciesID=3c304229372d5453968714ebf5af761c 
+Refreshing native plugins compatible for Editor in 3.09 ms, found 5 plugins.
+
+Asset Pipeline Refresh (id=434d9912983180c49ac2cf02ce0b4737): Total: 0.341 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=321 ms
+		Asset DB Callback time: managed=9 ms, native=7 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1702, non-scripts=3408
+		Asset File Changes: new=1, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	ApplyChangesToAssetFolders: 0.160ms
+	Scan: 17.113ms
+	Collect global state as custom dependencies: 0.470ms
+	OnSourceAssetsModified: 0.077ms
+	ProcessAssetsWithTransientArtifactChanges: 0.105ms
+	CategorizeAssets: 29.007ms
+	ImportOutOfDateAssets: 249.110ms (0.268ms without children)
+		ImportManagerImport: 247.334ms (0.347ms without children)
+		ReloadNativeAssets: 0.054ms
+		UnloadImportedAssets: 0.227ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.660ms
+		ImportSchedulerStart: 0.558ms
+	PostProcessAllAssets: 9.852ms
+		XRBuildSystem.XRAssetImported 4.062ms
+		MonoPostProcessAllAssets: 5.394ms
+			SyncVS.PostprocessSyncProject 2.064ms
+			AssetChangedListener.OnPostprocessAllAssets 0.875ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 0.622ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.614ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.302ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.148ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.082ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.062ms
+	PostAssetChangesProfiler: 7.970ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.273ms
+	UnloadStreamsBegin: 0.128ms
+	PersistCurrentRevisions: 0.381ms
+	Untracked: 25.921ms
+
+[Worker0] Imported GUID: 83b551f3406390a41a785788ecb5de25 - Path: Assets/Sprite/улица.png - Importer: PreviewImporter -> (ImportResultId: 'a6beba037260dbe2ef63db0e4605f732') in 0.0648936 seconds
+[Worker0] Imported GUID: 83b551f3406390a41a785788ecb5de25 - Path: Assets/Sprite/улица.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '5f9bd3d0e877f3fb0928e5fcd9f23754') in 0.039579 seconds
+Asset Pipeline Refresh (id=4f43d4e75a79d764bb585ccb1bb51792): Total: 0.022 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Asset Pipeline Refresh (id=3888dfcfbfe2274418c6785016f4b6b2): Total: 0.005 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+SpriteAtlasPacking completed in 0.008859 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.877 ms
+	Integration:            617.700 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.016 ms
+	Total Operation Time:   618.594 ms
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.646 ms
+	Integration:            32.484 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   33.138 ms
+Unloading 39 unused Assets / (2.9 MB). Loaded Objects now: 9911.
+Memory consumption went from 0.62 GB to 0.62 GB.
+Total: 47.010700 ms (FindLiveObjects: 1.483400 ms CreateObjectMapping: 0.662400 ms MarkObjects: 41.350700 ms  DeleteObjects: 3.149300 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+SpriteAtlasPacking completed in 0.006596 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.386 ms
+	Integration:            34.083 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   34.481 ms
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.303 ms
+	Integration:            26.863 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   27.177 ms
+Unloading 0 unused Assets / (270.9 KB). Loaded Objects now: 9893.
+Memory consumption went from 0.62 GB to 0.62 GB.
+Total: 40.513900 ms (FindLiveObjects: 1.010200 ms CreateObjectMapping: 0.368000 ms MarkObjects: 38.740500 ms  DeleteObjects: 0.034300 ms)
+
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: [ (91) to any virtual key
+GetVirtualKey: Could not map char: ] (93) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Importing 'GUID: 00000000000000009000000000000000 - Path: ProjectSettings/QualitySettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 00000000000000009000000000000000' -> (Import Result ID: 'ad6ca2034549a8dd6f88c2e2fb528c97') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2a108b3da874f726c62fbe5f12be4a8a DependenciesID=1aedbe56ae62f321fe459982db2fa012 StaticDependenciesID=e9a43e809c5953780a851aff477bfce8 
+Refreshing native plugins compatible for Editor in 2.45 ms, found 5 plugins.
+Asset Pipeline Refresh (id=526d2dece91c5ac4984cc9620746d4da): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity' with importer (DefaultImporter)
+Imported 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf' -> (Import Result ID: '452646206afbb22ab02edf39b19a566c') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=8f222ce9915a84d228bd61a220adf4a8 DependenciesID=968eaae1e45695ac2a87cb01abb8908a StaticDependenciesID=0ff020959972e4029696ca38fe59b5ab 
+Refreshing native plugins compatible for Editor in 2.77 ms, found 5 plugins.
+Asset Pipeline Refresh (id=01e806d8a49e4ab4396647bd809b7c61): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Opening scene 'Assets/Scenes/outplace.unity'
+Unloading 26 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/outplace.unity'
+	Deserialize:            0.816 ms
+	Integration:            39.678 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.016 ms
+	Total Operation Time:   40.513 ms
+Unloading 165 unused Assets / (4.5 MB). Loaded Objects now: 9999.
+Memory consumption went from 0.64 GB to 0.64 GB.
+Total: 53.926800 ms (FindLiveObjects: 1.502900 ms CreateObjectMapping: 0.824500 ms MarkObjects: 50.801800 ms  DeleteObjects: 0.352100 ms)
+
+[Worker1] Imported GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: PreviewImporter -> (ImportResultId: '817417cb62eaf3a67323257af82110ad') in 0.0292088 seconds
+[Worker0] Imported GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B -> (ImportResultId: '3117eadfdf6d30521de1560640f62fb8') in 0.026433 seconds
+[Worker0] Imported GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: PreviewImporter -> (ImportResultId: 'aa7151630256ffa9fe10ac0d9a3740b1') in 0.0271169 seconds
+Opening scene 'Assets/Scenes/Location-1.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Location-1.unity'
+	Deserialize:            1.709 ms
+	Integration:            30.203 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   31.926 ms
+Unloading 13 unused Assets / (4.1 MB). Loaded Objects now: 10012.
+Memory consumption went from 0.63 GB to 0.63 GB.
+Total: 76.048600 ms (FindLiveObjects: 1.531800 ms CreateObjectMapping: 0.576800 ms MarkObjects: 73.329000 ms  DeleteObjects: 0.207900 ms)
+
+Opening scene 'Assets/Scenes/SampleScene.unity'
+Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/SampleScene.unity'
+	Deserialize:            24.322 ms
+	Integration:            46.538 ms
+	Integration of assets:  0.665 ms
+	Thread Wait Time:       0.016 ms
+	Total Operation Time:   71.542 ms
+Unloading 8 unused Assets / (4.4 MB). Loaded Objects now: 10128.
+Memory consumption went from 0.63 GB to 0.63 GB.
+Total: 42.379400 ms (FindLiveObjects: 1.396200 ms CreateObjectMapping: 0.560200 ms MarkObjects: 39.856200 ms  DeleteObjects: 0.149800 ms)
+
+SpriteAtlasPacking completed in 0.007297 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            6.078 ms
+	Integration:            43.613 ms
+	Integration of assets:  0.099 ms
+	Thread Wait Time:       0.011 ms
+	Total Operation Time:   49.801 ms
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 11.204200 ms
+Loaded scene 'Assets/Scenes/Location-1.unity'
+	Deserialize:            5.942 ms
+	Integration:            49.218 ms
+	Integration of assets:  0.306 ms
+	Thread Wait Time:       6.236 ms
+	Total Operation Time:   61.701 ms
+Unloading 21 unused Assets / (4.8 MB). Loaded Objects now: 10080.
+Memory consumption went from 0.64 GB to 0.63 GB.
+Total: 43.505900 ms (FindLiveObjects: 1.222800 ms CreateObjectMapping: 0.537000 ms MarkObjects: 41.123700 ms  DeleteObjects: 0.175800 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.540000 ms
+Loaded scene 'Assets/Scenes/Location-1.unity'
+	Deserialize:            2.344 ms
+	Integration:            26.545 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.006 ms
+	Total Operation Time:   28.898 ms
+Unloading 1 unused Assets / (2.7 KB). Loaded Objects now: 10080.
+Memory consumption went from 0.63 GB to 0.63 GB.
+Total: 47.284500 ms (FindLiveObjects: 1.065200 ms CreateObjectMapping: 0.418300 ms MarkObjects: 45.499300 ms  DeleteObjects: 0.049600 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            4.529 ms
+	Integration:            30.141 ms
+	Integration of assets:  0.286 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   34.963 ms
+Unloading 6 unused Assets / (4.4 MB). Loaded Objects now: 10065.
+Memory consumption went from 0.63 GB to 0.63 GB.
+Total: 41.667000 ms (FindLiveObjects: 1.216900 ms CreateObjectMapping: 0.497900 ms MarkObjects: 39.586300 ms  DeleteObjects: 0.098400 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: [ (91) to any virtual key
+GetVirtualKey: Could not map char: ] (93) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Importing 'GUID: 00000000000000009000000000000000 - Path: ProjectSettings/QualitySettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 00000000000000009000000000000000' -> (Import Result ID: 'ad6ca2034549a8dd6f88c2e2fb528c97') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=2a108b3da874f726c62fbe5f12be4a8a DependenciesID=1aedbe56ae62f321fe459982db2fa012 StaticDependenciesID=e9a43e809c5953780a851aff477bfce8 
+Refreshing native plugins compatible for Editor in 3.46 ms, found 5 plugins.
+Asset Pipeline Refresh (id=4a6548078d66feb429966f4ccbd1950e): Total: 0.031 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+MonoPathRemapper: Attempts to remap: 91608; Successful remaps: 49190
 Serialized file version minimum: 22, current 23
 [LAYOUT] About to save layout A:\юинити\New_Start\UserSettings\Layouts\default-6000.dwlt
 [LAYOUT] About to save layout C:/Users/North/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
@@ -890,8 +1603,8 @@ UnityEditor.EditorApplication:Internal_EditorApplicationQuit ()
 
 Importing 'GUID: 2e498d1c8094910479dc3e1b768306a4 - Path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset' with importer (NativeFormatImporter)
 Imported 'GUID: 2e498d1c8094910479dc3e1b768306a4' -> (Import Result ID: 'f1196a424ca866ccf61e70986a2d1770') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=15c8c079d336d28f621b2cb41a27d1c5 DependenciesID=92e6ffef3a510b934be8531781a579bf StaticDependenciesID=3ff888b3e11e8c80578a4d051035fa83 
-Refreshing native plugins compatible for Editor in 2.45 ms, found 5 plugins.
-Asset Pipeline Refresh (id=d741dd9a1cd09d1489d8dbce0d571dd2): Total: 0.059 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Refreshing native plugins compatible for Editor in 9.02 ms, found 5 plugins.
+Asset Pipeline Refresh (id=0e0c9d1f2c150ab4f819df38d8a24845): Total: 0.235 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
 Input System module state changed to: ShutdownInProgress.
 Input Polling Thread exited.
 Input System module state changed to: Shutdown.
@@ -908,13 +1621,17 @@ Shut down UDS service system complete
 AcceleratorClientConnectionCallback - disconnected - :0
 Cleanup mono
 CodeReloadManager destroyed
-abort_threads: Failed aborting id: 00000000000049A4, mono_thread_manage will ignore it
+abort_threads: Failed aborting id: 0000000000006078, mono_thread_manage will ignore it
 
-abort_threads: Failed aborting id: 00000000000049A4, mono_thread_manage will ignore it
+abort_threads: Failed aborting id: 0000000000004330, mono_thread_manage will ignore it
 
-debugger-agent: Unable to listen on 4516
+abort_threads: Failed aborting id: 0000000000006078, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000004330, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 4484
 VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
 Checking for leaked weakptr:
   Found no leaked weakptrs.
 [Package Manager] Server process was shutdown
-##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1795458112890,"processId":23588,"allocatedMemory":18300709,"memoryLabels":[{"Default":217928},{"Permanent":15516},{"NewDelete":77617},{"Thread":4184560},{"Manager":818976},{"VertexData":8},{"Geometry":824},{"Shader":865431},{"Material":132},{"TextureCache":4104},{"GfxDevice":73224},{"GfxThread":2304},{"Animation":952},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":261640},{"Input":45280},{"JobScheduler":264},{"TextLib":16598},{"Mono":48},{"MonoCode":576},{"ScriptingNativeRuntime":1362960},{"BaseObject":70784},{"Resource":1444},{"Renderer":2504},{"Transform":4781},{"File":40072},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":491062},{"StaticString":3808},{"Utility":2673938},{"Curl":48},{"PoolAlloc":2408},{"AI":80},{"TypeTree":17269},{"ScriptManager":19032},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7296},{"WebRequest":9897},{"VR":49650},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":1080},{"Camera":729},{"Secure":2377},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":768},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14536},{"Identifiers":7152},{"EntityIdStore":33088},{"Gui":803590},{"EditorUtility":674191},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4967780},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":36921},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":260},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3602},{"Windowing":456},{"Licensing":12949},{"AssetReference":32},{"IPCStream":32}]}
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1795459803446,"processId":9984,"allocatedMemory":18054642,"memoryLabels":[{"Default":226934},{"Permanent":15516},{"NewDelete":75705},{"Thread":4124952},{"Manager":818976},{"VertexData":8},{"Geometry":824},{"Shader":865431},{"Material":2964},{"TextureCache":9272},{"GfxDevice":67624},{"GfxThread":1536},{"Animation":952},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":255064},{"Input":45280},{"JobScheduler":264},{"TextLib":28924},{"Mono":48},{"MonoCode":832},{"ScriptingNativeRuntime":1329800},{"BaseObject":130464},{"Resource":1444},{"Renderer":2504},{"Transform":4781},{"File":57898},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":784830},{"StaticString":3808},{"Utility":2673946},{"Curl":48},{"PoolAlloc":2408},{"AI":80},{"TypeTree":17269},{"ScriptManager":19032},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7296},{"WebRequest":9247},{"VR":49650},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"NativeArray":1080},{"Camera":729},{"Secure":2377},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":768},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14536},{"Identifiers":7152},{"EntityIdStore":33088},{"Gui":268647},{"EditorUtility":678767},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4967820},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":36921},{"Upm":1988},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":260},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3602},{"Windowing":456},{"Licensing":12949},{"AssetReference":32},{"IPCStream":32}]}

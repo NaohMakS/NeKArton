@@ -3,7 +3,7 @@ OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-11-23T18:35:03Z
+Date: 2026-11-23T18:56:20Z
 
 COMMAND LINE ARGUMENTS:
 A:\Unity\Hub\Editor\6000.6.10f1\Editor\Unity.exe
@@ -17,9 +17,9 @@ A:/юинити/New_Start
 -logFile
 Logs/AssetImportWorkerHW0.log
 -srvPort
-53965
+56116
 -parentPid
-9984
+25940
 -analyticsCloudUserId
 anonymous
 -analyticsCloudProjectId
@@ -83,14 +83,14 @@ A:/юинити/New_Start
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [8864]  Target information:
+Player connection [19160]  Target information:
 
-Player connection [8864]  * "[IP] 192.168.0.109 [Port] 0 [Flags] 2 [Guid] 4149006194 [EditorId] 4149006194 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [19160]  * "[IP] 192.168.0.109 [Port] 0 [Flags] 2 [Guid] 2123436108 [EditorId] 2123436108 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [8864]  * "[IP] 172.19.0.1 [Port] 0 [Flags] 2 [Guid] 4149006194 [EditorId] 4149006194 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [19160]  * "[IP] 172.19.0.1 [Port] 0 [Flags] 2 [Guid] 2123436108 [EditorId] 2123436108 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [8864] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [8864] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [19160] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [19160] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 3
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -108,7 +108,7 @@ Initialising UDS system complete:
 Active build profile path: `Assets/Settings/Build Profiles/location-2.asset`
 Got setting from build profile YAML, name `m_BuildTarget`, value `19`
 Got setting from build profile YAML, name `m_Subtarget`, value `2`
-Refreshing native plugins compatible for Editor in 6.95 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 8.28 ms, found 5 plugins.
 [Physics::Module] Selected backend (deferred post-plugins).
 [Physics::Module] Name: PhysX
 [Physics::Module] Id: 0xf2b8ea05
@@ -134,13 +134,13 @@ Mono path[0] = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/Managed'
 Mono path[1] = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56556
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002626 seconds.
+Registered in 0.003066 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -149,36 +149,36 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  1.078 seconds
-Domain Reload Profiling: 2260ms
-	BeginReloadAssembly (326ms)
-	RebuildCommonClasses (14ms)
-	RebuildNativeTypeToScriptingClass (37ms)
-	initialDomainReloadingComplete (126ms)
-	LoadAllAssembliesAndSetupDomain (678ms)
-		LoadAssemblies (324ms)
-		TypeCache.Refresh (486ms)
-			TypeCache.ScanAssembly (462ms)
+- Finished resetting the current domain, in  0.816 seconds
+Domain Reload Profiling: 1952ms
+	BeginReloadAssembly (227ms)
+	RebuildCommonClasses (12ms)
+	RebuildNativeTypeToScriptingClass (30ms)
+	initialDomainReloadingComplete (189ms)
+	LoadAllAssembliesAndSetupDomain (676ms)
+		LoadAssemblies (226ms)
+		TypeCache.Refresh (469ms)
+			TypeCache.ScanAssembly (440ms)
 		AnalyzeDomain (1ms)
-	FinalizeReload (1080ms)
+	FinalizeReload (818ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			BeforeProcessingInitializeOnLoad (283ms)
-			ProcessInitializeOnLoadAttributes (218ms)
-			ProcessInitializeOnLoadMethodAttributes (359ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (183ms)
+			ProcessInitializeOnLoadAttributes (163ms)
+			ProcessInitializeOnLoadMethodAttributes (313ms)
 Initializing Unity extensions:
 [Licensing::Module] Connecting to the Unity Licensing Client...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North" at "2026-11-23T18:35:07.4454142Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North" at "2026-11-23T18:56:23.6254513Z"
 [Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 26492, path: "C:/Program Files/WindowsApps/UnityTechnologies.UnityHub_4.0.1.65535_x64__2vrhnee42bhxm/app/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.19.0+4cc3dda
-  Session Id:              3a0bc5596170490788599452d2b0ce02
+  Session Id:              15677b8ab068482f8c4ba20255c8f5dc
   Correlation Id:          f61ea62301e46777df8a8963b92159ac
-  External correlation Id: 1664707809011252107
+  External correlation Id: 1245729352531994111
   Machine Id:              XTs0PD6xHqGasQXSRfb6s04M0II=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-North" (connect: 0.00s, validation: 0.00s, handshake: 0.06s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North-notifications" at "2026-11-23T18:35:07.5087519Z"
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-North" (connect: 0.00s, validation: 0.00s, handshake: 0.05s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North-notifications" at "2026-11-23T18:56:23.6788962Z"
 [Licensing::Module] The re-connection attempt was successful.
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
@@ -193,50 +193,50 @@ Got setting from build profile YAML, name `m_Development`, value `0`
 Begin MonoManager ReloadAssembly
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.60 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.82 ms, found 5 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 4.16 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 3.41 ms, found 5 plugins.
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  2.230 seconds
-Domain Reload Profiling: 4849ms
-	BeginReloadAssembly (617ms)
-		DisableScriptedObjects (42ms)
-		CreateAndSetChildDomain (78ms)
-	RebuildCommonClasses (22ms)
-	RebuildNativeTypeToScriptingClass (41ms)
-	initialDomainReloadingComplete (221ms)
-	LoadAllAssembliesAndSetupDomain (1716ms)
-		LoadAssemblies (904ms)
-		TypeCache.Refresh (529ms)
-			TypeCache.ScanAssembly (490ms)
-		AnalyzeDomain (189ms)
-			BuildScriptInfoCaches (174ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (2232ms)
+- Finished resetting the current domain, in  1.652 seconds
+Domain Reload Profiling: 3491ms
+	BeginReloadAssembly (403ms)
+		DisableScriptedObjects (36ms)
+		CreateAndSetChildDomain (55ms)
+	RebuildCommonClasses (14ms)
+	RebuildNativeTypeToScriptingClass (34ms)
+	initialDomainReloadingComplete (181ms)
+	LoadAllAssembliesAndSetupDomain (1205ms)
+		LoadAssemblies (600ms)
+		TypeCache.Refresh (356ms)
+			TypeCache.ScanAssembly (327ms)
+		AnalyzeDomain (152ms)
+			BuildScriptInfoCaches (142ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1654ms)
 		SetupLoadedEditorAssemblies (0ms)
-			LogAssemblyErrors (5ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			BeforeProcessingInitializeOnLoad (279ms)
-			ProcessInitializeOnLoadAttributes (694ms)
-			ProcessInitializeOnLoadMethodAttributes (627ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			LogAssemblyErrors (3ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (212ms)
+			ProcessInitializeOnLoadAttributes (627ms)
+			ProcessInitializeOnLoadMethodAttributes (383ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (3ms)
-		AwakeInstancesAfterBackupRestoration (43ms)
+		AwakeInstancesAfterBackupRestoration (32ms)
 AcceleratorClientConnectionCallback - disconnected - :0
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 3.42 ms, found 5 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 2.47 ms, found 5 plugins.
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7575 unused Assets / (8.6 MB). Loaded Objects now: 8569.
-Memory consumption went from 366.0 MB to 357.4 MB.
-Total: 17.834100 ms (FindLiveObjects: 1.719500 ms CreateObjectMapping: 1.203900 ms MarkObjects: 10.171100 ms  DeleteObjects: 4.414600 ms)
+Unloading 7575 unused Assets / (6.4 MB). Loaded Objects now: 8569.
+Memory consumption went from 366.3 MB to 359.9 MB.
+Total: 13.039800 ms (FindLiveObjects: 0.937100 ms CreateObjectMapping: 0.794800 ms MarkObjects: 8.735300 ms  DeleteObjects: 2.316800 ms)
 
 ========================================================================
 Received Prepare
@@ -244,7 +244,7 @@ AcceleratorClientConnectionCallback - disconnected - :0
 Begin MonoManager ReloadAssembly
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.68 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.86 ms, found 5 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -255,686 +255,63 @@ Native extension for WebGL target not found
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  1.562 seconds
-Domain Reload Profiling: 2950ms
-	BeginReloadAssembly (487ms)
-		DisableScriptedObjects (54ms)
-		CreateAndSetChildDomain (103ms)
-	RebuildCommonClasses (20ms)
-	RebuildNativeTypeToScriptingClass (28ms)
-	initialDomainReloadingComplete (93ms)
-	LoadAllAssembliesAndSetupDomain (758ms)
-		LoadAssemblies (578ms)
-		TypeCache.Refresh (14ms)
-		AnalyzeDomain (19ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1563ms)
+- Finished resetting the current domain, in  1.333 seconds
+Domain Reload Profiling: 2560ms
+	BeginReloadAssembly (444ms)
+		DisableScriptedObjects (51ms)
+		CreateAndSetChildDomain (88ms)
+	RebuildCommonClasses (15ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (96ms)
+	LoadAllAssembliesAndSetupDomain (641ms)
+		LoadAssemblies (529ms)
+		TypeCache.Refresh (9ms)
+		AnalyzeDomain (14ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1334ms)
 		SetupLoadedEditorAssemblies (0ms)
 			LogAssemblyErrors (3ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			BeforeProcessingInitializeOnLoad (257ms)
-			ProcessInitializeOnLoadAttributes (560ms)
-			ProcessInitializeOnLoadMethodAttributes (168ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (212ms)
+			ProcessInitializeOnLoadAttributes (467ms)
+			ProcessInitializeOnLoadMethodAttributes (156ms)
 			AfterProcessingInitializeOnLoad (6ms)
-		AwakeInstancesAfterBackupRestoration (60ms)
-Refreshing native plugins compatible for Editor in 2.57 ms, found 5 plugins.
+		AwakeInstancesAfterBackupRestoration (56ms)
+Refreshing native plugins compatible for Editor in 3.60 ms, found 5 plugins.
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7572 unused Assets / (6.2 MB). Loaded Objects now: 8572.
-Memory consumption went from 355.5 MB to 349.3 MB.
-Total: 13.018700 ms (FindLiveObjects: 1.278600 ms CreateObjectMapping: 0.825200 ms MarkObjects: 8.279500 ms  DeleteObjects: 2.375500 ms)
+Unloading 7572 unused Assets / (5.3 MB). Loaded Objects now: 8572.
+Memory consumption went from 355.5 MB to 350.2 MB.
+Total: 12.202000 ms (FindLiveObjects: 0.913500 ms CreateObjectMapping: 0.625200 ms MarkObjects: 7.727200 ms  DeleteObjects: 2.634800 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 AcceleratorClientConnectionCallback - disconnected - :0
-Refreshing native plugins compatible for Editor in 2.49 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.33 ms, found 5 plugins.
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 25 unused Assets / (3.0 MB). Loaded Objects now: 8572.
-Memory consumption went from 352.2 MB to 349.2 MB.
-Total: 10.481600 ms (FindLiveObjects: 1.032700 ms CreateObjectMapping: 0.433300 ms MarkObjects: 8.012100 ms  DeleteObjects: 0.701500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:50.7043449Z
-  Time since last request: 698466.42004819994327 seconds.
-  importAddress: GUID: 1e1f3ed434277ef42be1801cac6e6569 - Path: Assets/Sprite/движение_гг.png - Importer: PreviewImporter
-Importing 'GUID: 1e1f3ed434277ef42be1801cac6e6569 - Path: Assets/Sprite/движение_гг.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 1e1f3ed434277ef42be1801cac6e6569' -> (Import Result ID: 'c40e5fc7d53a6bd2a497fc724e21e090') in 0.259 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=573ba3e0e7c1a42e1970b6f15f1155dc DependenciesID=8d12a8366bb4fe2ffc933c598b44451f StaticDependenciesID=1a606221c004a85068ff4e838188a268 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 26
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:51.0066165Z
-  Time since last request: 0.0000501 seconds.
-  importAddress: GUID: d9b6014c27781b042b90d523f24a34fa - Path: Assets/Sprite/движение_насти.png - Importer: PreviewImporter
-Importing 'GUID: d9b6014c27781b042b90d523f24a34fa - Path: Assets/Sprite/движение_насти.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: d9b6014c27781b042b90d523f24a34fa' -> (Import Result ID: 'cdeea605b46be626a73ee3f6f8e0a16e') in 0.197 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0be7e69cb28c7b1a5a8f0da98cd7ab5b DependenciesID=eb4aaa2e912b4c9df7886ec9f583a5bd StaticDependenciesID=40d3a48f53fd69da1270b4e100a9742b 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 24
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.2186435Z
-  Time since last request: 7.987392 seconds.
-  importAddress: GUID: 8271a718ac3358a4eb9cb8ebff1c81fc - Path: Assets/Generated/Nastya - Importer: PreviewImporter
-Importing 'GUID: 8271a718ac3358a4eb9cb8ebff1c81fc - Path: Assets/Generated/Nastya - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 8271a718ac3358a4eb9cb8ebff1c81fc' -> (Import Result ID: 'c420c297c1dfcc57394fe8b7c10b10ce') in 0.001 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=df5005744107f863b723221820e9e8e1 DependenciesID=9c9f732876e88229eab0258c65edec47 StaticDependenciesID=3bdbb1914c895730cd93bd860f43d1fd 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.2739976Z
-  Time since last request: 0.0329839 seconds.
-  importAddress: GUID: f737c491e9340674fa75eedc9b9c0895 - Path: Assets/Generated/Nastya/Idle.png - Importer: PreviewImporter
-Importing 'GUID: f737c491e9340674fa75eedc9b9c0895 - Path: Assets/Generated/Nastya/Idle.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: f737c491e9340674fa75eedc9b9c0895' -> (Import Result ID: 'cc684910267b00747231132d090f8dd1') in 0.030 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a1956fc5d0d304ab1b6690c3f62c0be3 DependenciesID=b781417f0d7a8405a26a94e326a9ca9b StaticDependenciesID=a3907eefc61e2155ff7e58dfdec4fb06 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.3266126Z
-  Time since last request: 0.0007978 seconds.
-  importAddress: GUID: ef663f998c3dc174d99071086e9dd2d7 - Path: Assets/Generated/Nastya/Walk_14.png - Importer: PreviewImporter
-Importing 'GUID: ef663f998c3dc174d99071086e9dd2d7 - Path: Assets/Generated/Nastya/Walk_14.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: ef663f998c3dc174d99071086e9dd2d7' -> (Import Result ID: 'e4b226fd5fb9a99c291fc81540ae981d') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bdd0f3df072851004fc3216ca2d1af9c DependenciesID=e5f626f3de9c0e9c9af526df1c2b2af9 StaticDependenciesID=9b951ea0404413586c41e58540509b2c 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.4445782Z
-  Time since last request: 0.002399 seconds.
-  importAddress: GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd - Path: Assets/Generated/Nastya/Walk_19.png - Importer: PreviewImporter
-Importing 'GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd - Path: Assets/Generated/Nastya/Walk_19.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd' -> (Import Result ID: '586a0b910f3cd52e8f3bb993f5a3e086') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=db33e4de951c1e469fedb97e3672addf DependenciesID=2427592de14a74e2fe79a2c08f9ecf7a StaticDependenciesID=5e31d077313c9435bd5a39b1e9a22cae 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.5137925Z
-  Time since last request: 0.0013039 seconds.
-  importAddress: GUID: 9e15188fc4ffe694f95da27f74c46b3e - Path: Assets/Generated/Nastya/Walk_12.png - Importer: PreviewImporter
-Importing 'GUID: 9e15188fc4ffe694f95da27f74c46b3e - Path: Assets/Generated/Nastya/Walk_12.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 9e15188fc4ffe694f95da27f74c46b3e' -> (Import Result ID: '24f7cde1dd3e7dc7eae0d4ae2fe1fd9e') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=82998501c471ff47b2dd852b16e02973 DependenciesID=de99ed74f435793c1327c71098cca5ea StaticDependenciesID=73ef39b922785425d555551c3579c2e5 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.5528006Z
-  Time since last request: 0.0011665 seconds.
-  importAddress: GUID: 073beb112b5a6cf4d9ae1f148f0f4513 - Path: Assets/Generated/Nastya/Walk_04.png - Importer: PreviewImporter
-Importing 'GUID: 073beb112b5a6cf4d9ae1f148f0f4513 - Path: Assets/Generated/Nastya/Walk_04.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 073beb112b5a6cf4d9ae1f148f0f4513' -> (Import Result ID: 'd7eb37903dd564520ef86d467900fe9b') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f9e73e65e1a22aaa7393c5f70ce82452 DependenciesID=0d8aa8a4f5a262a5615126eda96c85d7 StaticDependenciesID=2185cd61135843485a7b1d3ca01d3b22 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.5871952Z
-  Time since last request: 0.0007484 seconds.
-  importAddress: GUID: 5959791da9f37384b84219764af7ec97 - Path: Assets/Generated/Nastya/Walk_01.png - Importer: PreviewImporter
-Importing 'GUID: 5959791da9f37384b84219764af7ec97 - Path: Assets/Generated/Nastya/Walk_01.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 5959791da9f37384b84219764af7ec97' -> (Import Result ID: '2db8b8fa3240111c43efe4d366d890ab') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8d08bf8207bca9cb90067b05183f8c86 DependenciesID=cf9330519d6b482d50686858a831adad StaticDependenciesID=989dacf4210e07acf87e90858de3e21e 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.6187748Z
-  Time since last request: 0.0015725 seconds.
-  importAddress: GUID: 6b7fad4f4e918704f97da9a637360223 - Path: Assets/Generated/Nastya/Walk_08.png - Importer: PreviewImporter
-Importing 'GUID: 6b7fad4f4e918704f97da9a637360223 - Path: Assets/Generated/Nastya/Walk_08.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 6b7fad4f4e918704f97da9a637360223' -> (Import Result ID: '195c5d1ea1f7a479dd1cc9c101370c24') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5db9a6d41ebcd784f7589b6187fe4314 DependenciesID=c9cccfd47dd30efb6b2fc741337d7628 StaticDependenciesID=192a87192f4c572f3c1bcbe26a374a9d 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.6566311Z
-  Time since last request: 0.0016025 seconds.
-  importAddress: GUID: e05eb33c4ec0df045a47a0fa69047ea5 - Path: Assets/Generated/Nastya/Walk_09.png - Importer: PreviewImporter
-Importing 'GUID: e05eb33c4ec0df045a47a0fa69047ea5 - Path: Assets/Generated/Nastya/Walk_09.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: e05eb33c4ec0df045a47a0fa69047ea5' -> (Import Result ID: '0cadd3f6565cbacef054bba4283ed4f1') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ad0098fa9151f40bfb3d94f46a76155d DependenciesID=94fa737a13a0d5ce6d715d8ad5fe8f7d StaticDependenciesID=e10874d39c856cf1ce2487a1b9f4efeb 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.6935173Z
-  Time since last request: 0.0009116 seconds.
-  importAddress: GUID: abab866fd38a4be47b2744ec3480287c - Path: Assets/Generated/Nastya/Walk_03.png - Importer: PreviewImporter
-Importing 'GUID: abab866fd38a4be47b2744ec3480287c - Path: Assets/Generated/Nastya/Walk_03.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: abab866fd38a4be47b2744ec3480287c' -> (Import Result ID: '08bf0e9504dc0c31fe32e7354adf8670') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b8c95f5b045fdc1d71621a2d3d9344b1 DependenciesID=15e07ad9136220ea88d5b7b38cb2ebf5 StaticDependenciesID=3df99bd4fc677aa8f527ba1a0bc17cc7 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.7279004Z
-  Time since last request: 0.0011127 seconds.
-  importAddress: GUID: b517489581debad4b993b72349fae939 - Path: Assets/Generated/Nastya/Walk_06.png - Importer: PreviewImporter
-Importing 'GUID: b517489581debad4b993b72349fae939 - Path: Assets/Generated/Nastya/Walk_06.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: b517489581debad4b993b72349fae939' -> (Import Result ID: '91ea09d4ea07ed2e9878c038ec72c97d') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f63662b095443d8a3c8cb18e00516802 DependenciesID=242e374ca6bbbe2d1296fe13f61b7f31 StaticDependenciesID=fe2962628584b314cae48cadd36013be 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.7654022Z
-  Time since last request: 0.001806 seconds.
-  importAddress: GUID: e545e97809429604fbd39f022b7e79f3 - Path: Assets/Generated/Nastya/Walk_11.png - Importer: PreviewImporter
-Importing 'GUID: e545e97809429604fbd39f022b7e79f3 - Path: Assets/Generated/Nastya/Walk_11.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: e545e97809429604fbd39f022b7e79f3' -> (Import Result ID: 'b457cfcf5c62cc29dfc4b5906fb43e8b') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ba2bf2f8f2ed9f734f4295d3c821f27 DependenciesID=16d179f081ccca3282ac671670512243 StaticDependenciesID=8b1ac1954cb79ee74955447ce6e85b29 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:36:59.8051166Z
-  Time since last request: 0.0011678 seconds.
-  importAddress: GUID: 8dbd774a5cd8c15409e5d44defef27a9 - Path: Assets/Generated/Nastya/Walk_16.png - Importer: PreviewImporter
-Importing 'GUID: 8dbd774a5cd8c15409e5d44defef27a9 - Path: Assets/Generated/Nastya/Walk_16.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 8dbd774a5cd8c15409e5d44defef27a9' -> (Import Result ID: '4544ad149466b9bd061fb60c2b1e103c') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a522e0533dc3b185305e7e02358d5e27 DependenciesID=92b1f309bdf9a28410dc17b08a2e1697 StaticDependenciesID=d19b13efe85c07e56d6f0d5cd1ba1a5f 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:27.8854533Z
-  Time since last request: 28.0417886 seconds.
-  importAddress: GUID: 80c4a64b3fb0a35499c4b95baf7a937a - Path: Assets/Generated/Player/Idle.png - Importer: PreviewImporter
-Importing 'GUID: 80c4a64b3fb0a35499c4b95baf7a937a - Path: Assets/Generated/Player/Idle.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 80c4a64b3fb0a35499c4b95baf7a937a' -> (Import Result ID: '0f497e9ed2ad41e8ccc7ddf954445d8b') in 0.034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=60d7333abc7a97a4b61f338a9542e42d DependenciesID=2bf2034cc2bf1e0d85ad142476544f1c StaticDependenciesID=e36a9d815fa31d2fc2db6a6f915bce17 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:27.9452241Z
-  Time since last request: 0.0008092 seconds.
-  importAddress: GUID: 8c05ec3b6474bc6448e78fd5fb9a32ac - Path: Assets/Generated/Player/Walk_03.png - Importer: PreviewImporter
-Importing 'GUID: 8c05ec3b6474bc6448e78fd5fb9a32ac - Path: Assets/Generated/Player/Walk_03.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 8c05ec3b6474bc6448e78fd5fb9a32ac' -> (Import Result ID: '29dc8cfe03b410d3ac5b77dd31b0496b') in 0.036 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4e11044db6e1a1728e7bfdcdce303494 DependenciesID=1fc61c09105dc04ef4d2ac4ddf3b7f07 StaticDependenciesID=9616113a3aaaa4193e7b9a077db61199 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.0053662Z
-  Time since last request: 0.0008405 seconds.
-  importAddress: GUID: 67c5385ebc294bd4fa964f77aa6ba0da - Path: Assets/Generated/Player/Walk_08.png - Importer: PreviewImporter
-Importing 'GUID: 67c5385ebc294bd4fa964f77aa6ba0da - Path: Assets/Generated/Player/Walk_08.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 67c5385ebc294bd4fa964f77aa6ba0da' -> (Import Result ID: 'ec4e7ef9f476d71d3275917a87559ebb') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=616edcd94b7c8bcb09db9c5931bec5b6 DependenciesID=be750dff141dfef5171bdecbfa791f65 StaticDependenciesID=986510c5d6899c4ac1062270bb68147b 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.0359914Z
-  Time since last request: 0.0007619 seconds.
-  importAddress: GUID: 06f28f4cea462fd4893546beaf62e36f - Path: Assets/Generated/Player/Walk_11.png - Importer: PreviewImporter
-Importing 'GUID: 06f28f4cea462fd4893546beaf62e36f - Path: Assets/Generated/Player/Walk_11.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 06f28f4cea462fd4893546beaf62e36f' -> (Import Result ID: '9b02c37e406dd6ae42108e377e71f724') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6d611c6f582327deb8adb17f82f9bd59 DependenciesID=b7590522e0b84de4adde91fc8706a834 StaticDependenciesID=533dc1ae976c415ffaab17e00b6e1c07 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.0720416Z
-  Time since last request: 0.0008031 seconds.
-  importAddress: GUID: 0242e3ac16fd93c409f48f774bcade60 - Path: Assets/Generated/Player/Walk_01.png - Importer: PreviewImporter
-Importing 'GUID: 0242e3ac16fd93c409f48f774bcade60 - Path: Assets/Generated/Player/Walk_01.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 0242e3ac16fd93c409f48f774bcade60' -> (Import Result ID: '3a721a396883c24fc82a5d4badda9190') in 0.024 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9fb79582fd9722e83cd869d36204679e DependenciesID=41b90a5e7c602587e9ffee3fa26db7b3 StaticDependenciesID=ee93e31d2e87d5219e9cbb25651480bf 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.116607Z
-  Time since last request: 0.0014267 seconds.
-  importAddress: GUID: 8ad0df09b77d634478ce98fe149dd6e9 - Path: Assets/Generated/Player/Walk_16.png - Importer: PreviewImporter
-Importing 'GUID: 8ad0df09b77d634478ce98fe149dd6e9 - Path: Assets/Generated/Player/Walk_16.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 8ad0df09b77d634478ce98fe149dd6e9' -> (Import Result ID: '7ea611621155966b38f52ef038fcaa16') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e3ad5b7c4dfb21502722f8cbc806f83f DependenciesID=dc3085b21b3415c6ae1d6d5219fb9ffb StaticDependenciesID=36a320c7242a6de08eaf3c5300efb0c5 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.1542697Z
-  Time since last request: 0.000894 seconds.
-  importAddress: GUID: 431b6272fe652c64f95f52496f989551 - Path: Assets/Generated/Player/Walk_04.png - Importer: PreviewImporter
-Importing 'GUID: 431b6272fe652c64f95f52496f989551 - Path: Assets/Generated/Player/Walk_04.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 431b6272fe652c64f95f52496f989551' -> (Import Result ID: '9eec8251a952d9efaeccce6ca631670f') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=16c872caa33252674a91cf9d1e943294 DependenciesID=292449a2b9e1d73599cd6f5ee0b773ed StaticDependenciesID=ad166ebaab6a1290f50eec5e8cd3b4df 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.1988251Z
-  Time since last request: 0.0012668 seconds.
-  importAddress: GUID: 9182854bf96f59f43bc95851adad8059 - Path: Assets/Generated/Player/Walk_13.png - Importer: PreviewImporter
-Importing 'GUID: 9182854bf96f59f43bc95851adad8059 - Path: Assets/Generated/Player/Walk_13.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 9182854bf96f59f43bc95851adad8059' -> (Import Result ID: '12543ef7f3370607b0b4a1d26ee51eac') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ca9438d266954cb2da1a4b911af5753d DependenciesID=9158f50091fbbc607cb67fa277f12559 StaticDependenciesID=e03b26b95d1fd8a610320eb8f01cc94a 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.2477172Z
-  Time since last request: 0.0012981 seconds.
-  importAddress: GUID: c83c381a3c47a1a469be5a77b6b65452 - Path: Assets/Generated/Player/Walk_17.png - Importer: PreviewImporter
-Importing 'GUID: c83c381a3c47a1a469be5a77b6b65452 - Path: Assets/Generated/Player/Walk_17.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: c83c381a3c47a1a469be5a77b6b65452' -> (Import Result ID: 'c2493fbe3cd27c60801ecb7ae84c1b4a') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1fcb95ce4a5aac22171d2ab881b9caf4 DependenciesID=a17c89150884a54b41092e7c399d22fc StaticDependenciesID=62ed2a9b9beafaa1637774717d4a73e9 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.2856716Z
-  Time since last request: 0.0009686 seconds.
-  importAddress: GUID: 9ba4066be365ce84c9e09d4c3b5030d3 - Path: Assets/Generated/Player/Walk_20.png - Importer: PreviewImporter
-Importing 'GUID: 9ba4066be365ce84c9e09d4c3b5030d3 - Path: Assets/Generated/Player/Walk_20.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 9ba4066be365ce84c9e09d4c3b5030d3' -> (Import Result ID: '28f462810c8ace36548bd1f6aff600d0') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7e1a29a355e8fe207a1f5f2e7c101d30 DependenciesID=5101ec089266790b0d5856a0d266df9c StaticDependenciesID=0acc84113a503a1b75eb131a2e26a8ff 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.3285024Z
-  Time since last request: 0.0012384 seconds.
-  importAddress: GUID: 574c9e3fdbf95d2428e9822feffbddc3 - Path: Assets/Generated/Player/Walk_10.png - Importer: PreviewImporter
-Importing 'GUID: 574c9e3fdbf95d2428e9822feffbddc3 - Path: Assets/Generated/Player/Walk_10.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 574c9e3fdbf95d2428e9822feffbddc3' -> (Import Result ID: '3231b385ac78a8c84dde53c17484ff45') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0452d49c03fa68b536e3e64ddb57d6ba DependenciesID=b7d04f578c7e5b3a5defe3ae36965d58 StaticDependenciesID=7f90841c8c8e7cb58b53bbbe6a0fdd8b 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:37:28.3678778Z
-  Time since last request: 0.0013161 seconds.
-  importAddress: GUID: b4f184121f417a744a2ee6241b60ef81 - Path: Assets/Generated/Player/Walk_09.png - Importer: PreviewImporter
-Importing 'GUID: b4f184121f417a744a2ee6241b60ef81 - Path: Assets/Generated/Player/Walk_09.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: b4f184121f417a744a2ee6241b60ef81' -> (Import Result ID: '807852db09a9e6df3a17c3127cdd4efe') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=faec3c68e10f96a16ad444b9ea98e4a9 DependenciesID=1e0196f3cd51f660f0fcce7ea467be2c StaticDependenciesID=186d4f56916458e557f4d8f8ab85a3d2 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Refreshing native plugins compatible for Editor in 2.50 ms, found 5 plugins.
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (3.0 MB). Loaded Objects now: 8589.
 Memory consumption went from 352.3 MB to 349.3 MB.
-Total: 12.602200 ms (FindLiveObjects: 1.119300 ms CreateObjectMapping: 0.431300 ms MarkObjects: 10.052500 ms  DeleteObjects: 0.671000 ms)
+Total: 10.057700 ms (FindLiveObjects: 0.600400 ms CreateObjectMapping: 0.228800 ms MarkObjects: 8.199600 ms  DeleteObjects: 0.735200 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:40:35.579639Z
-  Time since last request: 187.1746627 seconds.
-  importAddress: GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: PreviewImporter
-Importing 'GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: f0e7c751bdb501a429b4f431ff78e18d' -> (Import Result ID: '62b93cdff4a080b99ae1d8f2270f897c') in 0.001 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e545e129df15732f2c431ec35e03e86f DependenciesID=e0ad12dff3d1229a5c8ac567c834c2f3 StaticDependenciesID=bd2707bef6b0784801e4cddd8a3a75aa 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:40:36.0264797Z
-  Time since last request: 0.4202532 seconds.
-  importAddress: GUID: 8c9cfa26abfee488c85f1582747f6a02 - Path: Assets/Scenes/SampleScene.unity - Importer: PreviewImporter
-Importing 'GUID: 8c9cfa26abfee488c85f1582747f6a02 - Path: Assets/Scenes/SampleScene.unity - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 8c9cfa26abfee488c85f1582747f6a02' -> (Import Result ID: '750af900e00882ad5f6752fdd14e5f10') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=90ed1bf11bd6e0e85d4c90d5dd7c8fe3 DependenciesID=cd6531468c8e0dd801351547f2d78f23 StaticDependenciesID=81d57a48c189a71ddd8975e2821e1249 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:14.9423143Z
-  Time since last request: 278.88830899999999 seconds.
-  importAddress: GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: f0e7c751bdb501a429b4f431ff78e18d' -> (Import Result ID: 'ecb4850eca0f7f1b62b8f8421b60f8ae') in 0.108 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7bb8f826f8302a61b14cd9b7c9b4f3e2 DependenciesID=10772ae2f31eb6db8ecf638fc96416e3 StaticDependenciesID=c89a16c9ff8c0cb80bb815773bcca98b 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.0748629Z
-  Time since last request: 0.000645 seconds.
-  importAddress: GUID: f441f4e9dc3cade4a96aaf18fa0d00e0 - Path: Assets/Generated/Player/Walk_05.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: f441f4e9dc3cade4a96aaf18fa0d00e0 - Path: Assets/Generated/Player/Walk_05.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: f441f4e9dc3cade4a96aaf18fa0d00e0' -> (Import Result ID: 'cafdb1eae37a7fb85a03eb25ee39b5ad') in 0.113 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=52e271e2fa247ec439bdf709ed457bd7 DependenciesID=f89cc82bcfaadedf3ef6b118d92935be StaticDependenciesID=a4b2285ad8fd72d83fc141a3222bc0e6 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.2151082Z
-  Time since last request: 0.0005526 seconds.
-  importAddress: GUID: 9182854bf96f59f43bc95851adad8059 - Path: Assets/Generated/Player/Walk_13.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 9182854bf96f59f43bc95851adad8059 - Path: Assets/Generated/Player/Walk_13.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 9182854bf96f59f43bc95851adad8059' -> (Import Result ID: '0a4fd862f169308261c157cc7344e735') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7cdfa7f96ff9bfdf2d5cfba38c539b70 DependenciesID=d8dec4c2ff05fb281607f9335c346f8a StaticDependenciesID=65813b6c5f34d309580bc2f2a1bcd45a 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.253293Z
-  Time since last request: 0.0006075 seconds.
-  importAddress: GUID: 1b56e55ceeebea9439f688a6a60b40ca - Path: Assets/Generated/Nastya/Walk_18.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 1b56e55ceeebea9439f688a6a60b40ca - Path: Assets/Generated/Nastya/Walk_18.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 1b56e55ceeebea9439f688a6a60b40ca' -> (Import Result ID: 'd506814d99e9afb900b99b8b9234464d') in 0.022 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7306d113d4d89127454a1d367800b93b DependenciesID=6d32e28bd22dcd730e1912c7737d65ad StaticDependenciesID=17c213331b2bee04c8e8780c5d59c35e 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.2997474Z
-  Time since last request: 0.0005207 seconds.
-  importAddress: GUID: ed11cbb00b6790f47bd6f86a5df967c9 - Path: Assets/Generated/Player/Walk_00.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: ed11cbb00b6790f47bd6f86a5df967c9 - Path: Assets/Generated/Player/Walk_00.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: ed11cbb00b6790f47bd6f86a5df967c9' -> (Import Result ID: '1d698bf72bb92afc20b827568553f728') in 0.010 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=71324ce287f00b33e5bee6cbd70fc73a DependenciesID=4b0d65330a602b3c684061a62bf44e42 StaticDependenciesID=42dfb061fbd1c6606740f283d701e197 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.3382997Z
-  Time since last request: 0.0005877 seconds.
-  importAddress: GUID: 8ad0df09b77d634478ce98fe149dd6e9 - Path: Assets/Generated/Player/Walk_16.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 8ad0df09b77d634478ce98fe149dd6e9 - Path: Assets/Generated/Player/Walk_16.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 8ad0df09b77d634478ce98fe149dd6e9' -> (Import Result ID: '6579b62448637a0e51b680b1cc91b5e2') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=521ccb3088ba88d3ddcace3c3edad124 DependenciesID=3db80506bc30ece51dcaf8ffabd4c702 StaticDependenciesID=b57aa177f3d0a3f7d11c6d75e42caf3e 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.3720128Z
-  Time since last request: 0.0007845 seconds.
-  importAddress: GUID: 8c9cfa26abfee488c85f1582747f6a02 - Path: Assets/Scenes/SampleScene.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 8c9cfa26abfee488c85f1582747f6a02 - Path: Assets/Scenes/SampleScene.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 8c9cfa26abfee488c85f1582747f6a02' -> (Import Result ID: '069ede7ef9f8c5aaf4a9d4b3baddb148') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=854dbb03431a1d73db488608d422afc3 DependenciesID=0bebd9666f5e39768bfd5333597bc562 StaticDependenciesID=6d5469a9a28b62543cdda423576ce821 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.4015297Z
-  Time since last request: 0.0007235 seconds.
-  importAddress: GUID: 90be1514f96d73543b665ff73fd23f64 - Path: Assets/Generated/Player/Walk_06.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 90be1514f96d73543b665ff73fd23f64 - Path: Assets/Generated/Player/Walk_06.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 90be1514f96d73543b665ff73fd23f64' -> (Import Result ID: 'd8f86512f78c0cf2c6a74df1f37ebb6c') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7d3440d8f3644e4cedab68bf4487e5ba DependenciesID=2826cc085bb839857f70b9a8ba662722 StaticDependenciesID=592b914068fbfc1ead975dd8197b00d2 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.4399397Z
-  Time since last request: 0.0004431 seconds.
-  importAddress: GUID: d0e8f3e15bcc7d442b42ca0b0d92ef1a - Path: Assets/Generated/Player/Walk_02.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: d0e8f3e15bcc7d442b42ca0b0d92ef1a - Path: Assets/Generated/Player/Walk_02.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: d0e8f3e15bcc7d442b42ca0b0d92ef1a' -> (Import Result ID: '57029eacc59b30bdf2a35d9e865db288') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9f9dee0a6730e56a65d4494529eb54b3 DependenciesID=0d79085331b01ef2062a9c8e4390fcab StaticDependenciesID=b644cc0bf7c8e6adce04fa356635e7d2 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.4793285Z
-  Time since last request: 0.0005542 seconds.
-  importAddress: GUID: 574c9e3fdbf95d2428e9822feffbddc3 - Path: Assets/Generated/Player/Walk_10.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 574c9e3fdbf95d2428e9822feffbddc3 - Path: Assets/Generated/Player/Walk_10.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 574c9e3fdbf95d2428e9822feffbddc3' -> (Import Result ID: '75dbacf67e9d8b14dccd5db51dcdd44b') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4ea120117934e68082b6bd3ab7873796 DependenciesID=d678d2f4aa3ef29e9c09ebb181c4b9a3 StaticDependenciesID=f6dcb0047c57c4147211503d5243c3dc 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.5186349Z
-  Time since last request: 0.0006515 seconds.
-  importAddress: GUID: e05eb33c4ec0df045a47a0fa69047ea5 - Path: Assets/Generated/Nastya/Walk_09.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: e05eb33c4ec0df045a47a0fa69047ea5 - Path: Assets/Generated/Nastya/Walk_09.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: e05eb33c4ec0df045a47a0fa69047ea5' -> (Import Result ID: 'ac8f9be05659a3375749e74d88967b37') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=db5efde4765cd9ac758be2a61ece6470 DependenciesID=d5d8f0e9acfb7274c3a7e30cad7ed19a StaticDependenciesID=111f68e78adc1c977e727c3c65d2113d 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.5586457Z
-  Time since last request: 0.0006064 seconds.
-  importAddress: GUID: f2854929035646747a51aae5e7345ac8 - Path: Assets/Generated/Player/Walk_12.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: f2854929035646747a51aae5e7345ac8 - Path: Assets/Generated/Player/Walk_12.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: f2854929035646747a51aae5e7345ac8' -> (Import Result ID: '0a478203cc19550b3f7d61295ab17474') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=89cf10853f62890394fca104bde1b302 DependenciesID=68435da55da06fd5ca715cd66bb51997 StaticDependenciesID=b9127e505b5b77f28586dab0b54e2d42 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.5955924Z
-  Time since last request: 0.0005543 seconds.
-  importAddress: GUID: 087024707fb04fe45a9a0e6423dd69be - Path: Assets/Srpt/DoorTransitionTrigger.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 087024707fb04fe45a9a0e6423dd69be - Path: Assets/Srpt/DoorTransitionTrigger.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 087024707fb04fe45a9a0e6423dd69be' -> (Import Result ID: 'c9e0d136a39c90d7ea3350f28e2a5c4a') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1e2c186fdd36a44a22be86ba57e9b37b DependenciesID=cb78bb1bafc578e9af12ff3d7baad44d StaticDependenciesID=6140d12866452b3238ad458afe211386 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.6300349Z
-  Time since last request: 0.0006088 seconds.
-  importAddress: GUID: 889cb6445fbe76c41ae6ad5c69d79c20 - Path: Assets/Srpt/CharacterAnimationSetupEditor.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 889cb6445fbe76c41ae6ad5c69d79c20 - Path: Assets/Srpt/CharacterAnimationSetupEditor.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 889cb6445fbe76c41ae6ad5c69d79c20' -> (Import Result ID: 'faeaa480a19a1c2926be5faae66ed733') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cd8ebe9c78cbfe7118274971022bd059 DependenciesID=ec33c594cf4d77a6c886a5151d66db3b StaticDependenciesID=e53bbbc270f74848e5a21dccba9d6b2f 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.6605313Z
-  Time since last request: 0.0006314 seconds.
-  importAddress: GUID: 0242e3ac16fd93c409f48f774bcade60 - Path: Assets/Generated/Player/Walk_01.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 0242e3ac16fd93c409f48f774bcade60 - Path: Assets/Generated/Player/Walk_01.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 0242e3ac16fd93c409f48f774bcade60' -> (Import Result ID: '9df4dddcb4ffb9f0f6cbc2276ae6fa80') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d218530775afb4917eb10e47923fc4a2 DependenciesID=d218ccba60b5d210c779a8991ed1f214 StaticDependenciesID=562570d1be33cc4a490caf06966620fa 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.7023251Z
-  Time since last request: 0.000601 seconds.
-  importAddress: GUID: b4f184121f417a744a2ee6241b60ef81 - Path: Assets/Generated/Player/Walk_09.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: b4f184121f417a744a2ee6241b60ef81 - Path: Assets/Generated/Player/Walk_09.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: b4f184121f417a744a2ee6241b60ef81' -> (Import Result ID: '1fc8001e26b1a7e0c4c0eb47d59749bd') in 0.010 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=727d8824227e4ae282597dfd49fbe8c8 DependenciesID=133e0a786c5d13d6ff89792e8657ff05 StaticDependenciesID=302bd111b68a87619c5f0d7bdd72eea7 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.7408224Z
-  Time since last request: 0.000726 seconds.
-  importAddress: GUID: 8271a718ac3358a4eb9cb8ebff1c81fc - Path: Assets/Generated/Nastya - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 8271a718ac3358a4eb9cb8ebff1c81fc - Path: Assets/Generated/Nastya - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 8271a718ac3358a4eb9cb8ebff1c81fc' -> (Import Result ID: 'd8b060ff9835b13f89f0790e0241a697') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=22025339449333765624889ed3b91a33 DependenciesID=a0e5eb8457d8e0f9938a03e01ffd8955 StaticDependenciesID=86fb6a52e6ad908e3f22eefed6d07aab 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.7704785Z
-  Time since last request: 0.0007577 seconds.
-  importAddress: GUID: 182ad3afccb0d814aa95c6c1444b2333 - Path: Assets/Generated/Nastya/Walk_10.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 182ad3afccb0d814aa95c6c1444b2333 - Path: Assets/Generated/Nastya/Walk_10.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 182ad3afccb0d814aa95c6c1444b2333' -> (Import Result ID: '96ea1ecf3116c035a60d12f85121c0fb') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8b3428d1d2ce45b904cb61f8bf1cf5f4 DependenciesID=8a18ceab2ffef2508b0b4498a4374f97 StaticDependenciesID=e99f02f53b5398611c4860267d2abae6 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.8069375Z
-  Time since last request: 0.0009926 seconds.
-  importAddress: GUID: 7b3fc4284fde06346ba0122fc35f02f1 - Path: Assets/Srpt/NastyaCameraCue.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 7b3fc4284fde06346ba0122fc35f02f1 - Path: Assets/Srpt/NastyaCameraCue.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 7b3fc4284fde06346ba0122fc35f02f1' -> (Import Result ID: '850b0168ac80aeb9daf3eddf333c8c06') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed45ede0fdc402f66e311785c2ba8967 DependenciesID=27e6f1f1b0e16bda49faab24d3370756 StaticDependenciesID=571ab46fb8ed454995e88413f32e64d4 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.8346827Z
-  Time since last request: 0.0005862 seconds.
-  importAddress: GUID: 80c4a64b3fb0a35499c4b95baf7a937a - Path: Assets/Generated/Player/Idle.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 80c4a64b3fb0a35499c4b95baf7a937a - Path: Assets/Generated/Player/Idle.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 80c4a64b3fb0a35499c4b95baf7a937a' -> (Import Result ID: '5aa7777e8954366048d8c93ca36040cd') in 0.010 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=64875ac6d3d88f228f72989c4cf031dd DependenciesID=81a26a8f3f10d0319b976b02f52dbb3c StaticDependenciesID=81c5804fc52b5cbac93807d35baa9424 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.8700919Z
-  Time since last request: 0.0007173 seconds.
-  importAddress: GUID: d9b6014c27781b042b90d523f24a34fa - Path: Assets/Sprite/движение_насти.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: d9b6014c27781b042b90d523f24a34fa - Path: Assets/Sprite/движение_насти.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: d9b6014c27781b042b90d523f24a34fa' -> (Import Result ID: '1ce600f4fc5c5f1c28c40687138b30e5') in 0.045 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=af68eeeeac0f122368c2d48bc3dfa570 DependenciesID=f71c18f992333f25ba5ad34862c4e7e8 StaticDependenciesID=73ca803ec01fd27b59e5d500274e88f6 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 24
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.9414714Z
-  Time since last request: 0.0005792 seconds.
-  importAddress: GUID: 5959791da9f37384b84219764af7ec97 - Path: Assets/Generated/Nastya/Walk_01.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 5959791da9f37384b84219764af7ec97 - Path: Assets/Generated/Nastya/Walk_01.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 5959791da9f37384b84219764af7ec97' -> (Import Result ID: '85ba342433ad1c950bef03e3c3a3f496') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c3458bf4caaf82b53cd0068c0fe582ad DependenciesID=8e39cc33b34f39d7426313eb367188c4 StaticDependenciesID=f93688654d45b25c5be3a5b4941ffdff 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:15.9828833Z
-  Time since last request: 0.0005726 seconds.
-  importAddress: GUID: b517489581debad4b993b72349fae939 - Path: Assets/Generated/Nastya/Walk_06.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: b517489581debad4b993b72349fae939 - Path: Assets/Generated/Nastya/Walk_06.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: b517489581debad4b993b72349fae939' -> (Import Result ID: 'daad4fe5caf97066dcc3cdb430e57b01') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f31482fda2971c57959e4a9be34131d5 DependenciesID=b11eaca9c7c798e351ebd46fd3743a61 StaticDependenciesID=bf491699402aee5664de2522f5d65c0e 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:16.019365Z
-  Time since last request: 0.000485 seconds.
-  importAddress: GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd - Path: Assets/Generated/Nastya/Walk_19.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd - Path: Assets/Generated/Nastya/Walk_19.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 8c3d39f9a0a5f1947bd1faa59c71cdbd' -> (Import Result ID: 'cacb9a919b942d67f75ef9f9279601a6') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b7055692e6d5ab25c4d0c34552d9e738 DependenciesID=aa7080466e9fb14745a3ef629bfc4fae StaticDependenciesID=36dc0f1ff65299559f6842172ab88883 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:16.0614972Z
-  Time since last request: 0.0005227 seconds.
-  importAddress: GUID: 9ba4066be365ce84c9e09d4c3b5030d3 - Path: Assets/Generated/Player/Walk_20.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 9ba4066be365ce84c9e09d4c3b5030d3 - Path: Assets/Generated/Player/Walk_20.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 9ba4066be365ce84c9e09d4c3b5030d3' -> (Import Result ID: 'd9ed89e2051cf1e0e821129389214959') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0a206ec754145dca23adae785e27b9a5 DependenciesID=0e4a73c2d0164a2daaf85f9d9c910615 StaticDependenciesID=4b56a35c024f5e8275b58a26a96c4efa 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:16.1018239Z
-  Time since last request: 0.0005827 seconds.
-  importAddress: GUID: 7f38fbb5f1127fe4cbb4f3d3d979e0cb - Path: Assets/Editor/NeKArtonAnimationAndDoorSetup.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 7f38fbb5f1127fe4cbb4f3d3d979e0cb - Path: Assets/Editor/NeKArtonAnimationAndDoorSetup.cs - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 7f38fbb5f1127fe4cbb4f3d3d979e0cb' -> (Import Result ID: '4267695dcb1fdeadeded83044c5169a8') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b2d5c6893a73a04095d18d3e696bebbb DependenciesID=d50130207486219ad1adf0e45621b8cc StaticDependenciesID=9288bb828f7f0b3fe24dd47e2ec32bbe 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:16.1340766Z
-  Time since last request: 0.0005308 seconds.
-  importAddress: GUID: 878db88fb41a17d48a0b67cb1a83b382 - Path: Assets/Generated - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 878db88fb41a17d48a0b67cb1a83b382 - Path: Assets/Generated - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 878db88fb41a17d48a0b67cb1a83b382' -> (Import Result ID: '076123fde72c4f54220ed00b73348565') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0b8705148d318faf550d173513db7e4e DependenciesID=88b572e8a7553f049582501e65b34529 StaticDependenciesID=0a7d5bf157855069b9fe63cd7b60c349 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:16.1656105Z
-  Time since last request: 0.0008335 seconds.
-  importAddress: GUID: abab866fd38a4be47b2744ec3480287c - Path: Assets/Generated/Nastya/Walk_03.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: abab866fd38a4be47b2744ec3480287c - Path: Assets/Generated/Nastya/Walk_03.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: abab866fd38a4be47b2744ec3480287c' -> (Import Result ID: 'd73f3f93d3bc3cfac49153f1b30ffca8') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=939a289d16a24ce6b929c61cee684c33 DependenciesID=3d0e737e893c506c53f2a4f9b05fb7ef StaticDependenciesID=40aa3cdb2676ac786143c3ee82b6848a 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:16.2051301Z
-  Time since last request: 0.0006055 seconds.
-  importAddress: GUID: 0707c8bf8c0f74d41b5e1efe9cc45770 - Path: Assets/Generated/Player/Walk_19.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 0707c8bf8c0f74d41b5e1efe9cc45770 - Path: Assets/Generated/Player/Walk_19.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 0707c8bf8c0f74d41b5e1efe9cc45770' -> (Import Result ID: 'e35c811a0d2415084b02dd1b866be8f9') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=99d1f903175fd9beb0528be5d16b59cc DependenciesID=42ed6bf820f80306b261b34c5bb1889d StaticDependenciesID=d6f69233022be69c970261f3bb6c994f 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:16.2441283Z
-  Time since last request: 0.0005833 seconds.
-  importAddress: GUID: 431b6272fe652c64f95f52496f989551 - Path: Assets/Generated/Player/Walk_04.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 431b6272fe652c64f95f52496f989551 - Path: Assets/Generated/Player/Walk_04.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 431b6272fe652c64f95f52496f989551' -> (Import Result ID: '8a073e2478eeead190306f97581bb085') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7e5c4e411bd1ce5569e71506f26a507e DependenciesID=219990da7711fac492973b5697f735b4 StaticDependenciesID=611534da39548ff512fb28c14fe5fc3f 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:45:16.2889717Z
-  Time since last request: 0.0005692 seconds.
-  importAddress: GUID: 073beb112b5a6cf4d9ae1f148f0f4513 - Path: Assets/Generated/Nastya/Walk_04.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 073beb112b5a6cf4d9ae1f148f0f4513 - Path: Assets/Generated/Nastya/Walk_04.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 073beb112b5a6cf4d9ae1f148f0f4513' -> (Import Result ID: 'c90fa301521240ca176577275bbe38dc') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=52990f3fac3806503b96a46b25df37cc DependenciesID=1c6b71e079add78f3b9fb7e2d4e2ef5f StaticDependenciesID=f6ec73ed5edd359df4fd38ba58287f4e 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:47:18.9982654Z
-  Time since last request: 122.66404439999999 seconds.
-  importAddress: GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: PreviewImporter
-Importing 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf' -> (Import Result ID: '1b28209b0665c4d0bc48546e258b285c') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a5adf43ea940b49978c4904850603346 DependenciesID=1c1cbcad80bc9b1c9916c59d06cfae85 StaticDependenciesID=62a361eca12b14776e5eb5ac6198b8db 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:47:19.9497278Z
-  Time since last request: 0.9266008 seconds.
-  importAddress: GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf' -> (Import Result ID: 'bfd59cd87c467fb9a68b504648d65f81') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2a4b368fbf9bafe362ce142f84bc160d DependenciesID=6595ae2e9390c5253764b1ac135472fe StaticDependenciesID=55edfafcce4cd9c1dcf4be5e41bbd51a 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:47:30.7485225Z
-  Time since last request: 10.7729356 seconds.
-  importAddress: GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: f0e7c751bdb501a429b4f431ff78e18d' -> (Import Result ID: '66904221c690350b4b3c19b2bf47a7e8') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=109785b1bc69888cf8033ffc006a58b6 DependenciesID=1c77f686423317d10d75f50b3c4051e9 StaticDependenciesID=4f1a5cde2cce3b7036d115ba1d239d5d 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
 Received Prepare
 AcceleratorClientConnectionCallback - disconnected - :0
-Refreshing native plugins compatible for Editor in 2.77 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.51 ms, found 5 plugins.
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 29 unused Assets / (3.0 MB). Loaded Objects now: 8589.
-Memory consumption went from 352.0 MB to 349.0 MB.
-Total: 17.495100 ms (FindLiveObjects: 1.382700 ms CreateObjectMapping: 1.271000 ms MarkObjects: 13.105700 ms  DeleteObjects: 1.384900 ms)
+Unloading 25 unused Assets / (3.0 MB). Loaded Objects now: 8572.
+Memory consumption went from 354.4 MB to 351.4 MB.
+Total: 10.138200 ms (FindLiveObjects: 0.535300 ms CreateObjectMapping: 0.203100 ms MarkObjects: 8.423000 ms  DeleteObjects: 0.736900 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:48:07.5089544Z
-  Time since last request: 36.7302117 seconds.
-  importAddress: GUID: 83b551f3406390a41a785788ecb5de25 - Path: Assets/Sprite/улица.png - Importer: PreviewImporter
-Importing 'GUID: 83b551f3406390a41a785788ecb5de25 - Path: Assets/Sprite/улица.png - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: 83b551f3406390a41a785788ecb5de25' -> (Import Result ID: 'a6beba037260dbe2ef63db0e4605f732') in 0.036 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1de77d90f7207021051c7cad38ce31f4 DependenciesID=351008f627b63b7cf362cbf8fbfea6eb StaticDependenciesID=755a2916e87b13942afa00d588cd879c 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:48:08.2064743Z
-  Time since last request: 0.6321679 seconds.
-  importAddress: GUID: 83b551f3406390a41a785788ecb5de25 - Path: Assets/Sprite/улица.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 83b551f3406390a41a785788ecb5de25 - Path: Assets/Sprite/улица.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 83b551f3406390a41a785788ecb5de25' -> (Import Result ID: '5f9bd3d0e877f3fb0928e5fcd9f23754') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=446ec1f8923ef8c6bc5fd3cfea8018b3 DependenciesID=190fda892d8eb331deb5def7cf6ee086 StaticDependenciesID=2c7fc3d1fe6715fe2af49b9415475dde 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
 Received Prepare
 AcceleratorClientConnectionCallback - disconnected - :0
-Refreshing native plugins compatible for Editor in 4.63 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.36 ms, found 5 plugins.
 Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (3.0 MB). Loaded Objects now: 8590.
-Memory consumption went from 352.0 MB to 349.0 MB.
-Total: 16.627100 ms (FindLiveObjects: 1.199700 ms CreateObjectMapping: 0.507300 ms MarkObjects: 13.793400 ms  DeleteObjects: 0.837100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:49:39.4687484Z
-  Time since last request: 91.2224638 seconds.
-  importAddress: GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
-Importing 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf - Path: Assets/Scenes/outplace.unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
-Imported 'GUID: 7a0b6eb0d6e33df41b2126e43360b6bf' -> (Import Result ID: '3117eadfdf6d30521de1560640f62fb8') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b7162f83d0805591745eeebe3b2874f6 DependenciesID=4c2500e982d7ad5001f6b6b653b9326b StaticDependenciesID=6e568827ce0a4cfa6434bd897664af64 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time of request: 2026-11-23T18:49:40.5910161Z
-  Time since last request: 1.0956111 seconds.
-  importAddress: GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: PreviewImporter
-Importing 'GUID: f0e7c751bdb501a429b4f431ff78e18d - Path: Assets/Scenes/Location-1.unity - Importer: PreviewImporter' with importer (PreviewImporter)
-Imported 'GUID: f0e7c751bdb501a429b4f431ff78e18d' -> (Import Result ID: 'aa7151630256ffa9fe10ac0d9a3740b1') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e545e129df15732f2c431ec35e03e86f DependenciesID=def33a992b158ef9d312d8ebdeef8af6 StaticDependenciesID=03de3148bb231eeaac83cd71c71d5b6d 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-AcceleratorClientConnectionCallback - disconnected - :0
-Refreshing native plugins compatible for Editor in 3.10 ms, found 5 plugins.
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (3.0 MB). Loaded Objects now: 8590.
-Memory consumption went from 352.0 MB to 349.0 MB.
-Total: 12.795900 ms (FindLiveObjects: 1.129600 ms CreateObjectMapping: 0.570900 ms MarkObjects: 10.068300 ms  DeleteObjects: 0.725700 ms)
+Unloading 25 unused Assets / (3.0 MB). Loaded Objects now: 8572.
+Memory consumption went from 356.4 MB to 353.4 MB.
+Total: 9.955900 ms (FindLiveObjects: 0.713300 ms CreateObjectMapping: 0.366900 ms MarkObjects: 7.965600 ms  DeleteObjects: 0.620700 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 Editor requested this worker to shutdown with reason: Editor is closing down
