@@ -105,8 +105,8 @@ public class PlayerMovement : MonoBehaviour
             statusText.text = string.IsNullOrEmpty(activeFallbackPanel)
                 ? string.Empty
                 : activeFallbackPanel + (title == "ИНВЕНТАРЬ"
-                    ? "\\nИнвентарь пока пуст."
-                    : "\\nХарактеристики персонажа появятся здесь.");
+                    ? "\nИнвентарь пока пуст."
+                    : "\nХарактеристики персонажа появятся здесь.");
         }
     }
 
