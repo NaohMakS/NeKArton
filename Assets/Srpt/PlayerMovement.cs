@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private TextMeshProUGUI statusText;
     private bool isPaused;
     private bool isTransitioning;
+    private string activeFallbackPanel = string.Empty;
     private float horizontalInput;
 
     private void Awake()
@@ -98,8 +99,15 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        activeFallbackPanel = activeFallbackPanel == title ? string.Empty : title;
         if (statusText != null)
-            statusText.text = title + "\nПанель можно назначить в Inspector.";
+        {
+            statusText.text = string.IsNullOrEmpty(activeFallbackPanel)
+                ? string.Empty
+                : activeFallbackPanel + (title == "ИНВЕНТАРЬ"
+                    ? "\\nИнвентарь пока пуст."
+                    : "\\nХарактеристики персонажа появятся здесь.");
+        }
     }
 
     private void TogglePause()
@@ -125,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
         if (statusText != null) statusText.text = "ПЕРЕХОД МЕЖДУ ЛОКАЦИЯМИ";
         yield return new WaitForSecondsRealtime(fadeDuration * 0.35f);
         yield return Fade(0f);
+        if (statusText != null) statusText.text = string.Empty;
         isTransitioning = false;
     }
 
