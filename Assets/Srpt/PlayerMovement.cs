@@ -90,7 +90,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current == null || isTransitioning) return;
+        if (isTransitioning) return;
+        if (Keyboard.current == null)
+        {
+            horizontalInput = 0f;
+            return;
+        }
 
         Keyboard keyboard = Keyboard.current;
 
@@ -128,10 +133,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (body != null)
         {
-            Vector2 velocity = body.linearVelocity;
-            velocity.x = horizontalInput * moveSpeed;
-            body.linearVelocity = velocity;
-            body.position = new Vector2(nextX, body.position.y);
+            body.MovePosition(new Vector2(nextX, body.position.y));
         }
         else
         {
