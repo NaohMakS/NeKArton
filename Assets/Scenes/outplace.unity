@@ -405,11 +405,34 @@ MonoBehaviour:
   moveSpeed: 5
   body: {fileID: 0}
   spriteRenderer: {fileID: 3100000002}
-  walkFrames: []
+  walkFrames:
+  - {fileID: 8051780188957950043, guid: ed11cbb00b6790f47bd6f86a5df967c9, type: 3}
+  - {fileID: 5695823929769056846, guid: 0242e3ac16fd93c409f48f774bcade60, type: 3}
+  - {fileID: 8887006134180644394, guid: d0e8f3e15bcc7d442b42ca0b0d92ef1a, type: 3}
+  - {fileID: -5684395763846510631, guid: 8c05ec3b6474bc6448e78fd5fb9a32ac, type: 3}
+  - {fileID: 1054974459868980372, guid: 431b6272fe652c64f95f52496f989551, type: 3}
+  - {fileID: -9153257304444426904, guid: f441f4e9dc3cade4a96aaf18fa0d00e0, type: 3}
+  - {fileID: 1834858180887452285, guid: 90be1514f96d73543b665ff73fd23f64, type: 3}
+  - {fileID: 1685589978077755936, guid: a5a5610ae4db293459e7702c9e9a4e22, type: 3}
+  - {fileID: 7909514532186419216, guid: 67c5385ebc294bd4fa964f77aa6ba0da, type: 3}
+  - {fileID: -2901318747940082284, guid: b4f184121f417a744a2ee6241b60ef81, type: 3}
+  - {fileID: 6646734700752008592, guid: 574c9e3fdbf95d2428e9822feffbddc3, type: 3}
+  - {fileID: -1058417239312587050, guid: 06f28f4cea462fd4893546beaf62e36f, type: 3}
+  - {fileID: 407074151086075640, guid: f2854929035646747a51aae5e7345ac8, type: 3}
+  - {fileID: -4680606009761191602, guid: 9182854bf96f59f43bc95851adad8059, type: 3}
+  - {fileID: 768893867134454671, guid: 3b7ce0804888ba14fa17eb68fc44653e, type: 3}
+  - {fileID: -1064954182103401833, guid: 68a91632c648d244abf49631c7a9d1ac, type: 3}
+  - {fileID: 1239407173332459589, guid: 8ad0df09b77d634478ce98fe149dd6e9, type: 3}
+  - {fileID: 3964660665495905104, guid: c83c381a3c47a1a469be5a77b6b65452, type: 3}
+  - {fileID: -4949310552555899083, guid: 2f9cedb8294147647a3d5bc245dd3d33, type: 3}
+  - {fileID: -8212902489829606218, guid: 0707c8bf8c0f74d41b5e1efe9cc45770, type: 3}
+  - {fileID: 547115967285668526, guid: 9ba4066be365ce84c9e09d4c3b5030d3, type: 3}
+  - {fileID: 9004673626768599442, guid: a242d7bcf5a8dfc4ebfeab165904a79f, type: 3}
+  - {fileID: -140143444907614325, guid: 9aacb9abfcc41164da13bd774e0ae168, type: 3}
   idleSprite: {fileID: 4723107735738678597, guid: 80c4a64b3fb0a35499c4b95baf7a937a, type: 3}
   animationFramesPerSecond: 9
   followCamera: {fileID: 1859074925}
-  locationBounds: {fileID: 0}
+  locationBounds: {fileID: 520691236}
   cameraOffset: {x: 0, y: 0, z: -10}
   cameraSmoothTime: 0.12
   destinationScene:
