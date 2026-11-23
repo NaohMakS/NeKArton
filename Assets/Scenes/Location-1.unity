@@ -471,7 +471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3000000011}
-  - component: {fileID: 619394801}
+  - component: {fileID: 3000000012}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
