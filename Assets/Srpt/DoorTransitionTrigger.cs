@@ -14,6 +14,17 @@ public class DoorTransitionTrigger : MonoBehaviour
     private bool playerNearby;
     private bool loading;
 
+    private void OnDrawGizmos()
+    {
+        BoxCollider2D box = GetComponent<BoxCollider2D>();
+        if (box == null) return;
+        Gizmos.color = new Color(0.1f, 0.9f, 1f, 0.9f);
+        Matrix4x4 oldMatrix = Gizmos.matrix;
+        Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.DrawWireCube(box.offset, box.size);
+        Gizmos.matrix = oldMatrix;
+    }
+
     private void Reset()
     {
         Collider2D col = GetComponent<Collider2D>();
