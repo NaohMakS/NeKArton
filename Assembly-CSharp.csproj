@@ -53,6 +53,7 @@
     <Analyzer Include="A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\BCLExtensions\TargetingPacks\netstandard2.1\analyzers\dotnet\roslyn4.0\cs\System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Srpt\CharacterAnimationSetupEditor.cs" />
     <Compile Include="Assets\Srpt\NastyaCameraCue.cs" />
     <Compile Include="Assets\Srpt\SceneLoader.cs" />
     <Compile Include="Assets\Srpt\PlayerMovement.cs" />
