@@ -58,8 +58,26 @@ public class PlayerMovement : MonoBehaviour
         if (followCamera == null) followCamera = Camera.main;
         if (locationBounds == null)
         {
+            // В каждой игровой сцене фон может называться по-разному.
+            // Сначала пробуем старое имя, затем ищем самый большой SpriteRenderer, кроме самого игрока.
             GameObject boundsObject = GameObject.Find("Background_FirstLocation");
             if (boundsObject != null) locationBounds = boundsObject.GetComponent<SpriteRenderer>();
+            if (locationBounds == null)
+            {
+                SpriteRenderer[] renderers = FindObjectsOfType<SpriteRenderer>();
+                float largestArea = 0f;
+                foreach (SpriteRenderer candidate in renderers)
+                {
+                    if (candidate == spriteRenderer || candidate.sprite == null) continue;
+                    Bounds candidateBounds = candidate.bounds;
+                    float area = candidateBounds.size.x * candidateBounds.size.y;
+                    if (area > largestArea)
+                    {
+                        largestArea = area;
+                        locationBounds = candidate;
+                    }
+                }
+            }
         }
         if (spriteRenderer != null)
             spriteRenderer.sprite = idleSprite != null ? idleSprite : (walkFrames != null && walkFrames.Length > 0 ? walkFrames[0] : null);
@@ -180,23 +198,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (followCamera == null || locationBounds == null) return;
+        if (followCamera == null) return;
 
-        Bounds bounds = locationBounds.bounds;
-        float halfHeight = followCamera.orthographicSize;
-        float halfWidth = halfHeight * followCamera.aspect;
+        float targetX = transform.position.x + cameraOffset.x;
+        float targetY = transform.position.y + cameraOffset.y;
 
-        float minCameraX = bounds.min.x + halfWidth;
-        float maxCameraX = bounds.max.x - halfWidth;
-        float minCameraY = bounds.min.y + halfHeight;
-        float maxCameraY = bounds.max.y - halfHeight;
+        if (locationBounds != null)
+        {
+            Bounds bounds = locationBounds.bounds;
+            float halfHeight = followCamera.orthographicSize;
+            float halfWidth = halfHeight * followCamera.aspect;
 
-        float targetX = minCameraX > maxCameraX
-            ? bounds.center.x
-            : Mathf.Clamp(transform.position.x + cameraOffset.x, minCameraX, maxCameraX);
-        float targetY = minCameraY > maxCameraY
-            ? bounds.center.y
-            : Mathf.Clamp(transform.position.y + cameraOffset.y, minCameraY, maxCameraY);
+            float minCameraX = bounds.min.x + halfWidth;
+            float maxCameraX = bounds.max.x - halfWidth;
+            float minCameraY = bounds.min.y + halfHeight;
+            float maxCameraY = bounds.max.y - halfHeight;
+
+            targetX = minCameraX > maxCameraX
+                ? bounds.center.x
+                : Mathf.Clamp(targetX, minCameraX, maxCameraX);
+            targetY = minCameraY > maxCameraY
+                ? bounds.center.y
+                : Mathf.Clamp(targetY, minCameraY, maxCameraY);
+        }
 
         Vector3 cameraPosition = followCamera.transform.position;
         cameraPosition.x = Mathf.SmoothDamp(cameraPosition.x, targetX, ref cameraVelocityX, cameraSmoothTime);
