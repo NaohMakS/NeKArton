@@ -129,8 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 887715413}
   - component: {fileID: 887715412}
-  - component: {fileID: 887715411}
-  - component: {fileID: 887715410}
+  - component: {fileID: 887715414}
   m_Layer: 0
   m_Name: Idle (1)
   m_TagString: Player
