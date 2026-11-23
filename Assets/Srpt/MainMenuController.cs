@@ -71,10 +71,35 @@ public class MainMenuController : MonoBehaviour
         sliderRect.anchorMin = sliderRect.anchorMax = new Vector2(0.5f, 0.47f);
         sliderRect.anchoredPosition = Vector2.zero;
         sliderRect.sizeDelta = new Vector2(420, 28);
-        Image sliderImage = sliderObject.GetComponent<Image>();
-        sliderImage.color = new Color(0.35f, 0.35f, 0.4f, 1f);
+        sliderObject.GetComponent<Image>().color = new Color(0.18f, 0.18f, 0.22f, 1f);
+
+        GameObject fillArea = new GameObject("Fill Area", typeof(RectTransform));
+        fillArea.transform.SetParent(sliderObject.transform, false);
+        RectTransform fillAreaRect = fillArea.GetComponent<RectTransform>();
+        fillAreaRect.anchorMin = new Vector2(0f, 0.25f);
+        fillAreaRect.anchorMax = new Vector2(1f, 0.75f);
+        fillAreaRect.offsetMin = new Vector2(10f, 0f);
+        fillAreaRect.offsetMax = new Vector2(-10f, 0f);
+
+        GameObject fill = new GameObject("Fill", typeof(RectTransform), typeof(Image));
+        fill.transform.SetParent(fillArea.transform, false);
+        RectTransform fillRect = fill.GetComponent<RectTransform>();
+        fillRect.anchorMin = Vector2.zero;
+        fillRect.anchorMax = Vector2.one;
+        fillRect.offsetMin = fillRect.offsetMax = Vector2.zero;
+        fill.GetComponent<Image>().color = new Color(0.45f, 0.7f, 0.9f, 1f);
+
+        GameObject handle = new GameObject("Handle", typeof(RectTransform), typeof(Image));
+        handle.transform.SetParent(sliderObject.transform, false);
+        RectTransform handleRect = handle.GetComponent<RectTransform>();
+        handleRect.sizeDelta = new Vector2(22f, 22f);
+        handle.GetComponent<Image>().color = Color.white;
 
         Slider slider = sliderObject.GetComponent<Slider>();
+        slider.fillRect = fillRect;
+        slider.handleRect = handleRect;
+        slider.targetGraphic = handle.GetComponent<Image>();
+        slider.direction = Slider.Direction.LeftToRight;
         slider.minValue = 0f;
         slider.maxValue = 1f;
         slider.value = AudioListener.volume;
