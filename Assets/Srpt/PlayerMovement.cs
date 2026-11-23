@@ -55,35 +55,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (body == null) body = GetComponent<Rigidbody2D>();
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.enabled = true;
-            spriteRenderer.color = Color.white;
-            spriteRenderer.sortingOrder = 50;
-        }
         if (followCamera == null) followCamera = Camera.main;
         if (locationBounds == null)
         {
-            // В каждой игровой сцене фон может называться по-разному.
-            // Сначала пробуем старое имя, затем ищем самый большой SpriteRenderer, кроме самого игрока.
             GameObject boundsObject = GameObject.Find("Background_FirstLocation");
             if (boundsObject != null) locationBounds = boundsObject.GetComponent<SpriteRenderer>();
-            if (locationBounds == null)
-            {
-                SpriteRenderer[] renderers = FindObjectsOfType<SpriteRenderer>();
-                float largestArea = 0f;
-                foreach (SpriteRenderer candidate in renderers)
-                {
-                    if (candidate == spriteRenderer || candidate.sprite == null) continue;
-                    Bounds candidateBounds = candidate.bounds;
-                    float area = candidateBounds.size.x * candidateBounds.size.y;
-                    if (area > largestArea)
-                    {
-                        largestArea = area;
-                        locationBounds = candidate;
-                    }
-                }
-            }
         }
         if (spriteRenderer != null)
             spriteRenderer.sprite = idleSprite != null ? idleSprite : (walkFrames != null && walkFrames.Length > 0 ? walkFrames[0] : null);
@@ -96,12 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (isTransitioning) return;
-        if (Keyboard.current == null)
-        {
-            horizontalInput = 0f;
-            return;
-        }
+        if (Keyboard.current == null || isTransitioning) return;
 
         Keyboard keyboard = Keyboard.current;
 
@@ -139,7 +110,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (body != null)
         {
-            body.MovePosition(new Vector2(nextX, body.position.y));
+            Vector2 velocity = body.linearVelocity;
+            velocity.x = horizontalInput * moveSpeed;
+            body.linearVelocity = velocity;
+            body.position = new Vector2(nextX, body.position.y);
         }
         else
         {
@@ -206,29 +180,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (followCamera == null) return;
+        if (followCamera == null || locationBounds == null) return;
 
-        float targetX = transform.position.x + cameraOffset.x;
-        float targetY = transform.position.y + cameraOffset.y;
+        Bounds bounds = locationBounds.bounds;
+        float halfHeight = followCamera.orthographicSize;
+        float halfWidth = halfHeight * followCamera.aspect;
 
-        if (locationBounds != null)
-        {
-            Bounds bounds = locationBounds.bounds;
-            float halfHeight = followCamera.orthographicSize;
-            float halfWidth = halfHeight * followCamera.aspect;
+        float minCameraX = bounds.min.x + halfWidth;
+        float maxCameraX = bounds.max.x - halfWidth;
+        float minCameraY = bounds.min.y + halfHeight;
+        float maxCameraY = bounds.max.y - halfHeight;
 
-            float minCameraX = bounds.min.x + halfWidth;
-            float maxCameraX = bounds.max.x - halfWidth;
-            float minCameraY = bounds.min.y + halfHeight;
-            float maxCameraY = bounds.max.y - halfHeight;
-
-            targetX = minCameraX > maxCameraX
-                ? bounds.center.x
-                : Mathf.Clamp(targetX, minCameraX, maxCameraX);
-            targetY = minCameraY > maxCameraY
-                ? bounds.center.y
-                : Mathf.Clamp(targetY, minCameraY, maxCameraY);
-        }
+        float targetX = minCameraX > maxCameraX
+            ? bounds.center.x
+            : Mathf.Clamp(transform.position.x + cameraOffset.x, minCameraX, maxCameraX);
+        float targetY = minCameraY > maxCameraY
+            ? bounds.center.y
+            : Mathf.Clamp(transform.position.y + cameraOffset.y, minCameraY, maxCameraY);
 
         Vector3 cameraPosition = followCamera.transform.position;
         cameraPosition.x = Mathf.SmoothDamp(cameraPosition.x, targetX, ref cameraVelocityX, cameraSmoothTime);
