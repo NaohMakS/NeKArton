@@ -54,7 +54,7 @@ public class NastyaCameraCue : MonoBehaviour
         int index = Mathf.FloorToInt(animationClock * framesPerSecond) % walkFrames.Length;
         spriteRenderer.sprite = walkFrames[index];
         if (lampStopPoint != null)
-            spriteRenderer.flipX = lampStopPoint.position.x < transform.position.x;
+            spriteRenderer.flipX = lampStopPoint.position.x > transform.position.x;
     }
 
     private void MoveToLamp()
