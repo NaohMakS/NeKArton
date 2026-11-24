@@ -236,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 1383466760}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0206513, y: -3.5756316, z: 0}
+  m_LocalPosition: {x: 2.0206513, y: -4.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3fc4284fde06346ba0122fc35f02f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NastyaCameraCue
+  idleSprite: {fileID: 0}
   walkFrames:
   - {fileID: 1902529007, guid: d9b6014c27781b042b90d523f24a34fa, type: 3}
   - {fileID: 683913691, guid: d9b6014c27781b042b90d523f24a34fa, type: 3}
@@ -370,8 +371,8 @@ Transform:
   m_GameObject: {fileID: 1425945359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.516, y: -4.02, z: 0}
-  m_LocalScale: {x: -0.8838533, y: 1.0266918, z: 1}
+  m_LocalPosition: {x: 9.56, y: -4.62, z: 0}
+  m_LocalScale: {x: -1.023237, y: 1.0266918, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -646,6 +647,7 @@ MonoBehaviour:
   - {fileID: 1905074860, guid: 1e1f3ed434277ef42be1801cac6e6569, type: 3}
   - {fileID: -1708318610, guid: 1e1f3ed434277ef42be1801cac6e6569, type: 3}
   - {fileID: -1148111558, guid: 1e1f3ed434277ef42be1801cac6e6569, type: 3}
+  idleSprite: {fileID: 0}
   animationFramesPerSecond: 9
   followCamera: {fileID: 2101542524}
   locationBounds: {fileID: 1151509911}

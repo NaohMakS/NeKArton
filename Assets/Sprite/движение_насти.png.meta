@@ -123,11 +123,11 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 93.09091
+        width: 110
         height: 682
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 2, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -143,13 +143,13 @@ TextureImporter:
       name: Nastya_02
       rect:
         serializedVersion: 2
-        x: 93.09091
+        x: 0
         y: 0
-        width: 93.09091
+        width: 2048
         height: 682
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
