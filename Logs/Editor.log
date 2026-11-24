@@ -1,25 +1,26 @@
-VBCSCompilerPreWarmer: watching VBCSCompiler (PID 23212)
-VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 14612)
-VBCSCompiler prewarm took 67.01 ms
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 16180)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 26128)
+VBCSCompiler prewarm took 138.50 ms
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.6/staging' branch; Version is '6000.6.10f1 (40e81493c67d) revision 4253716'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North" at "2026-11-24T06:34:52.3636324Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North" at "2026-11-24T18:02:24.5023508Z"
 OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 16311 MB
 BatchMode: 0, IsHumanControllingUs: 1, StartBugReporterOnCrash: 1, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-11-24T06:34:52Z
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 18412, path: "C:/Program Files/WindowsApps/UnityTechnologies.UnityHub_4.0.1.65535_x64__2vrhnee42bhxm/app/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+Date: 2026-11-24T18:02:24Z
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 10988, path: "C:/Program Files/WindowsApps/UnityTechnologies.UnityHub_4.0.1.65535_x64__2vrhnee42bhxm/app/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.19.0+4cc3dda
-  Session Id:              7ac5a3fb96c942e3a210429355bcc62f
-  Correlation Id:          347f9304b236da97bccd53c2298a2d11
-  External correlation Id: 4302411222243616339
+  Session Id:              58a000d8423e4affac9d0ef66c8a64b2
+  Correlation Id:          0f44fb874fdde0a4eeed1d368f1b6595
+  External correlation Id: 5879982901149377689
   Machine Id:              XTs0PD6xHqGasQXSRfb6s04M0II=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-North" (connect: 0.00s, validation: 0.00s, handshake: 0.23s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North-notifications" at "2026-11-24T06:34:52.5911534Z"
-[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-North" (connect: 0.00s, validation: 0.00s, handshake: 0.07s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-North-notifications" at "2026-11-24T18:02:24.5712756Z"
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated the access token AaIO6_Q7gp...
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 10171684016653-UnityPersXXXX
@@ -28,7 +29,7 @@ Date: 2026-11-24T06:34:52Z
   Expiration: Unlimited
 [Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
 [Licensing::Client] Successfully resolved entitlement details
-[Licensing::Module] Licensing Background thread has ended after 0.23s
+[Licensing::Module] Licensing Background thread has ended after 0.08s
 
 COMMAND LINE ARGUMENTS:
 A:\Unity\Hub\Editor\6000.6.10f1\Editor\Unity.exe
@@ -42,9 +43,9 @@ production
 -licensingIpc
 LicenseClient-North
 -hubSessionId
-723097cc-0d85-4dc1-83fc-5427ad227235
+17f9bc81-5c09-4f80-8b52-088bf46a046b
 -accessToken
--m2iFYVsyOJCHLKHDrfbM1RMlu1A_2Jcg8PcRFZF9_o009f
+AaIO6_Q7gpleaTB7RRNk2h3S7qa3j650zsgAv6fKJSE009f
 Successfully changed project path to: A:\юинити\New_Start
 A:/юинити/New_Start
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -84,18 +85,16 @@ A:/юинити/New_Start
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [15824]  Target information:
+Player connection [22704]  Target information:
 
-Player connection [15824]  * "[IP] 192.168.0.109 [Port] 55504 [Flags] 2 [Guid] 1342509930 [EditorId] 1342509930 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [22704]  * "[IP] 192.168.0.109 [Port] 55504 [Flags] 2 [Guid] 3826018891 [EditorId] 3826018891 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [15824]  * "[IP] 172.19.0.1 [Port] 55504 [Flags] 2 [Guid] 1342509930 [EditorId] 1342509930 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1TAU42M) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
-
-Player connection [15824] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [15824] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [22704] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [22704] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-19880" after 0.3 seconds.
+[Package Manager] Connected to IPC stream "Upm-24344" after 0.5 seconds.
 [Licensing::Client] Successfully resolved entitlement details
 Library Redirect Path: Library/
 Initialising UDS system complete:
@@ -107,10 +106,11 @@ Initialising UDS system complete:
   - Hashmap size: 4194304
   - Service connected: false
 Launching Unity Data Store - A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/Tools/Unity.DataStore.exe 
-Unity Data Store artifact dir = Library/DataStore, working dir = A:/юинити/New_StartActive build profile path: `Assets/Settings/Build Profiles/location-2.asset`
+Unity Data Store artifact dir = Library/DataStore, working dir = A:/юинити/New_StartActive build profile path: `Assets/Settings/Build Profiles/new_start.asset`
 Unity Data Store running and initialised
 Got setting from build profile YAML, name `m_BuildTarget`, value `19`
 Got setting from build profile YAML, name `m_Subtarget`, value `2`
+Refreshing native plugins compatible for Editor in 2.60 ms, found 0 plugins.
 [Physics::Module] Selected backend (deferred post-plugins).
 [Physics::Module] Name: PhysX
 [Physics::Module] Id: 0xf2b8ea05
@@ -142,7 +142,7 @@ Mono path[0] = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/Managed'
 Mono path[1] = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
 Mono path[2] = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
 CodeReloadManager initialized
 ImportWorker Server TCP listen port: 0
 AcceleratorClientConnectionCallback - disconnected - :0
@@ -150,30 +150,31 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: A:/Unity/Hub/Editor/6000.6.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.735510 seconds.
+Registered in 0.004396 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Scripting: successfully reloaded assembly
-- Finished resetting the current domain, in  2.476 seconds
-Domain Reload Profiling: 7276ms
-	BeginReloadAssembly (549ms)
-		CreateAndSetChildDomain (6ms)
-	RebuildCommonClasses (9ms)
-	RebuildNativeTypeToScriptingClass (289ms)
-	initialDomainReloadingComplete (1045ms)
-	LoadAllAssembliesAndSetupDomain (2907ms)
-		LoadAssemblies (548ms)
-		TypeCache.Refresh (2729ms)
-			TypeCache.ScanAssembly (2363ms)
+- Finished resetting the current domain, in  3.190 seconds
+Domain Reload Profiling: 9651ms
+	BeginReloadAssembly (829ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (391ms)
+	initialDomainReloadingComplete (480ms)
+	LoadAllAssembliesAndSetupDomain (4736ms)
+		LoadAssemblies (806ms)
+		TypeCache.Refresh (4443ms)
+			TypeCache.ScanAssembly (3779ms)
 		AnalyzeDomain (1ms)
-	FinalizeReload (2477ms)
+	FinalizeReload (3192ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (75ms)
-			BeforeProcessingInitializeOnLoad (235ms)
-			ProcessInitializeOnLoadAttributes (168ms)
-			ProcessInitializeOnLoadMethodAttributes (817ms)
+			LogAssemblyErrors (3ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			BeforeProcessingInitializeOnLoad (456ms)
+			ProcessInitializeOnLoadAttributes (247ms)
+			ProcessInitializeOnLoadMethodAttributes (759ms)
 [Licensing::Client] Successfully resolved entitlement details
 Application.AssetDatabase Initial Refresh Start
 [Package Manager] Restoring resolved packages state from cache
@@ -253,4 +254,372 @@ Application.AssetDatabase Initial Refresh Start
     com.unity.burst@2.0.0 (location: A:\юинити\New_Start\Library\PackageCache\com.unity.burst@626e66ab421b)
     com.unity.test-framework.performance@6.6.0 (location: A:\юинити\New_Start\Library\PackageCache\com.unity.test-framework.performance@816c370aad5b)
 [Subsystems] No new subsystems found in resolved package list.
-[Package Manager] Done registering packages in 0.03 seconds
+[Package Manager] Done registering packages in 0.04 seconds
+Starting: A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: A:/юинити/New_Start
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "A:\Unity\Hub\Editor\6000.6.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+ExitCode: 0 Duration: 1s762ms
+[ 977/1275  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (1.63 seconds), 1 items updated, 1275 evaluated
+AssetDatabase: script compilation time: 7.136590s
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 158.61 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  2.612 seconds
+Domain Reload Profiling: 8009ms
+	BeginReloadAssembly (717ms)
+		DisableScriptedObjects (77ms)
+		CreateAndSetChildDomain (244ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (40ms)
+	initialDomainReloadingComplete (115ms)
+	LoadAllAssembliesAndSetupDomain (4503ms)
+		LoadAssemblies (3517ms)
+		TypeCache.Refresh (750ms)
+			TypeCache.ScanAssembly (721ms)
+		AnalyzeDomain (189ms)
+			BuildScriptInfoCaches (172ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (2614ms)
+		SetupLoadedEditorAssemblies (0ms)
+			LogAssemblyErrors (5ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (238ms)
+			ProcessInitializeOnLoadAttributes (910ms)
+			ProcessInitializeOnLoadMethodAttributes (799ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (3ms)
+		AwakeInstancesAfterBackupRestoration (60ms)
+Starting new worker id: 0 with log in A:/юинити/New_Start/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=8e7953ed9992d404faea409f01b29ba6): Total: 19.055 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=6111 ms
+		Asset DB Callback time: managed=103 ms, native=78 ms
+		Scripting: domain reloads=1, domain reload time=5496 ms, compile time=7140 ms, other=123 ms
+		Project Asset Count: scripts=1706, non-scripts=3425
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 80.175ms
+	ApplyChangesToAssetFolders: 1.557ms
+	Scan: 305.476ms
+	Collect global state as custom dependencies: 57.334ms
+	CategorizeScriptCompilationAssets: 981.361ms
+	ProcessAssetsWithTransientArtifactChanges: 179.385ms
+	CategorizeAssets: 116.763ms
+	CompileScripts: 7140.194ms
+	ImportOutOfDateAssets: 2848.902ms (2827.489ms without children)
+		ReloadNativeAssets: 0.520ms
+		UnloadImportedAssets: 3.128ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.678ms
+		ImportSchedulerStart: 16.083ms
+	PostProcessAllAssets: 103.815ms
+		MonoPostProcessAllAssets: 103.695ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 35.202ms
+			SyncVS.PostprocessSyncProject 25.689ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 5.160ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 3.407ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 2.368ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.934ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 1.001ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.813ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.611ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.484ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.427ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.357ms
+	UnloadStreamsBegin: 4.789ms
+	PersistCurrentRevisions: 0.208ms
+	GenerateScriptTypeHashes: 4.791ms
+	GenerateScriptTypeSerializationHashes: 9.107ms
+	Untracked: 7189.118ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Scanning for USB devices : 7.040ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-New_Start
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: [ (91) to any virtual key
+GetVirtualKey: Could not map char: ] (93) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Curl error 7: Failed to connect to config.uca.cloud.unity3d.com:443 over proxy 127.0.0.1 after 4 ms: Could not connect to server
+Unloading 34 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Location-1.unity'
+	Deserialize:            186.485 ms
+	Integration:            220.423 ms
+	Integration of assets:  8.945 ms
+	Thread Wait Time:       0.042 ms
+	Total Operation Time:   415.896 ms
+Unloading 7594 unused Assets / (7.4 MB). Loaded Objects now: 8761.
+Memory consumption went from 463.0 MB to 455.6 MB.
+Total: 23.863800 ms (FindLiveObjects: 1.247000 ms CreateObjectMapping: 0.615200 ms MarkObjects: 14.533600 ms  DeleteObjects: 6.766700 ms)
+
+[LAYOUT] About to load UserSettings\Layouts\default-6000.dwlt, keepMainWindow=False
+Worker ready: AssetImportWorkerHW0 0
+[LAYOUT] About to save layout A:\юинити\New_Start\UserSettings\Layouts\default-6000.dwlt
+[LAYOUT] About to save layout C:/Users/North/AppData/Roaming/Unity/Editor-5.x/Preferences\Layouts\current\default-6000.dwlt
+[MODES] ModeService[default].InitializeCurrentMode
+[MODES] ModeService[default].RaiseModeChanged(default, default)
+<RI> Initializing input.
+Using Windows.Gaming.Input
+[Project] Loading completed in 60.169 seconds
+	Project init time: 				56.784 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.522 seconds
+		Asset Database init time: 		1.321 seconds
+		Global illumination init time: 	0.059 seconds
+		Assemblies load time: 			29.181 seconds
+		Unity extensions init time: 	0.076 seconds
+		Asset Database refresh time: 	19.056 seconds
+	Scene opening time: 			2.970 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1795543404508,"processId":24344,"projectLoad":60.1692923,"projectInit":56.7837744,"templateInit":0.0,"packageManagerInit":0.5223033,"assetDatabaseInit":1.3205127,"globalIlluminationInit":0.058993,"assembliesLoad":29.1810239,"unityExtensionsInit":0.0756885,"assetDatabaseRefresh":19.0557287,"sceneOpening":2.9695871}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1795543404509,"processId":24344,"editorVersion":"6000.6.10f1 (40e81493c67d)","branch":"6000.6/staging","buildType":"Release","platform":"Windows"}
+Reloading assemblies due to reload request.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.63 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: [ (91) to any virtual key
+GetVirtualKey: Could not map char: ] (93) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  3.544 seconds
+Domain Reload Profiling: 5203ms
+	BeginReloadAssembly (1110ms)
+		DisableScriptedObjects (355ms)
+		CreateAndSetChildDomain (391ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (43ms)
+	initialDomainReloadingComplete (108ms)
+	LoadAllAssembliesAndSetupDomain (376ms)
+		LoadAssemblies (274ms)
+		TypeCache.Refresh (10ms)
+		AnalyzeDomain (47ms)
+			ResolveRequiredComponents (42ms)
+	FinalizeReload (3545ms)
+		SetupLoadedEditorAssemblies (0ms)
+			LogAssemblyErrors (3ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (384ms)
+			ProcessInitializeOnLoadAttributes (883ms)
+			ProcessInitializeOnLoadMethodAttributes (250ms)
+			AfterProcessingInitializeOnLoad (6ms)
+		AwakeInstancesAfterBackupRestoration (1231ms)
+No restricted APIs configured; Validation skipped.
+Checking 18 assemblies for restricted APIs found 0 usage(s) in 6 ms
+Refreshing native plugins compatible for Editor in 3.13 ms, found 5 plugins.
+
+Asset Pipeline Refresh (id=b49ce760de6a9dd469d61a82cac7d6f7): Total: 8.377 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=4161 ms
+		Asset DB Callback time: managed=1849 ms, native=621 ms
+		Scripting: domain reloads=1, domain reload time=1740 ms, compile time=3 ms, other=0 ms
+		Project Asset Count: scripts=1706, non-scripts=3425
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 2.348ms
+	ApplyChangesToAssetFolders: 0.461ms
+	Collect global state as custom dependencies: 4.995ms
+	ProcessAssetsWithTransientArtifactChanges: 351.200ms
+	CategorizeAssets: 135.234ms
+	CompileScripts: 3.072ms
+	ImportOutOfDateAssets: 3562.741ms (3555.315ms without children)
+		CollectScriptTypesHashes: 3.482ms
+		ReloadNativeAssets: 2.424ms
+		UnloadImportedAssets: 2.992ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.483ms
+		ImportSchedulerStart: 0.490ms
+	PostProcessAllAssets: 2456.230ms
+		AssemblyValidation.PostprocessAllAssets 75.000ms
+		PostProcessCallbackCreateDeferredMaterials 44.898ms
+		SpriteAtlasDatabase.OnAssetPostprocessCallback 38.770ms
+		PostprocessAssetsUpdateCachedIcon 36.795ms
+		ComputeShaderImportPostprocess 24.941ms
+		ShaderAssetModifiedCallback 24.917ms
+		RaytracingShaderImportPostprocess 23.210ms
+		SpeedTreeImporter.PostprocessAllAssets 20.712ms
+		BlockShaderImporter.PostprocessAllAssets 10.454ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 8.872ms
+		XRBuildSystem.XRAssetImported 0.719ms
+		VCAutoAddAssetPostprocess 0.551ms
+		MonoPostProcessAllAssets: 1844.342ms
+			SyncVS.PostprocessSyncProject 566.121ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 404.678ms
+			AssetPostprocessor.OnPostprocessAllAssets 153.595ms
+			PostProcessor.OnPostprocessAllAssets 103.553ms
+			AssetChangedListener.OnPostprocessAllAssets 91.110ms
+			MaterialPostprocessor.OnPostprocessAllAssets 73.019ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 68.301ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 64.864ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 50.170ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 43.341ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 39.554ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 16.504ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 15.392ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 11.013ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 4.789ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 3.683ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 1.999ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.732ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 1.719ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.501ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 1.396ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 1.056ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.979ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.920ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.920ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.864ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.799ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.764ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.751ms
+			AssetEvents.OnPostprocessAllAssets 0.689ms
+			AssetProcessor.OnPostprocessAllAssets 0.542ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.455ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.356ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.353ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.343ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.343ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.336ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.311ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.257ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.234ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.161ms
+	PostAssetChangesProfiler: 15.000ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.284ms
+	UnloadStreamsBegin: 2.377ms
+	PersistCurrentRevisions: 0.208ms
+	GenerateScriptTypeHashes: 8.095ms
+	GenerateScriptTypeSerializationHashes: 14.384ms
+	Untracked: 1793.298ms
+
+Created GICache directory at C:/Users/North/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.026s, timestamps: [62.871 - 62.897]
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully updated the access token
+[Licensing::Module] Successfully updated access token: "AaIO6_Q7"... (expires: 2026-11-24T18:55:03Z)
+[Licensing::Client] Successfully resolved entitlement details
+Curl error 7: Failed to connect to services.unity.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+Curl error 7: Failed to connect to api.unity.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+Curl error 7: Failed to connect to cdp.cloud.unity3d.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+UnityConnectWebRequestException: Token Exchange failed due a failure with the web request.
+  at UnityEditor.Connect.TokenExchange.VerifyTokenExchangeResponse (UnityEngine.Networking.UnityWebRequest exchangeRequest) [0x00014] in <a00644a855d2414893227ff267354e9d>:0 
+  at UnityEditor.Connect.TokenExchange.TokenExchangeRequestAsync (UnityEditor.Connect.TokenExchangeRequest tokenExchangeRequest, System.Threading.CancellationToken cancellationToken) [0x00195] in <a00644a855d2414893227ff267354e9d>:0 
+  at UnityEditor.Connect.TokenExchange.GetServiceTokenAsync (System.String genesisToken, System.Threading.CancellationToken cancellationToken) [0x0007b] in <a00644a855d2414893227ff267354e9d>:0 
+  at UnityEditor.Connect.ServiceToken.GetServiceTokenAsync (System.String genesisToken, System.Threading.CancellationToken cancellationToken) [0x000f3] in <a00644a855d2414893227ff267354e9d>:0 
+  at UnityEditor.Connect.UnityConnect.RequestNewServiceToken () [0x00080] in <a00644a855d2414893227ff267354e9d>:0 
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__7_0 (System.Object state) [0x00000] in <2bdc0b2cb99347f4b2a172256836a5e9>:0 
+  at UnityEngine.UnitySynchronizationContext+WorkRequest.Invoke () [0x00000] in <ce4b698a1545417984c287b50b67fc95>:0 
+  at UnityEngine.UnitySynchronizationContext.Exec () [0x00052] in <ce4b698a1545417984c287b50b67fc95>:0 
+  at UnityEngine.UnitySynchronizationContext.ExecuteTasks () [0x0000e] in <ce4b698a1545417984c287b50b67fc95>:0 
+UnityEngine.StackTraceUtility:ExtractStringFromExceptionInternal(Object, String&, String&)
+
+Curl error 7: Failed to connect to engine-data.services.api.unity.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+Curl error 7: Failed to connect to engine-data.services.api.unity.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+Curl error 7: Failed to connect to engine-data.services.api.unity.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+Curl error 7: Failed to connect to engine-data.services.api.unity.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+Curl error 7: Failed to connect to cdp.cloud.unity3d.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+Project ID request failed, Reason: Failed to connect to services.unity.com:443 over proxy 127.0.0.1 after 999 ms: Could not connect to server (0).
+Unknown Unity Connect error (408). Please contact support at support@unity.com while processing request "https://services.unity.com/api/unity/legacy/v1/projects/834a896b-17c0-46a2-9d0a-bc5a813dd67c", HTTP error code 0
+.Curl error 7: Failed to connect to cdp.cloud.unity3d.com:443 over proxy 127.0.0.1 after 0 ms: Could not connect to server
+Scanning for USB devices : 6.603ms
+Scanning for USB devices : 7.065ms
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+Asset Pipeline Refresh (id=352fcfc6c47f7504b84df3ed899d1762): Total: 0.006 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+TrimDiskCacheJob: Current cache size 0mb
+Starting new worker id: 1 with log in A:/юинити/New_Start/Logs/AssetImportWorkerHW1.log
