@@ -84,6 +84,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (isPaused) return;
 
+        if (DialogueManager.IsActive)
+        {
+            horizontalInput = 0f;
+            if (spriteRenderer != null)
+                spriteRenderer.sprite = idleSprite != null ? idleSprite :
+                    (walkFrames != null && walkFrames.Length > 0 ? walkFrames[0] : spriteRenderer.sprite);
+            return;
+        }
+
         horizontalInput = 0f;
         if (keyboard.aKey.isPressed) horizontalInput -= 1f;
         if (keyboard.dKey.isPressed) horizontalInput += 1f;
@@ -104,6 +113,13 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if (isPaused || isTransitioning) return;
+
+        if (DialogueManager.IsActive)
+        {
+            horizontalInput = 0f;
+            if (body != null) body.linearVelocity = Vector2.zero;
+            return;
+        }
 
         float nextX = transform.position.x + horizontalInput * moveSpeed * Time.fixedDeltaTime;
         nextX = ClampPlayerX(nextX);
