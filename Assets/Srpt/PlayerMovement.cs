@@ -87,7 +87,9 @@ public class PlayerMovement : MonoBehaviour
         if (DialogueManager.IsActive)
         {
             horizontalInput = 0f;
-            if (spriteRenderer != null && idleSprite != null) spriteRenderer.sprite = idleSprite;
+            if (spriteRenderer != null)
+                spriteRenderer.sprite = idleSprite != null ? idleSprite :
+                    (walkFrames != null && walkFrames.Length > 0 ? walkFrames[0] : spriteRenderer.sprite);
             return;
         }
 
