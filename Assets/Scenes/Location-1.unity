@@ -791,7 +791,7 @@ MonoBehaviour:
   choiceButtonPrefab: {fileID: 7354118749069393415, guid: 9f717c7572f83644aa8dc28566f619a8, type: 3}
   charsPerSecond: 40
   openingDialogue: {fileID: 11400000, guid: 6e5e5f43a7ab4f28a4f70f0d9b2c8a31, type: 2}
-  followupDialogue: {fileID: 11400000, guid: 9c071db2445a4714a944094729959215, type: 2}
+  followupDialogue: {fileID: 11400000, guid: d3b45d5b6a4c4d7f8e9a102b3c4d5e6f, type: 2}
 --- !u!4 &1102416435
 Transform:
   m_ObjectHideFlags: 0
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2f16f38b31275498aa51b43b310847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
-  dialogue: {fileID: 11400000, guid: 9c071db2445a4714a944094729959215, type: 2}
+  dialogue: {fileID: 11400000, guid: d3b45d5b6a4c4d7f8e9a102b3c4d5e6f, type: 2}
   hint: {fileID: 0}
   interactionButtonPrefab: {fileID: 7354118749069393415, guid: 9f717c7572f83644aa8dc28566f619a8, type: 3}
 --- !u!58 &1425945364
