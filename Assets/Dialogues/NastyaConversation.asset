@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3bde62e1c950945aca324b1d32a62b, type: 3}
+  m_Name: NastyaConversation
+  m_EditorClassIdentifier:
+  nodes:
+  - speaker: Главный герой
+    text: "Привет. Ты знаешь, где мы? Я, кажется, потерялся."
+    next: 1
+    endsHere: 0
+    choices: []
+  - speaker: Настя
+    text: "Ты наконец очнулся. Я уже начала думать, что ты не придёшь в себя."
+    next: 2
+    endsHere: 0
+    choices: []
+  - speaker: Главный герой
+    text: "Кто ты? И что это за место?"
+    next: 3
+    endsHere: 0
+    choices: []
+  - speaker: Настя
+    text: "Меня зовут Настя. Давай поговорим спокойно — у меня к тебе тоже много вопросов."
+    next: -1
+    endsHere: 1
+    choices: []
