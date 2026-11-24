@@ -254,9 +254,11 @@ public class PlayerMovement : MonoBehaviour
     {
         isPaused = !isPaused;
         Time.timeScale = isPaused ? 0f : 1f;
-        SetPanel(pausePanel, isPaused);
-        if (statusText != null)
-            statusText.text = isPaused ? "ПАУЗА\nНажмите ESC, чтобы вернуться" : string.Empty;
+
+        if (pausePanel != null) SetPanel(pausePanel, isPaused);
+        else if (runtimePausePanel != null) runtimePausePanel.SetActive(isPaused);
+
+        if (statusText != null) statusText.text = string.Empty;
     }
 
     /// <summary>Можно вызвать из другого скрипта/триггера для перехода в указанную сцену.</summary>
