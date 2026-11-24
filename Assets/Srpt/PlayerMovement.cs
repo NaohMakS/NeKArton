@@ -529,7 +529,11 @@ public class PlayerMovement : MonoBehaviour
     private void ExitGame()
     {
         Time.timeScale = 1f;
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
     }
 
     private void OnDisable()
