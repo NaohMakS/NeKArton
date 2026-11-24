@@ -790,6 +790,8 @@ MonoBehaviour:
   choicesContainer: {fileID: 1651877098}
   choiceButtonPrefab: {fileID: 7354118749069393415, guid: 9f717c7572f83644aa8dc28566f619a8, type: 3}
   charsPerSecond: 40
+  openingDialogue: {fileID: 11400000, guid: 6e5e5f43a7ab4f28a4f70f0d9b2c8a31, type: 2}
+  followupDialogue: {fileID: 11400000, guid: 9c071db2445a4714a944094729959215, type: 2}
 --- !u!4 &1102416435
 Transform:
   m_ObjectHideFlags: 0
@@ -1080,6 +1082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue: {fileID: 11400000, guid: 9c071db2445a4714a944094729959215, type: 2}
   hint: {fileID: 0}
+  interactionButtonPrefab: {fileID: 7354118749069393415, guid: 9f717c7572f83644aa8dc28566f619a8, type: 3}
 --- !u!58 &1425945364
 CircleCollider2D:
   m_ObjectHideFlags: 0
