@@ -5,83 +5,118 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Collider2D))]
 public class DialogueTrigger : MonoBehaviour
 {
-    [SerializeField] DialogueData dialogue;
-    [SerializeField] GameObject hint;
-    [SerializeField] Button interactionButtonPrefab;
+    [Header("Диалог")]
+    [SerializeField] private DialogueData dialogue;
 
-    bool playerInRange;
-    Button interactionButton;
-    Transform uiRoot;
+    [Header("Взаимодействие")]
+    [SerializeField, Min(0.5f)] private float interactionRange = 4.5f;
+    [SerializeField] private GameObject hint;
 
-    void Reset()
+    private Transform player;
+    private Button interactionButton;
+    private Transform uiRoot;
+    private bool playerInRange;
+
+    private void Reset()
     {
         Collider2D trigger = GetComponent<Collider2D>();
         trigger.isTrigger = true;
     }
 
-    void Start()
+    private void Start()
     {
-        Canvas canvas = null;
-        foreach (Canvas candidate in FindObjectsOfType<Canvas>())
-            if (candidate.name == "DialogueCanvas") { canvas = candidate; break; }
-
-        if (canvas == null) canvas = FindObjectOfType<Canvas>();
-        if (canvas != null)
-        {
-            uiRoot = canvas.transform;
-            RectTransform rootRect = uiRoot as RectTransform;
-            if (rootRect != null) rootRect.localScale = Vector3.one;
-        }
+        FindPlayer();
+        FindDialogueCanvas();
+        if (uiRoot == null)
+            Debug.LogError("DialogueTrigger: не найден Canvas с именем DialogueCanvas. Кнопка взаимодействия не сможет отображаться.", this);
+        if (dialogue == null)
+            Debug.LogError("DialogueTrigger: не назначен DialogueData для Насти.", this);
     }
 
-    void Update()
+    private void Update()
     {
-        bool visible = playerInRange && !DialogueManager.IsActive;
-        if (hint != null) hint.SetActive(visible);
+        if (player == null) FindPlayer();
 
-        if (visible) ShowPrompt();
-        else HidePrompt();
+        // Не полагаемся только на OnTriggerEnter2D: у игрока может не быть Collider2D.
+        playerInRange = player != null &&
+            Vector2.Distance(player.position, transform.position) <= interactionRange;
 
-        if (visible && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        bool canInteract = playerInRange && !DialogueManager.IsActive;
+        if (hint != null) hint.SetActive(canInteract);
+
+        if (canInteract)
+            ShowPrompt();
+        else
+            HidePrompt();
+
+        if (canInteract && Keyboard.current != null &&
+            Keyboard.current.eKey.wasPressedThisFrame)
             BeginDialogue();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void FindPlayer()
     {
-        if (!other.CompareTag("Player")) return;
-        playerInRange = true;
-        ShowPrompt();
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null) player = playerObject.transform;
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    private void FindDialogueCanvas()
     {
-        if (!other.CompareTag("Player")) return;
-        playerInRange = false;
-        HidePrompt();
+        GameObject canvasObject = GameObject.Find("DialogueCanvas");
+        Canvas canvas = canvasObject != null ? canvasObject.GetComponent<Canvas>() : null;
+
+        if (canvas == null)
+        {
+            Canvas[] canvases = FindObjectsOfType<Canvas>(true);
+            foreach (Canvas candidate in canvases)
+            {
+                if (candidate.name == "DialogueCanvas")
+                {
+                    canvas = candidate;
+                    break;
+                }
+            }
+        }
+
+        if (canvas != null)
+        {
+            uiRoot = canvas.transform;
+            RectTransform rect = uiRoot as RectTransform;
+            if (rect != null) rect.localScale = Vector3.one;
+        }
     }
 
-    void ShowPrompt()
+    private void ShowPrompt()
     {
         if (interactionButton != null || DialogueManager.IsActive ||
-            DialogueManager.Instance == null || uiRoot == null) return;
+            DialogueManager.Instance == null || uiRoot == null)
+            return;
+
         interactionButton = DialogueManager.Instance.CreateInteractionButton(
             uiRoot, "Поговорить", BeginDialogue);
+
+        if (interactionButton == null)
+            Debug.LogError("DialogueTrigger: не удалось создать кнопку. Проверьте Choice Button Prefab в DialogueManager.", this);
     }
 
-    void HidePrompt()
+    private void HidePrompt()
     {
-        if (interactionButton != null) Destroy(interactionButton.gameObject);
+        if (interactionButton != null)
+            Destroy(interactionButton.gameObject);
         interactionButton = null;
     }
 
-    void BeginDialogue()
+    private void BeginDialogue()
     {
-        if (!playerInRange || DialogueManager.IsActive || DialogueManager.Instance == null) return;
+        if (!playerInRange || DialogueManager.IsActive ||
+            DialogueManager.Instance == null || dialogue == null)
+            return;
+
         HidePrompt();
         DialogueManager.Instance.StartDialogue(dialogue);
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
         HidePrompt();
     }
