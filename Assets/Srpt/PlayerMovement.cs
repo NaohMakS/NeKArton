@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject statsPanel;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] private Sprite inventoryIcon;
+
+    private GameObject runtimeInventoryPanel;
+    private GameObject runtimePausePanel;
 
     private Canvas uiCanvas;
     private GameObject runtimeUi;
@@ -229,6 +233,12 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        if (title == "ИНВЕНТАРЬ" && runtimeInventoryPanel != null)
+        {
+            runtimeInventoryPanel.SetActive(!runtimeInventoryPanel.activeSelf);
+            return;
+        }
+
         activeFallbackPanel = activeFallbackPanel == title ? string.Empty : title;
         if (statusText != null)
         {
@@ -321,17 +331,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void EnsureUi()
     {
-        if (fadeOverlay != null && statusText != null) return;
-
-        uiCanvas = FindObjectOfType<Canvas>();
-        if (uiCanvas == null)
-        {
-            GameObject canvasObject = new GameObject("PlayerRuntimeCanvas", typeof(RectTransform), typeof(Canvas),
-                typeof(CanvasScaler), typeof(GraphicRaycaster));
-            uiCanvas = canvasObject.GetComponent<Canvas>();
-            uiCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            canvasObject.GetComponent<CanvasScaler>().uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        }
+        // Отдельный Overlay Canvas не зависит от масштаба/режима Canvas сцены.
+        GameObject canvasObject = new GameObject("PlayerRuntimeCanvas", typeof(RectTransform),
+            typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
+        uiCanvas = canvasObject.GetComponent<Canvas>();
+        uiCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        uiCanvas.sortingOrder = 200;
+        CanvasScaler scaler = canvasObject.GetComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1920f, 1080f);
+        scaler.matchWidthOrHeight = 0.5f;
 
         runtimeUi = new GameObject("PlayerRuntimeOverlay", typeof(RectTransform));
         runtimeUi.transform.SetParent(uiCanvas.transform, false);
@@ -341,35 +350,184 @@ public class PlayerMovement : MonoBehaviour
         root.offsetMin = Vector2.zero;
         root.offsetMax = Vector2.zero;
 
-        if (fadeOverlay == null)
+        GameObject fadeObject = new GameObject("LocationFade", typeof(RectTransform), typeof(Image));
+        fadeObject.transform.SetParent(runtimeUi.transform, false);
+        RectTransform fadeRect = fadeObject.GetComponent<RectTransform>();
+        Stretch(fadeRect);
+        fadeOverlay = fadeObject.GetComponent<Image>();
+        fadeOverlay.color = new Color(0f, 0f, 0f, 0f);
+        fadeOverlay.raycastTarget = false;
+        fadeObject.SetActive(false);
+
+        GameObject textObject = new GameObject("PlayerStatus", typeof(RectTransform), typeof(TextMeshProUGUI));
+        textObject.transform.SetParent(runtimeUi.transform, false);
+        RectTransform textRect = textObject.GetComponent<RectTransform>();
+        textRect.anchorMin = new Vector2(0.5f, 0.5f);
+        textRect.anchorMax = new Vector2(0.5f, 0.5f);
+        textRect.sizeDelta = new Vector2(700f, 180f);
+        statusText = textObject.GetComponent<TextMeshProUGUI>();
+        statusText.alignment = TextAlignmentOptions.Center;
+        statusText.fontSize = 30f;
+        statusText.color = Color.white;
+        statusText.raycastTarget = false;
+
+        CreateInventoryHud();
+        CreateRuntimeInventoryPanel();
+        CreateRuntimePausePanel();
+    }
+
+    private void CreateInventoryHud()
+    {
+        Button button = CreateUiButton("InventoryHudButton", runtimeUi.transform,
+            new Vector2(0f, 1f), new Vector2(0f, 1f), new Vector2(28f, -28f),
+            new Vector2(230f, 76f), "ИНВЕНТАРЬ");
+        button.onClick.AddListener(() => TogglePanel(inventoryPanel, "ИНВЕНТАРЬ"));
+
+        if (inventoryIcon != null)
         {
-            GameObject fadeObject = new GameObject("LocationFade", typeof(RectTransform), typeof(Image));
-            fadeObject.transform.SetParent(runtimeUi.transform, false);
-            RectTransform fadeRect = fadeObject.GetComponent<RectTransform>();
-            fadeRect.anchorMin = Vector2.zero;
-            fadeRect.anchorMax = Vector2.one;
-            fadeRect.offsetMin = Vector2.zero;
-            fadeRect.offsetMax = Vector2.zero;
-            fadeOverlay = fadeObject.GetComponent<Image>();
-            fadeOverlay.color = new Color(0f, 0f, 0f, 0f);
-            fadeOverlay.raycastTarget = false;
-            fadeObject.SetActive(false);
+            GameObject iconObject = new GameObject("InventoryIcon", typeof(RectTransform), typeof(Image));
+            iconObject.transform.SetParent(button.transform, false);
+            RectTransform iconRect = iconObject.GetComponent<RectTransform>();
+            iconRect.anchorMin = new Vector2(0f, 0.5f);
+            iconRect.anchorMax = new Vector2(0f, 0.5f);
+            iconRect.pivot = new Vector2(0f, 0.5f);
+            iconRect.anchoredPosition = new Vector2(12f, 0f);
+            iconRect.sizeDelta = new Vector2(48f, 48f);
+            Image iconImage = iconObject.GetComponent<Image>();
+            iconImage.sprite = inventoryIcon;
+            iconImage.preserveAspect = true;
+            iconImage.raycastTarget = false;
         }
 
-        if (statusText == null)
+        TMP_Text label = button.GetComponentInChildren<TMP_Text>();
+        if (label != null)
         {
-            GameObject textObject = new GameObject("PlayerStatus", typeof(RectTransform), typeof(TextMeshProUGUI));
-            textObject.transform.SetParent(runtimeUi.transform, false);
-            RectTransform textRect = textObject.GetComponent<RectTransform>();
-            textRect.anchorMin = new Vector2(0.5f, 0.5f);
-            textRect.anchorMax = new Vector2(0.5f, 0.5f);
-            textRect.sizeDelta = new Vector2(700f, 180f);
-            statusText = textObject.GetComponent<TextMeshProUGUI>();
-            statusText.alignment = TextAlignmentOptions.Center;
-            statusText.fontSize = 30f;
-            statusText.color = Color.white;
-            statusText.raycastTarget = false;
+            label.text = "ИНВЕНТАРЬ";
+            label.alignment = TextAlignmentOptions.Midline;
+            label.fontSize = 23f;
+            label.margin = new Vector4(inventoryIcon != null ? 68f : 12f, 0f, 8f, 0f);
         }
+    }
+
+    private void CreateRuntimeInventoryPanel()
+    {
+        runtimeInventoryPanel = CreateUiPanel("InventoryPanel", new Vector2(560f, 390f));
+        AddPanelTitle(runtimeInventoryPanel.transform, "ИНВЕНТАРЬ");
+        AddPanelBody(runtimeInventoryPanel.transform, "Пока здесь пусто. Найденные предметы будут появляться здесь.");
+        runtimeInventoryPanel.SetActive(false);
+    }
+
+    private void CreateRuntimePausePanel()
+    {
+        runtimePausePanel = CreateUiPanel("PauseMenu", new Vector2(520f, 390f));
+        AddPanelTitle(runtimePausePanel.transform, "ПАУЗА");
+        Button resume = CreateUiButton("ResumeButton", runtimePausePanel.transform,
+            new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0f, -28f),
+            new Vector2(300f, 66f), "ПРОДОЛЖИТЬ");
+        resume.onClick.AddListener(TogglePause);
+
+        Button exit = CreateUiButton("ExitButton", runtimePausePanel.transform,
+            new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0f, -116f),
+            new Vector2(300f, 66f), "ВЫХОД");
+        exit.onClick.AddListener(ExitGame);
+        runtimePausePanel.SetActive(false);
+    }
+
+    private GameObject CreateUiPanel(string name, Vector2 size)
+    {
+        GameObject panel = new GameObject(name, typeof(RectTransform), typeof(Image));
+        panel.transform.SetParent(runtimeUi.transform, false);
+        RectTransform rect = panel.GetComponent<RectTransform>();
+        rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 0.5f);
+        rect.pivot = new Vector2(0.5f, 0.5f);
+        rect.anchoredPosition = Vector2.zero;
+        rect.sizeDelta = size;
+        Image image = panel.GetComponent<Image>();
+        image.color = new Color(0.035f, 0.045f, 0.06f, 0.96f);
+        return panel;
+    }
+
+    private void AddPanelTitle(Transform parent, string title)
+    {
+        GameObject titleObject = new GameObject("Title", typeof(RectTransform), typeof(TextMeshProUGUI));
+        titleObject.transform.SetParent(parent, false);
+        RectTransform rect = titleObject.GetComponent<RectTransform>();
+        rect.anchorMin = new Vector2(0f, 1f);
+        rect.anchorMax = new Vector2(1f, 1f);
+        rect.pivot = new Vector2(0.5f, 1f);
+        rect.anchoredPosition = new Vector2(0f, -28f);
+        rect.sizeDelta = new Vector2(-40f, 64f);
+        TextMeshProUGUI text = titleObject.GetComponent<TextMeshProUGUI>();
+        text.text = title;
+        text.fontSize = 34f;
+        text.fontStyle = FontStyles.Bold;
+        text.alignment = TextAlignmentOptions.Center;
+        text.color = new Color(1f, 0.82f, 0.43f);
+    }
+
+    private void AddPanelBody(Transform parent, string value)
+    {
+        GameObject body = new GameObject("Description", typeof(RectTransform), typeof(TextMeshProUGUI));
+        body.transform.SetParent(parent, false);
+        RectTransform rect = body.GetComponent<RectTransform>();
+        rect.anchorMin = new Vector2(0.08f, 0.32f);
+        rect.anchorMax = new Vector2(0.92f, 0.68f);
+        rect.offsetMin = rect.offsetMax = Vector2.zero;
+        TextMeshProUGUI text = body.GetComponent<TextMeshProUGUI>();
+        text.text = value;
+        text.fontSize = 23f;
+        text.alignment = TextAlignmentOptions.Center;
+        text.color = Color.white;
+    }
+
+    private Button CreateUiButton(string name, Transform parent, Vector2 anchorMin,
+        Vector2 anchorMax, Vector2 position, Vector2 size, string caption)
+    {
+        GameObject buttonObject = new GameObject(name, typeof(RectTransform), typeof(Image), typeof(Button));
+        buttonObject.transform.SetParent(parent, false);
+        RectTransform rect = buttonObject.GetComponent<RectTransform>();
+        rect.anchorMin = anchorMin;
+        rect.anchorMax = anchorMax;
+        rect.pivot = new Vector2(anchorMin.x, anchorMin.y);
+        rect.anchoredPosition = position;
+        rect.sizeDelta = size;
+        Image image = buttonObject.GetComponent<Image>();
+        image.color = new Color(0.16f, 0.19f, 0.23f, 0.98f);
+        Button button = buttonObject.GetComponent<Button>();
+        button.targetGraphic = image;
+        ColorBlock colors = button.colors;
+        colors.highlightedColor = new Color(0.28f, 0.32f, 0.37f, 1f);
+        colors.pressedColor = new Color(0.42f, 0.30f, 0.16f, 1f);
+        button.colors = colors;
+
+        GameObject labelObject = new GameObject("Label", typeof(RectTransform), typeof(TextMeshProUGUI));
+        labelObject.transform.SetParent(buttonObject.transform, false);
+        RectTransform labelRect = labelObject.GetComponent<RectTransform>();
+        labelRect.anchorMin = Vector2.zero;
+        labelRect.anchorMax = Vector2.one;
+        labelRect.offsetMin = new Vector2(8f, 4f);
+        labelRect.offsetMax = new Vector2(-8f, -4f);
+        TextMeshProUGUI label = labelObject.GetComponent<TextMeshProUGUI>();
+        label.text = caption;
+        label.fontSize = 22f;
+        label.alignment = TextAlignmentOptions.Center;
+        label.color = Color.white;
+        label.raycastTarget = false;
+        return button;
+    }
+
+    private void Stretch(RectTransform rect)
+    {
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.one;
+        rect.offsetMin = Vector2.zero;
+        rect.offsetMax = Vector2.zero;
+    }
+
+    private void ExitGame()
+    {
+        Time.timeScale = 1f;
+        Application.Quit();
     }
 
     private void OnDisable()
