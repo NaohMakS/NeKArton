@@ -211,7 +211,7 @@ RectTransform:
   m_GameObject: {fileID: 5157032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -463,7 +463,7 @@ RectTransform:
   m_GameObject: {fileID: 284745643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 259804821}
@@ -891,8 +891,8 @@ Transform:
   m_GameObject: {fileID: 1151509910}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 848.7106, y: 543.3403, z: 0}
-  m_LocalScale: {x: 167.05579, y: 151.77663, z: 1}
+  m_LocalPosition: {x: 0, y: -0.0087, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.4191658, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -922,7 +922,7 @@ Transform:
   m_GameObject: {fileID: 1383466760}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1103, y: 272.1, z: 0}
+  m_LocalPosition: {x: 2.0206513, y: -3.5756316, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -944,7 +944,7 @@ GameObject:
   - component: {fileID: 1425945365}
   m_Layer: 0
   m_Name: Nastya_NPC
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1060,8 +1060,8 @@ Transform:
   m_GameObject: {fileID: 1425945359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2129, y: 69, z: 0}
-  m_LocalScale: {x: -253.22313, y: 113.62643, z: 1}
+  m_LocalPosition: {x: 9.516, y: -4.02, z: 0}
+  m_LocalScale: {x: -0.8838533, y: 1.0266918, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1283,7 +1283,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1308,8 +1308,8 @@ Transform:
   m_GameObject: {fileID: 2101542522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -816, y: 31, z: -10}
-  m_LocalScale: {x: 0.7988, y: 4.043992, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1404,8 +1404,8 @@ Transform:
   m_GameObject: {fileID: 3000000001}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -816, y: 31, z: 0}
-  m_LocalScale: {x: 304.69852, y: 118.58857, z: 1}
+  m_LocalPosition: {x: -13.25, y: -4.61, z: 0}
+  m_LocalScale: {x: 1.3553315, y: 1.1353848, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

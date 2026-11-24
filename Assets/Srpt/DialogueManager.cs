@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -48,7 +49,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (!IsActive || Time.frameCount == startFrame) return;
 
-        bool pressed = Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0);
+        bool keyboardPressed = Keyboard.current != null &&
+            (Keyboard.current.eKey.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame);
+        bool mousePressed = Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
+        bool pressed = keyboardPressed || mousePressed;
         if (!pressed) return;
 
         if (!lineFinished) FinishTyping();          // первый клик: показать реплику целиком
