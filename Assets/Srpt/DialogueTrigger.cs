@@ -39,6 +39,9 @@ public class DialogueTrigger : MonoBehaviour
         bool visible = playerInRange && !DialogueManager.IsActive;
         if (hint != null) hint.SetActive(visible);
 
+        if (visible) ShowPrompt();
+        else HidePrompt();
+
         if (visible && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
             BeginDialogue();
     }
@@ -59,7 +62,8 @@ public class DialogueTrigger : MonoBehaviour
 
     void ShowPrompt()
     {
-        if (interactionButton != null || DialogueManager.Instance == null || uiRoot == null) return;
+        if (interactionButton != null || DialogueManager.IsActive ||
+            DialogueManager.Instance == null || uiRoot == null) return;
         interactionButton = DialogueManager.Instance.CreateInteractionButton(
             uiRoot, "Поговорить", BeginDialogue);
     }
