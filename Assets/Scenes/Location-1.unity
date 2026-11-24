@@ -1082,7 +1082,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue: {fileID: 11400000, guid: d3b45d5b6a4c4d7f8e9a102b3c4d5e6f, type: 2}
   hint: {fileID: 0}
-  interactionButtonPrefab: {fileID: 7354118749069393415, guid: 9f717c7572f83644aa8dc28566f619a8, type: 3}
 --- !u!58 &1425945364
 CircleCollider2D:
   m_ObjectHideFlags: 0
