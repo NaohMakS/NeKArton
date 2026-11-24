@@ -30,6 +30,14 @@ public class DialogueManager : MonoBehaviour
     bool hasChoices;
     bool sequenceRunning;
     static bool openingSequencePlayed;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    static void ResetRuntimeState()
+    {
+        openingSequencePlayed = false;
+        Instance = null;
+        IsActive = false;
+    }
     int startFrame;
     Coroutine typing;
     Button skipButton;
@@ -219,7 +227,15 @@ public class DialogueManager : MonoBehaviour
             rect.anchorMax = new Vector2(1f, 1f);
             rect.pivot = new Vector2(1f, 1f);
             rect.anchoredPosition = new Vector2(-24f, -18f);
-            rect.sizeDelta = new Vector2(190f, 54f);
+            rect.sizeDelta = new Vector2(224f, 58f);
+            TMP_Text skipLabel = skipButton.GetComponentInChildren<TMP_Text>();
+            if (skipLabel != null)
+            {
+                skipLabel.fontSize = 25f;
+                skipLabel.enableWordWrapping = false;
+                skipLabel.overflowMode = TextOverflowModes.Overflow;
+                skipLabel.alignment = TextAlignmentOptions.Center;
+            }
         }
         skipButton.onClick.AddListener(SkipSequence);
     }
