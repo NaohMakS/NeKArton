@@ -377,3 +377,67 @@ Importing 'GUID: be24e151d6e4d784d8bf497e394953be - Path: Assets/Editor/CanvasTo
 Imported 'GUID: be24e151d6e4d784d8bf497e394953be' -> (Import Result ID: 'e444d93d36e58d3cd614e9fb18f8d307') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=265fbe761a62753d506485df5b5b6996 DependenciesID=592c5b5a8226416fa08e39739d88d989 StaticDependenciesID=300dc5937698df0ab9242323e59ceb5c 
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.74 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.322 seconds
+Domain Reload Profiling: 2862ms
+	BeginReloadAssembly (431ms)
+		DisableScriptedObjects (57ms)
+		CreateAndSetChildDomain (86ms)
+	RebuildCommonClasses (13ms)
+	RebuildNativeTypeToScriptingClass (36ms)
+	initialDomainReloadingComplete (102ms)
+	LoadAllAssembliesAndSetupDomain (955ms)
+		LoadAssemblies (514ms)
+		TypeCache.Refresh (14ms)
+		AnalyzeDomain (339ms)
+			BuildScriptInfoCaches (328ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1324ms)
+		SetupLoadedEditorAssemblies (0ms)
+			LogAssemblyErrors (3ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (206ms)
+			ProcessInitializeOnLoadAttributes (463ms)
+			ProcessInitializeOnLoadMethodAttributes (163ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (3ms)
+		AwakeInstancesAfterBackupRestoration (64ms)
+Refreshing native plugins compatible for Editor in 2.98 ms, found 5 plugins.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7580 unused Assets / (5.3 MB). Loaded Objects now: 8583.
+Memory consumption went from 360.3 MB to 354.9 MB.
+Total: 12.447000 ms (FindLiveObjects: 0.756600 ms CreateObjectMapping: 0.562500 ms MarkObjects: 8.304600 ms  DeleteObjects: 2.574600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Refreshing native plugins compatible for Editor in 3.93 ms, found 5 plugins.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (3.0 MB). Loaded Objects now: 8583.
+Memory consumption went from 357.1 MB to 354.1 MB.
+Total: 14.191700 ms (FindLiveObjects: 0.564100 ms CreateObjectMapping: 0.255000 ms MarkObjects: 12.149500 ms  DeleteObjects: 0.913700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+[ExitDontLaunchBugReporter] Exiting without the bug reporter. Application will exit with return code 0
