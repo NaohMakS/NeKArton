@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     bool lineFinished;
     bool hasChoices;
     bool sequenceRunning;
+    static bool openingSequencePlayed;
     int startFrame;
     Coroutine typing;
     Button skipButton;
@@ -51,8 +52,11 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        if (openingDialogue != null)
+        if (openingDialogue != null && !openingSequencePlayed)
+        {
+            openingSequencePlayed = true;
             StartCoroutine(BeginOpeningSequence());
+        }
     }
 
     IEnumerator BeginOpeningSequence()
