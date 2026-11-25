@@ -9,7 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private DialogueData dialogue;
 
     [Header("Взаимодействие")]
-    [SerializeField, Min(0.5f)] private float interactionRange = 4.5f;
+    [SerializeField, Min(0.5f)] private float interactionRange = 2.5f;
     [SerializeField] private GameObject hint;
 
     private Transform player;
@@ -27,8 +27,11 @@ public class DialogueTrigger : MonoBehaviour
     {
         FindPlayer();
         FindDialogueCanvas();
+
         if (uiRoot == null)
-            Debug.LogError("DialogueTrigger: не найден Canvas с именем DialogueCanvas. Кнопка взаимодействия не сможет отображаться.", this);
+            Debug.LogError("DialogueTrigger: не найден DialogueCanvas. Кнопка взаимодействия не появится.", this);
+        if (player == null)
+            Debug.LogError("DialogueTrigger: не найден игрок. Проверь Player tag или компонент PlayerMovement.", this);
         if (dialogue == null)
             Debug.LogError("DialogueTrigger: не назначен DialogueData для Насти.", this);
     }
@@ -36,12 +39,11 @@ public class DialogueTrigger : MonoBehaviour
     private void Update()
     {
         if (player == null) FindPlayer();
+        if (uiRoot == null) FindDialogueCanvas();
 
-        // Не полагаемся только на OnTriggerEnter2D: у игрока может не быть Collider2D.
-        playerInRange = player != null &&
-            Vector2.Distance(player.position, transform.position) <= interactionRange;
-
+        playerInRange = player != null && Vector2.Distance(player.position, transform.position) <= interactionRange;
         bool canInteract = playerInRange && !DialogueManager.IsActive;
+
         if (hint != null) hint.SetActive(canInteract);
 
         if (canInteract)
@@ -57,6 +59,12 @@ public class DialogueTrigger : MonoBehaviour
     private void FindPlayer()
     {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject == null)
+        {
+            PlayerMovement movement = FindObjectOfType<PlayerMovement>();
+            if (movement != null) playerObject = movement.gameObject;
+        }
+
         if (playerObject != null) player = playerObject.transform;
     }
 
@@ -96,7 +104,7 @@ public class DialogueTrigger : MonoBehaviour
             uiRoot, "Поговорить", BeginDialogue);
 
         if (interactionButton == null)
-            Debug.LogError("DialogueTrigger: не удалось создать кнопку. Проверьте Choice Button Prefab в DialogueManager.", this);
+            Debug.LogError("DialogueTrigger: кнопка не создана. Проверьте Choice Button Prefab в DialogueManager.", this);
     }
 
     private void HidePrompt()

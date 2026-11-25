@@ -22,6 +22,7 @@ public class NastyaCameraCue : MonoBehaviour
     [SerializeField, Min(0f)] private float stopDistance = 0.08f;
 
     private SpriteRenderer spriteRenderer;
+    private Transform player;
     private bool hasStarted;
     private bool hasArrived;
     private float animationClock;
@@ -30,6 +31,7 @@ public class NastyaCameraCue : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (targetCamera == null) targetCamera = Camera.main;
+        FindPlayer();
         SetIdle();
     }
 
@@ -42,7 +44,7 @@ public class NastyaCameraCue : MonoBehaviour
 
         if (!hasStarted) return;
 
-        FaceMovementDirection();
+        FacePlayerOrMovement();
         MoveToLamp();
 
         if (!hasArrived)
@@ -59,14 +61,26 @@ public class NastyaCameraCue : MonoBehaviour
                viewport.y >= -cameraMargin && viewport.y <= 1f + cameraMargin;
     }
 
-    private void FaceMovementDirection()
+    private void FindPlayer()
     {
-        float deltaX = lampStopPoint.position.x - transform.position.x;
-        if (Mathf.Abs(deltaX) > 0.01f)
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject == null)
         {
-            // В исходном спрайте Настя смотрит вправо: flipX нужен при движении влево.
-            spriteRenderer.flipX = deltaX < 0f;
+            PlayerMovement movement = FindObjectOfType<PlayerMovement>();
+            if (movement != null) playerObject = movement.gameObject;
         }
+        if (playerObject != null) player = playerObject.transform;
+    }
+
+    private void FacePlayerOrMovement()
+    {
+        if (player == null) FindPlayer();
+
+        // Настя должна смотреть на главного героя, даже когда идёт к точке остановки.
+        float targetX = player != null ? player.position.x : lampStopPoint.position.x;
+        float deltaX = targetX - transform.position.x;
+        if (Mathf.Abs(deltaX) > 0.01f)
+            spriteRenderer.flipX = deltaX < 0f;
     }
 
     private void AnimateWalk()

@@ -72,11 +72,21 @@ public static class NeKArtonNastyaRestoreEditor
         renderer.sortingLayerID = background.sortingLayerID;
         renderer.sortingOrder = Mathf.Max(background.sortingOrder + 1, 51);
 
-        BoxCollider2D triggerCollider = npc.GetComponent<BoxCollider2D>();
-        if (triggerCollider == null) triggerCollider = Undo.AddComponent<BoxCollider2D>(npc);
-        triggerCollider.isTrigger = true;
-        triggerCollider.size = new Vector2(2.2f, 5f);
-        triggerCollider.offset = new Vector2(0f, 2.5f);
+        CircleCollider2D circleTrigger = npc.GetComponent<CircleCollider2D>();
+        if (circleTrigger != null)
+        {
+            circleTrigger.isTrigger = true;
+            circleTrigger.radius = 1.4f;
+            circleTrigger.offset = new Vector2(0f, 0.4f);
+        }
+        else
+        {
+            BoxCollider2D triggerCollider = npc.GetComponent<BoxCollider2D>();
+            if (triggerCollider == null) triggerCollider = Undo.AddComponent<BoxCollider2D>(npc);
+            triggerCollider.isTrigger = true;
+            triggerCollider.size = new Vector2(1.8f, 3.2f);
+            triggerCollider.offset = new Vector2(0f, 1.6f);
+        }
 
         Transform stop = GameObject.Find("NastyaLampStopPoint")?.transform;
         if (stop == null)
@@ -110,7 +120,7 @@ public static class NeKArtonNastyaRestoreEditor
         if (dialogueTrigger == null) dialogueTrigger = Undo.AddComponent<DialogueTrigger>(npc);
         SerializedObject triggerData = new SerializedObject(dialogueTrigger);
         triggerData.FindProperty("dialogue").objectReferenceValue = dialogue;
-        triggerData.FindProperty("interactionRange").floatValue = 4.5f;
+        triggerData.FindProperty("interactionRange").floatValue = 2.5f;
         triggerData.FindProperty("hint").objectReferenceValue = null;
         triggerData.ApplyModifiedProperties();
 
