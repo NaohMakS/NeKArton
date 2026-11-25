@@ -2,72 +2,71 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour
+public sealed class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
     public static bool IsActive { get; private set; }
 
     [Header("UI")]
-    [SerializeField] GameObject panel;
-    [SerializeField] TMP_Text speakerText;
-    [SerializeField] TMP_Text bodyText;
-    [SerializeField] Transform choicesContainer;
-    [SerializeField] Button choiceButtonPrefab;
+    [SerializeField] private GameObject panel;
+    [SerializeField] private TMP_Text speakerText;
+    [SerializeField] private TMP_Text bodyText;
+    [SerializeField] private Transform choicesContainer;
+    [SerializeField] private Button choiceButtonPrefab;
 
     [Header("Начальная последовательность")]
-    [SerializeField] DialogueData openingDialogue;
-    [SerializeField] DialogueData followupDialogue;
+    [SerializeField] private DialogueData openingDialogue;
+    [SerializeField] private DialogueData followupDialogue;
 
     [Header("Настройки")]
-    [SerializeField, Min(1f)] float charsPerSecond = 40f;
+    [SerializeField, Min(1f)] private float charsPerSecond = 40f;
 
-    DialogueData current;
-    int index;
-    bool lineFinished;
-    bool hasChoices;
-    bool sequenceRunning;
-    static bool openingSequencePlayed;
+    private DialogueData current;
+    private int nodeIndex;
+    private bool typingFinished;
+    private bool hasChoices;
+    private bool openingSequence;
+    private int startedFrame;
+    private Coroutine typingRoutine;
+    private Button skipButton;
+    private readonly System.Collections.Generic.List<Button> generatedButtons =
+        new System.Collections.Generic.List<Button>();
+
+    private static bool openingPlayed;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-    static void ResetRuntimeState()
+    private static void ResetStatics()
     {
-        openingSequencePlayed = false;
         Instance = null;
         IsActive = false;
+        openingPlayed = false;
     }
-    int startFrame;
-    Coroutine typing;
-    Button skipButton;
-    Canvas dialogueCanvas;
 
-    void Awake()
+    private void Awake()
     {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
         IsActive = false;
-
         if (panel != null) panel.SetActive(false);
-        dialogueCanvas = panel != null ? panel.GetComponentInParent<Canvas>() : null;
-        if (dialogueCanvas != null)
-        {
-            RectTransform canvasRect = dialogueCanvas.transform as RectTransform;
-            if (canvasRect != null) canvasRect.localScale = Vector3.one;
-        }
     }
 
-    void Start()
+    private void Start()
     {
-        if (openingDialogue != null && !openingSequencePlayed)
+        if (openingDialogue != null && !openingPlayed)
         {
-            openingSequencePlayed = true;
-            StartCoroutine(BeginOpeningSequence());
+            openingPlayed = true;
+            StartCoroutine(StartOpeningNextFrame());
         }
     }
 
-    IEnumerator BeginOpeningSequence()
+    private IEnumerator StartOpeningNextFrame()
     {
         yield return null;
         StartOpeningSequence();
@@ -75,199 +74,187 @@ public class DialogueManager : MonoBehaviour
 
     public void StartOpeningSequence()
     {
-        if (openingDialogue == null)
-        {
-            Debug.LogWarning("DialogueManager: openingDialogue не назначен.");
-            return;
-        }
-
-        sequenceRunning = true;
+        if (openingDialogue == null || IsActive) return;
+        openingSequence = true;
         StartDialogueInternal(openingDialogue);
     }
 
     public void StartDialogue(DialogueData data)
     {
-        if (IsActive || data == null) return;
-        sequenceRunning = false;
+        if (data == null || IsActive) return;
+        openingSequence = false;
         StartDialogueInternal(data);
     }
 
-    void StartDialogueInternal(DialogueData data)
+    private void StartDialogueInternal(DialogueData data)
     {
         if (data == null || data.nodes == null || data.nodes.Length == 0)
         {
-            Debug.LogWarning("DialogueManager: диалог пуст или не назначен.", this);
-            FinishSequence(false);
+            Debug.LogWarning("DialogueManager: диалог не содержит реплик.", this);
+            EndSequence();
             return;
         }
 
         current = data;
+        nodeIndex = 0;
         IsActive = true;
-        startFrame = Time.frameCount;
+        startedFrame = Time.frameCount;
         if (panel != null) panel.SetActive(true);
         CreateSkipButton();
-        ShowNode(0);
+        DisplayNode(nodeIndex);
     }
 
-    void Update()
+    private void Update()
     {
-        if (!IsActive || Time.frameCount == startFrame) return;
+        if (!IsActive || Time.frameCount == startedFrame) return;
 
-        bool keyboardPressed = Keyboard.current != null &&
-            (Keyboard.current.eKey.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame);
-        bool mousePressed = Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
-        if (!keyboardPressed && !mousePressed) return;
+        bool pressed = (Keyboard.current != null &&
+            (Keyboard.current.eKey.wasPressedThisFrame ||
+             Keyboard.current.spaceKey.wasPressedThisFrame ||
+             Keyboard.current.enterKey.wasPressedThisFrame)) ||
+            (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame);
 
-        if (!lineFinished) FinishTyping();
-        else if (!hasChoices) Next();
+        if (!pressed) return;
+        if (!typingFinished) RevealCurrentLine();
+        else if (!hasChoices) Advance();
     }
 
-    void ShowNode(int i)
+    private void DisplayNode(int index)
     {
-        if (current == null || i < 0 || i >= current.nodes.Length)
+        if (current == null || index < 0 || index >= current.nodes.Length)
         {
             FinishCurrentDialogue();
             return;
         }
 
-        index = i;
-        DialogueNode node = current.nodes[i];
-        ClearChoices();
-        if (speakerText != null) speakerText.text = node.speaker;
+        nodeIndex = index;
+        DialogueNode node = current.nodes[index];
+        ClearGeneratedButtons();
         hasChoices = node.choices != null && node.choices.Length > 0;
+        if (speakerText != null) speakerText.text = node.speaker ?? string.Empty;
 
-        if (typing != null) StopCoroutine(typing);
-        typing = StartCoroutine(TypeLine(node.text));
+        if (typingRoutine != null) StopCoroutine(typingRoutine);
+        typingRoutine = StartCoroutine(TypeLine(node.text ?? string.Empty));
     }
 
-    IEnumerator TypeLine(string text)
+    private IEnumerator TypeLine(string line)
     {
-        lineFinished = false;
+        typingFinished = false;
         if (bodyText == null)
         {
-            lineFinished = true;
+            typingFinished = true;
             yield break;
         }
 
-        bodyText.text = text;
+        bodyText.text = line;
         bodyText.maxVisibleCharacters = 0;
         bodyText.ForceMeshUpdate();
-
-        int total = bodyText.textInfo.characterCount;
-        float shown = 0f;
-        while (shown < total)
+        int count = bodyText.textInfo.characterCount;
+        float visible = 0f;
+        while (visible < count)
         {
-            shown += charsPerSecond * Time.unscaledDeltaTime;
-            bodyText.maxVisibleCharacters = Mathf.FloorToInt(shown);
+            visible += charsPerSecond * Time.unscaledDeltaTime;
+            bodyText.maxVisibleCharacters = Mathf.FloorToInt(visible);
             yield return null;
         }
-        FinishTyping();
+        typingRoutine = null;
+        RevealCurrentLine();
     }
 
-    void FinishTyping()
+    private void RevealCurrentLine()
     {
-        if (typing != null) { StopCoroutine(typing); typing = null; }
+        if (typingRoutine != null)
+        {
+            StopCoroutine(typingRoutine);
+            typingRoutine = null;
+        }
         if (bodyText != null) bodyText.maxVisibleCharacters = int.MaxValue;
-        lineFinished = true;
-        if (hasChoices) ShowChoices(current.nodes[index].choices);
+        typingFinished = true;
+        if (hasChoices && current != null) CreateChoiceButtons(current.nodes[nodeIndex].choices);
     }
 
-    void Next()
+    private void Advance()
     {
-        DialogueNode node = current.nodes[index];
+        if (current == null) { EndSequence(); return; }
+        DialogueNode node = current.nodes[nodeIndex];
         if (node.endsHere) { FinishCurrentDialogue(); return; }
-        ShowNode(node.next >= 0 ? node.next : index + 1);
+        DisplayNode(node.next >= 0 ? node.next : nodeIndex + 1);
     }
 
-    void FinishCurrentDialogue()
+    private void FinishCurrentDialogue()
     {
-        ClearChoices();
+        ClearGeneratedButtons();
         DestroySkipButton();
-
-        if (sequenceRunning && current == openingDialogue && followupDialogue != null)
+        if (openingSequence && current == openingDialogue && followupDialogue != null)
         {
             StartDialogueInternal(followupDialogue);
             return;
         }
-
-        FinishSequence(false);
+        EndSequence();
     }
 
-    void FinishSequence(bool skipped)
+    private void EndSequence()
     {
-        if (typing != null) { StopCoroutine(typing); typing = null; }
-        ClearChoices();
+        if (typingRoutine != null) StopCoroutine(typingRoutine);
+        typingRoutine = null;
+        ClearGeneratedButtons();
         DestroySkipButton();
         if (panel != null) panel.SetActive(false);
         current = null;
         IsActive = false;
-        sequenceRunning = false;
+        openingSequence = false;
     }
 
     public void SkipSequence()
     {
-        if (!IsActive) return;
-        FinishSequence(true);
-    }
-
-    void CreateSkipButton()
-    {
-        DestroySkipButton();
-        if (choiceButtonPrefab == null || panel == null) return;
-
-        skipButton = Instantiate(choiceButtonPrefab, panel.transform);
-        skipButton.name = "SkipDialogueButton";
-        TMP_Text label = skipButton.GetComponentInChildren<TMP_Text>();
-        if (label != null) label.text = "Пропустить";
-
-        RectTransform rect = skipButton.transform as RectTransform;
-        if (rect != null)
-        {
-            rect.anchorMin = new Vector2(1f, 1f);
-            rect.anchorMax = new Vector2(1f, 1f);
-            rect.pivot = new Vector2(1f, 1f);
-            rect.anchoredPosition = new Vector2(-24f, -18f);
-            rect.sizeDelta = new Vector2(224f, 58f);
-            TMP_Text skipLabel = skipButton.GetComponentInChildren<TMP_Text>();
-            if (skipLabel != null)
-            {
-                skipLabel.fontSize = 25f;
-                skipLabel.textWrappingMode = TextWrappingModes.NoWrap;
-                skipLabel.overflowMode = TextOverflowModes.Overflow;
-                skipLabel.alignment = TextAlignmentOptions.Center;
-            }
-        }
-        skipButton.onClick.AddListener(SkipSequence);
-    }
-
-    void DestroySkipButton()
-    {
-        if (skipButton != null) Destroy(skipButton.gameObject);
-        skipButton = null;
+        if (IsActive) EndSequence();
     }
 
     public Button CreateInteractionButton(Transform parent, string label, UnityEngine.Events.UnityAction action)
     {
-        if (choiceButtonPrefab == null || parent == null) return null;
+        if (parent == null || choiceButtonPrefab == null) return null;
         Button button = Instantiate(choiceButtonPrefab, parent);
         button.name = "TalkToNastyaButton";
         TMP_Text text = button.GetComponentInChildren<TMP_Text>();
         if (text != null) text.text = label;
-
         RectTransform rect = button.transform as RectTransform;
         if (rect != null)
         {
-            rect.anchorMin = new Vector2(0.5f, 0f);
-            rect.anchorMax = new Vector2(0.5f, 0f);
+            rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 0f);
             rect.pivot = new Vector2(0.5f, 0f);
-            rect.anchoredPosition = new Vector2(0f, 42f);
+            rect.anchoredPosition = new Vector2(0f, 44f);
             rect.sizeDelta = new Vector2(260f, 64f);
         }
         button.onClick.AddListener(action);
         return button;
     }
 
-    void ShowChoices(DialogueChoice[] choices)
+    private void CreateSkipButton()
+    {
+        DestroySkipButton();
+        if (panel == null || choiceButtonPrefab == null) return;
+        skipButton = Instantiate(choiceButtonPrefab, panel.transform);
+        skipButton.name = "SkipDialogueButton";
+        TMP_Text label = skipButton.GetComponentInChildren<TMP_Text>();
+        if (label != null) label.text = "Пропустить";
+        RectTransform rect = skipButton.transform as RectTransform;
+        if (rect != null)
+        {
+            rect.anchorMin = rect.anchorMax = new Vector2(1f, 1f);
+            rect.pivot = new Vector2(1f, 1f);
+            rect.anchoredPosition = new Vector2(-24f, -18f);
+            rect.sizeDelta = new Vector2(230f, 60f);
+        }
+        skipButton.onClick.AddListener(SkipSequence);
+    }
+
+    private void DestroySkipButton()
+    {
+        if (skipButton != null) Destroy(skipButton.gameObject);
+        skipButton = null;
+    }
+
+    private void CreateChoiceButtons(DialogueChoice[] choices)
     {
         if (choiceButtonPrefab == null || choicesContainer == null) return;
         foreach (DialogueChoice choice in choices)
@@ -275,21 +262,32 @@ public class DialogueManager : MonoBehaviour
             Button button = Instantiate(choiceButtonPrefab, choicesContainer);
             TMP_Text label = button.GetComponentInChildren<TMP_Text>();
             if (label != null) label.text = choice.text;
-            int target = choice.next;
+            int destination = choice.next;
             button.onClick.AddListener(() =>
             {
-                if (target < 0) FinishCurrentDialogue();
-                else ShowNode(target);
+                ClearGeneratedButtons();
+                if (destination < 0) FinishCurrentDialogue();
+                else DisplayNode(destination);
             });
+            generatedButtons.Add(button);
         }
-
-        if (EventSystem.current != null && choicesContainer.childCount > 0)
-            EventSystem.current.SetSelectedGameObject(choicesContainer.GetChild(0).gameObject);
+        if (EventSystem.current != null && generatedButtons.Count > 0)
+            EventSystem.current.SetSelectedGameObject(generatedButtons[0].gameObject);
     }
 
-    void ClearChoices()
+    private void ClearGeneratedButtons()
     {
-        if (choicesContainer == null) return;
-        foreach (Transform child in choicesContainer) Destroy(child.gameObject);
+        foreach (Button button in generatedButtons)
+            if (button != null) Destroy(button.gameObject);
+        generatedButtons.Clear();
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            EndSequence();
+            Instance = null;
+        }
     }
 }
