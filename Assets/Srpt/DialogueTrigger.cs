@@ -107,8 +107,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void ShowPrompt()
     {
-        if (interactionButton != null || DialogueManager.IsActive ||
-            DialogueManager.Instance == null || uiRoot == null)
+        if (interactionButton != null || DialogueManager.IsActive || uiRoot == null)
             return;
 
         if (DialogueManager.Instance != null)
