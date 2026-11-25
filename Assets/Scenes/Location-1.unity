@@ -1072,7 +1072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue: {fileID: 11400000, guid: 9c071db2445a4714a944094729959215, type: 2}
-  interactionRange: 4.5
+  interactionRange: 2.5
   hint: {fileID: 0}
 --- !u!58 &1425945364
 CircleCollider2D:
@@ -1108,8 +1108,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.410001}
-  m_Radius: 2
+  m_Offset: {x: 0, y: 0.4}
+  m_Radius: 1.4
 --- !u!50 &1425945365
 Rigidbody2D:
   serializedVersion: 5
