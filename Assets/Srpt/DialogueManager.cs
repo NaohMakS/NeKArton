@@ -232,7 +232,7 @@ public class DialogueManager : MonoBehaviour
             if (skipLabel != null)
             {
                 skipLabel.fontSize = 25f;
-                skipLabel.enableWordWrapping = false;
+                skipLabel.textWrappingMode = TextWrappingModes.NoWrap;
                 skipLabel.overflowMode = TextOverflowModes.Overflow;
                 skipLabel.alignment = TextAlignmentOptions.Center;
             }
