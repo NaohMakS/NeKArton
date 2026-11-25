@@ -8,7 +8,7 @@ using TMPro;
 public class DoorTransitionTrigger : MonoBehaviour
 {
     [SerializeField] private string destinationScene = "";
-    [SerializeField] private string hint = "Нажмите ENTER, чтобы войти";
+    [SerializeField] private string hint = "Подойдите к двери, чтобы выйти";
     [SerializeField] private TextMeshProUGUI hintText;
     [SerializeField] private Button exitButton;
 
@@ -41,7 +41,6 @@ public class DoorTransitionTrigger : MonoBehaviour
 
     private void EnsureHintText()
     {
-        if (hintText != null) return;
         Canvas canvas = FindObjectOfType<Canvas>();
         if (canvas == null)
         {
@@ -52,48 +51,56 @@ public class DoorTransitionTrigger : MonoBehaviour
             canvasObject.GetComponent<CanvasScaler>().uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
         }
 
-        GameObject textObject = new GameObject("DoorEnterHint", typeof(RectTransform), typeof(TextMeshProUGUI));
-        textObject.transform.SetParent(canvas.transform, false);
-        RectTransform rect = textObject.GetComponent<RectTransform>();
-        rect.anchorMin = new Vector2(0.5f, 0f);
-        rect.anchorMax = new Vector2(0.5f, 0f);
-        rect.pivot = new Vector2(0.5f, 0f);
-        rect.anchoredPosition = new Vector2(0f, 36f);
-        rect.sizeDelta = new Vector2(900f, 90f);
-        hintText = textObject.GetComponent<TextMeshProUGUI>();
-        hintText.alignment = TextAlignmentOptions.Center;
-        hintText.fontSize = 28f;
-        hintText.color = Color.white;
-        hintText.raycastTarget = false;
+        if (hintText == null)
+        {
+            GameObject textObject = new GameObject("DoorEnterHint", typeof(RectTransform), typeof(TextMeshProUGUI));
+            textObject.transform.SetParent(canvas.transform, false);
+            RectTransform rect = textObject.GetComponent<RectTransform>();
+            rect.anchorMin = new Vector2(0.5f, 0f);
+            rect.anchorMax = new Vector2(0.5f, 0f);
+            rect.pivot = new Vector2(0.5f, 0f);
+            rect.anchoredPosition = new Vector2(0f, 36f);
+            rect.sizeDelta = new Vector2(900f, 90f);
+            hintText = textObject.GetComponent<TextMeshProUGUI>();
+            hintText.alignment = TextAlignmentOptions.Center;
+            hintText.fontSize = 28f;
+            hintText.color = Color.white;
+            hintText.raycastTarget = false;
+        }
 
-        GameObject buttonObject = new GameObject("ExitButton", typeof(RectTransform), typeof(Image), typeof(Button));
-        buttonObject.transform.SetParent(canvas.transform, false);
-        RectTransform buttonRect = buttonObject.GetComponent<RectTransform>();
-        buttonRect.anchorMin = new Vector2(0.5f, 0f);
-        buttonRect.anchorMax = new Vector2(0.5f, 0f);
-        buttonRect.pivot = new Vector2(0.5f, 0f);
-        buttonRect.anchoredPosition = new Vector2(0f, 112f);
-        buttonRect.sizeDelta = new Vector2(220f, 58f);
-        Image buttonImage = buttonObject.GetComponent<Image>();
-        buttonImage.color = new Color(0.12f, 0.16f, 0.2f, 0.95f);
-        exitButton = buttonObject.GetComponent<Button>();
-        exitButton.targetGraphic = buttonImage;
-        exitButton.onClick.AddListener(LoadDestination);
+        if (exitButton == null)
+        {
+            GameObject buttonObject = new GameObject("ExitButton", typeof(RectTransform), typeof(Image), typeof(Button));
+            buttonObject.transform.SetParent(canvas.transform, false);
+            RectTransform buttonRect = buttonObject.GetComponent<RectTransform>();
+            buttonRect.anchorMin = new Vector2(0.5f, 0f);
+            buttonRect.anchorMax = new Vector2(0.5f, 0f);
+            buttonRect.pivot = new Vector2(0.5f, 0f);
+            buttonRect.anchoredPosition = new Vector2(0f, 112f);
+            buttonRect.sizeDelta = new Vector2(220f, 58f);
+            Image buttonImage = buttonObject.GetComponent<Image>();
+            buttonImage.color = new Color(0.12f, 0.16f, 0.2f, 0.95f);
+            exitButton = buttonObject.GetComponent<Button>();
+            exitButton.targetGraphic = buttonImage;
+            exitButton.onClick.AddListener(LoadDestination);
 
-        GameObject labelObject = new GameObject("Label", typeof(RectTransform), typeof(TextMeshProUGUI));
-        labelObject.transform.SetParent(buttonObject.transform, false);
-        RectTransform labelRect = labelObject.GetComponent<RectTransform>();
-        labelRect.anchorMin = Vector2.zero;
-        labelRect.anchorMax = Vector2.one;
-        labelRect.offsetMin = Vector2.zero;
-        labelRect.offsetMax = Vector2.zero;
-        TextMeshProUGUI label = labelObject.GetComponent<TextMeshProUGUI>();
-        label.text = "Выйти";
-        label.fontSize = 26f;
-        label.alignment = TextAlignmentOptions.Center;
-        label.color = Color.white;
-        label.raycastTarget = false;
-        buttonObject.SetActive(false);
+            GameObject labelObject = new GameObject("Label", typeof(RectTransform), typeof(TextMeshProUGUI));
+            labelObject.transform.SetParent(buttonObject.transform, false);
+            RectTransform labelRect = labelObject.GetComponent<RectTransform>();
+            labelRect.anchorMin = Vector2.zero;
+            labelRect.anchorMax = Vector2.one;
+            labelRect.offsetMin = Vector2.zero;
+            labelRect.offsetMax = Vector2.zero;
+            TextMeshProUGUI label = labelObject.GetComponent<TextMeshProUGUI>();
+            label.text = "Выйти";
+            label.fontSize = 26f;
+            label.alignment = TextAlignmentOptions.Center;
+            label.color = Color.white;
+            label.raycastTarget = false;
+        }
+
+        hintText.gameObject.SetActive(false);
+        exitButton.gameObject.SetActive(false);
     }
 
     private void LoadDestination()
