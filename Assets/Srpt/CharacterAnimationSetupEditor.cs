@@ -75,8 +75,8 @@ public static class NeKArtonNastyaRestoreEditor
         BoxCollider2D triggerCollider = npc.GetComponent<BoxCollider2D>();
         if (triggerCollider == null) triggerCollider = Undo.AddComponent<BoxCollider2D>(npc);
         triggerCollider.isTrigger = true;
-        triggerCollider.size = new Vector2(2.2f, 5f);
-        triggerCollider.offset = new Vector2(0f, 2.5f);
+        triggerCollider.size = new Vector2(1.8f, 3.2f);
+        triggerCollider.offset = new Vector2(0f, 1.6f);
 
         Transform stop = GameObject.Find("NastyaLampStopPoint")?.transform;
         if (stop == null)
