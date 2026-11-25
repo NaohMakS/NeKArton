@@ -1,12 +1,16 @@
 using UnityEngine;
 
+/// <summary>
+/// Вступительное движение Насти: появляется в кадре, идёт к точке у лампы,
+/// а затем остаётся на последнем кадре покоя.
+/// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
 public class NastyaCameraCue : MonoBehaviour
 {
     [Header("Анимация")]
     [SerializeField] private Sprite idleSprite;
     [SerializeField] private Sprite[] walkFrames;
-    [SerializeField, Min(1f)] private float framesPerSecond = 8f;
+    [SerializeField, Min(1f)] private float framesPerSecond = 9f;
 
     [Header("Появление в камере")]
     [SerializeField] private Camera targetCamera;
@@ -15,7 +19,7 @@ public class NastyaCameraCue : MonoBehaviour
     [Header("Движение к лампе")]
     [SerializeField] private Transform lampStopPoint;
     [SerializeField, Min(0.01f)] private float moveSpeed = 1.5f;
-    [SerializeField] private float stopDistance = 0.08f;
+    [SerializeField, Min(0f)] private float stopDistance = 0.08f;
 
     private SpriteRenderer spriteRenderer;
     private bool hasStarted;
@@ -31,40 +35,61 @@ public class NastyaCameraCue : MonoBehaviour
 
     private void Update()
     {
-        if (hasArrived) return;
-        if (!hasStarted && IsInsideCamera()) hasStarted = true;
+        if (hasArrived || lampStopPoint == null) return;
+
+        if (!hasStarted && IsInsideCamera())
+            hasStarted = true;
+
         if (!hasStarted) return;
 
+        FaceMovementDirection();
         MoveToLamp();
-        if (!hasArrived) Animate();
+
+        if (!hasArrived)
+            AnimateWalk();
     }
 
     private bool IsInsideCamera()
     {
         if (targetCamera == null) return false;
-        Vector3 p = targetCamera.WorldToViewportPoint(transform.position);
-        return p.z > 0f && p.x >= -cameraMargin && p.x <= 1f + cameraMargin
-            && p.y >= -cameraMargin && p.y <= 1f + cameraMargin;
+
+        Vector3 viewport = targetCamera.WorldToViewportPoint(transform.position);
+        return viewport.z > 0f &&
+               viewport.x >= -cameraMargin && viewport.x <= 1f + cameraMargin &&
+               viewport.y >= -cameraMargin && viewport.y <= 1f + cameraMargin;
     }
 
-    private void Animate()
+    private void FaceMovementDirection()
+    {
+        float deltaX = lampStopPoint.position.x - transform.position.x;
+        if (Mathf.Abs(deltaX) > 0.01f)
+        {
+            // В исходном спрайте Настя смотрит вправо: flipX нужен при движении влево.
+            spriteRenderer.flipX = deltaX < 0f;
+        }
+    }
+
+    private void AnimateWalk()
     {
         if (walkFrames == null || walkFrames.Length == 0) return;
+
         animationClock += Time.deltaTime;
-        int index = Mathf.FloorToInt(animationClock * framesPerSecond) % walkFrames.Length;
-        spriteRenderer.sprite = walkFrames[index];
-        if (lampStopPoint != null)
-            spriteRenderer.flipX = lampStopPoint.position.x > transform.position.x;
+        int frameIndex = Mathf.FloorToInt(animationClock * framesPerSecond) % walkFrames.Length;
+        if (walkFrames[frameIndex] != null)
+            spriteRenderer.sprite = walkFrames[frameIndex];
     }
 
     private void MoveToLamp()
     {
-        if (lampStopPoint == null) return;
         Vector3 target = lampStopPoint.position;
         target.z = transform.position.z;
-        transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
+
+        transform.position = Vector3.MoveTowards(
+            transform.position, target, moveSpeed * Time.deltaTime);
+
         if (Vector2.Distance(transform.position, target) <= stopDistance)
         {
+            transform.position = target;
             hasArrived = true;
             SetIdle();
         }
@@ -73,7 +98,12 @@ public class NastyaCameraCue : MonoBehaviour
     private void SetIdle()
     {
         if (spriteRenderer == null) return;
+
+        Sprite fallback = walkFrames != null && walkFrames.Length > 0
+            ? walkFrames[0]
+            : null;
+
         if (idleSprite != null) spriteRenderer.sprite = idleSprite;
-        else if (walkFrames != null && walkFrames.Length > 0) spriteRenderer.sprite = walkFrames[0];
+        else if (fallback != null) spriteRenderer.sprite = fallback;
     }
 }
