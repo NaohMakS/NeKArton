@@ -21,7 +21,7 @@ public class NastyaCameraCue : MonoBehaviour
     [SerializeField, Min(0.01f)] private float moveSpeed = 1.5f;
     [SerializeField, Min(0f)] private float stopDistance = 0.08f;
 
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;\n    private Transform player;
     private bool hasStarted;
     private bool hasArrived;
     private float animationClock;
@@ -29,7 +29,7 @@ public class NastyaCameraCue : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if (targetCamera == null) targetCamera = Camera.main;
+        if (targetCamera == null) targetCamera = Camera.main;\n        FindPlayer();
         SetIdle();
     }
 
@@ -42,7 +42,7 @@ public class NastyaCameraCue : MonoBehaviour
 
         if (!hasStarted) return;
 
-        FaceMovementDirection();
+        FacePlayerOrMovement();
         MoveToLamp();
 
         if (!hasArrived)
