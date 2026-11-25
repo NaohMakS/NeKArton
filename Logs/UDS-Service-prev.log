@@ -19,44 +19,6 @@ Initialising UDS system complete:
   - Command buffer size: 8192
   - Hashmap size: 4194304
 Starting Unity Data Store Application
-[Error] Failed to remove data for hash 154aee161fb79e6cde1dfac73568b7e4. Failure received from service
-0x00007ff7c8984565 (Unity.DataStore) 
-0x00007ff7c899fd95 (Unity.DataStore) uds_cleanup
-0x00007ff7c898f72f (Unity.DataStore) 
-0x00007ff7c8990a1d (Unity.DataStore) 
-0x00007ff7c8957505 (Unity.DataStore) 
-0x00007ff7c895698a (Unity.DataStore) 
-0x00007ff7c8956c6f (Unity.DataStore) 
-0x00007ff7c8952a25 (Unity.DataStore) 
-0x00007ff7c89d91b0 (Unity.DataStore) uds_wait_handle_complete
-0x00007ffa64797374 (KERNEL32) BaseThreadInitThunk
-0x00007ffa650fcc91 (ntdll) RtlUserThreadStart
-
-[Error] Failed to remove data for hash 9a45c8e4f3fab47a014bf189d7baf4da. Failure received from service
-0x00007ff7c8984565 (Unity.DataStore) 
-0x00007ff7c899fd95 (Unity.DataStore) uds_cleanup
-0x00007ff7c898f72f (Unity.DataStore) 
-0x00007ff7c8990a1d (Unity.DataStore) 
-0x00007ff7c8957505 (Unity.DataStore) 
-0x00007ff7c895698a (Unity.DataStore) 
-0x00007ff7c8956c6f (Unity.DataStore) 
-0x00007ff7c8952a25 (Unity.DataStore) 
-0x00007ff7c89d91b0 (Unity.DataStore) uds_wait_handle_complete
-0x00007ffa64797374 (KERNEL32) BaseThreadInitThunk
-0x00007ffa650fcc91 (ntdll) RtlUserThreadStart
-
-[Error] Failed to remove data for hash 4cfaf7788fd4a009c82a738499fe4b0d. Failure received from service
-0x00007ff7c8984565 (Unity.DataStore) 
-0x00007ff7c899fd95 (Unity.DataStore) uds_cleanup
-0x00007ff7c898f72f (Unity.DataStore) 
-0x00007ff7c8990a1d (Unity.DataStore) 
-0x00007ff7c8957505 (Unity.DataStore) 
-0x00007ff7c895698a (Unity.DataStore) 
-0x00007ff7c8956c6f (Unity.DataStore) 
-0x00007ff7c8952a25 (Unity.DataStore) 
-0x00007ff7c89d91b0 (Unity.DataStore) uds_wait_handle_complete
-0x00007ffa64797374 (KERNEL32) BaseThreadInitThunk
-0x00007ffa650fcc91 (ntdll) RtlUserThreadStart
-
 Unity Data Store Application Complete
+[Warning] Shutting down service while there are still connected clients, client count = 3
 Shut down UDS service system complete

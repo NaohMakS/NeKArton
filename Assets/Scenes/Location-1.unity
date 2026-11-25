@@ -1053,8 +1053,8 @@ Transform:
   m_GameObject: {fileID: 1425945359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0013179446, w: 0.99999917}
-  m_LocalPosition: {x: 15.976, y: -1.63, z: 0}
-  m_LocalScale: {x: -1.0155725, y: 0.81581485, z: 1}
+  m_LocalPosition: {x: 16.101, y: -1.6918, z: 0}
+  m_LocalScale: {x: 0.83132935, y: 0.8385761, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1072,7 +1072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue: {fileID: 11400000, guid: 9c071db2445a4714a944094729959215, type: 2}
-  interactionRange: 2.5
+  interactionRange: 4
   hint: {fileID: 0}
 --- !u!58 &1425945364
 CircleCollider2D:
@@ -1108,8 +1108,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.4}
-  m_Radius: 1.4
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 3
 --- !u!50 &1425945365
 Rigidbody2D:
   serializedVersion: 5
