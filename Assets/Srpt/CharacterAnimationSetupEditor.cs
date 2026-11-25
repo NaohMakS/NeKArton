@@ -110,7 +110,7 @@ public static class NeKArtonNastyaRestoreEditor
         if (dialogueTrigger == null) dialogueTrigger = Undo.AddComponent<DialogueTrigger>(npc);
         SerializedObject triggerData = new SerializedObject(dialogueTrigger);
         triggerData.FindProperty("dialogue").objectReferenceValue = dialogue;
-        triggerData.FindProperty("interactionRange").floatValue = 4.5f;
+        triggerData.FindProperty("interactionRange").floatValue = 2.5f;
         triggerData.FindProperty("hint").objectReferenceValue = null;
         triggerData.ApplyModifiedProperties();
 
