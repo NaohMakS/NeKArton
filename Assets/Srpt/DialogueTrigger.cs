@@ -3,59 +3,40 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
-public class DialogueTrigger : MonoBehaviour
+public sealed class DialogueTrigger : MonoBehaviour
 {
     [Header("Диалог")]
     [SerializeField] private DialogueData dialogue;
 
     [Header("Взаимодействие")]
-    [SerializeField, Min(0.5f)] private float interactionRange = 2.5f;
+    [SerializeField, Min(0.5f)] private float interactionRange = 3f;
     [SerializeField] private GameObject hint;
 
     private Transform player;
-    private Collider2D interactionCollider;
-    private Collider2D playerCollider;
-    private Button interactionButton;
     private Transform uiRoot;
+    private Button interactionButton;
     private bool playerInRange;
+    private bool missingReferencesReported;
 
-    private void Reset()
+    private void Awake()
     {
         Collider2D trigger = GetComponent<Collider2D>();
-        trigger.isTrigger = true;
-    }
-
-    private void Start()
-    {
-        interactionCollider = GetComponent<Collider2D>();
+        if (trigger != null) trigger.isTrigger = true;
         FindPlayer();
-        FindDialogueCanvas();
-
-        if (uiRoot == null)
-            Debug.LogError("DialogueTrigger: не найден DialogueCanvas. Кнопка взаимодействия не появится.", this);
-        if (player == null)
-            Debug.LogError("DialogueTrigger: не найден игрок. Проверь Player tag или компонент PlayerMovement.", this);
-        if (dialogue == null)
-            Debug.LogError("DialogueTrigger: не назначен DialogueData для Насти.", this);
+        FindCanvas();
     }
 
     private void Update()
     {
         if (player == null) FindPlayer();
-        if (uiRoot == null) FindDialogueCanvas();
+        if (uiRoot == null) FindCanvas();
 
-        if (player != null && playerCollider == null)
-            playerCollider = player.GetComponentInChildren<Collider2D>();
-
-        bool collidersTouching = interactionCollider != null && playerCollider != null &&
-            interactionCollider.Distance(playerCollider).distance <= 0f;
-        bool withinConfiguredRange = player != null &&
+        playerInRange = player != null &&
             Vector2.Distance(player.position, transform.position) <= interactionRange;
-        // Prefer existing collider overlap; keep the configured distance as a fallback.
-        playerInRange = collidersTouching || withinConfiguredRange;
-        bool canInteract = playerInRange && !DialogueManager.IsActive;
 
-        if (hint != null) hint.SetActive(canInteract);
+        bool canInteract = playerInRange && !DialogueManager.IsActive;
+        if (hint != null && hint.activeSelf != canInteract)
+            hint.SetActive(canInteract);
 
         if (canInteract)
             ShowPrompt();
@@ -63,95 +44,78 @@ public class DialogueTrigger : MonoBehaviour
             HidePrompt();
 
         if (canInteract && Keyboard.current != null &&
-            Keyboard.current.eKey.wasPressedThisFrame)
+            (Keyboard.current.eKey.wasPressedThisFrame ||
+             Keyboard.current.enterKey.wasPressedThisFrame))
             BeginDialogue();
     }
 
     private void FindPlayer()
     {
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-        if (playerObject == null)
+        GameObject found = GameObject.FindGameObjectWithTag("Player");
+        if (found == null)
         {
             PlayerMovement movement = FindObjectOfType<PlayerMovement>();
-            if (movement != null) playerObject = movement.gameObject;
+            if (movement != null) found = movement.gameObject;
         }
 
-        if (playerObject != null) player = playerObject.transform;
+        if (found != null) player = found.transform;
     }
 
-    private void FindDialogueCanvas()
+    private void FindCanvas()
     {
-        GameObject canvasObject = GameObject.Find("DialogueCanvas");
-        Canvas canvas = canvasObject != null ? canvasObject.GetComponent<Canvas>() : null;
+        Canvas[] canvases = FindObjectsOfType<Canvas>(true);
+        Canvas selected = null;
 
-        if (canvas == null)
+        // Prefer the main screen-space Canvas; DialogueCanvas may only be a child panel.
+        foreach (Canvas candidate in canvases)
         {
-            Canvas[] canvases = FindObjectsOfType<Canvas>(true);
-            foreach (Canvas candidate in canvases)
+            if (candidate == null) continue;
+            if (candidate.renderMode == RenderMode.ScreenSpaceOverlay)
             {
-                if (candidate.name == "DialogueCanvas")
-                {
-                    canvas = candidate;
-                    break;
-                }
+                selected = candidate;
+                break;
             }
+            if (selected == null) selected = candidate;
         }
 
-        if (canvas != null)
+        if (selected != null)
         {
-            uiRoot = canvas.transform;
-            RectTransform rect = uiRoot as RectTransform;
-            if (rect != null) rect.localScale = Vector3.one;
+            uiRoot = selected.transform;
+            return;
+        }
+
+        if (!missingReferencesReported)
+        {
+            Debug.LogError("DialogueTrigger: в сцене не найден Canvas. Кнопка взаимодействия не может быть создана.", this);
+            missingReferencesReported = true;
         }
     }
 
     private void ShowPrompt()
     {
-        if (interactionButton != null || DialogueManager.IsActive || uiRoot == null)
-            return;
+        if (interactionButton != null || uiRoot == null) return;
 
-        if (DialogueManager.Instance != null)
-            interactionButton = DialogueManager.Instance.CreateInteractionButton(
-                uiRoot, "Поговорить", BeginDialogue);
-
-        // A missing dialogue-button prefab must not block interaction.
-        if (interactionButton == null)
-            interactionButton = CreateFallbackButton();
-
-        if (interactionButton != null)
-        {
-            interactionButton.gameObject.SetActive(true);
-            interactionButton.transform.SetAsLastSibling();
-        }
-        else
-            Debug.LogError("DialogueTrigger: не удалось создать кнопку. Проверьте Canvas и GraphicRaycaster.", this);
-    }
-
-    private Button CreateFallbackButton()
-    {
-        if (uiRoot == null) return null;
-
-        GameObject root = new GameObject("TalkToNastyaButton", typeof(RectTransform),
-            typeof(CanvasRenderer), typeof(Image), typeof(Button));
+        GameObject root = new GameObject("TalkToNastyaButton",
+            typeof(RectTransform), typeof(CanvasRenderer), typeof(Image), typeof(Button));
         root.transform.SetParent(uiRoot, false);
 
         RectTransform rect = root.GetComponent<RectTransform>();
-        rect.anchorMin = new Vector2(0.5f, 0f);
-        rect.anchorMax = new Vector2(0.5f, 0f);
+        rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 0f);
         rect.pivot = new Vector2(0.5f, 0f);
-        rect.anchoredPosition = new Vector2(0f, 48f);
-        rect.sizeDelta = new Vector2(260f, 64f);
+        rect.anchoredPosition = new Vector2(0f, 42f);
+        rect.sizeDelta = new Vector2(260f, 62f);
 
         Image image = root.GetComponent<Image>();
-        image.color = new Color(0.12f, 0.12f, 0.16f, 0.95f);
+        image.color = new Color(0.12f, 0.12f, 0.16f, 0.96f);
 
-        Button button = root.GetComponent<Button>();
-        button.targetGraphic = image;
-        button.onClick.AddListener(BeginDialogue);
+        interactionButton = root.GetComponent<Button>();
+        interactionButton.targetGraphic = image;
+        interactionButton.onClick.AddListener(BeginDialogue);
 
-        GameObject labelObject = new GameObject("Label", typeof(RectTransform),
-            typeof(CanvasRenderer), typeof(Text));
+        GameObject labelObject = new GameObject("Label",
+            typeof(RectTransform), typeof(CanvasRenderer), typeof(Text));
         labelObject.transform.SetParent(root.transform, false);
+
         RectTransform labelRect = labelObject.GetComponent<RectTransform>();
         labelRect.anchorMin = Vector2.zero;
         labelRect.anchorMax = Vector2.one;
@@ -165,28 +129,33 @@ public class DialogueTrigger : MonoBehaviour
         label.fontSize = 24;
         label.color = Color.white;
         label.raycastTarget = false;
-        return button;
     }
 
     private void HidePrompt()
     {
-        if (interactionButton != null)
-            Destroy(interactionButton.gameObject);
+        if (interactionButton != null) Destroy(interactionButton.gameObject);
         interactionButton = null;
     }
 
     private void BeginDialogue()
     {
-        if (!playerInRange || DialogueManager.IsActive ||
-            DialogueManager.Instance == null || dialogue == null)
+        if (!playerInRange || DialogueManager.IsActive) return;
+        if (dialogue == null)
+        {
+            Debug.LogError("DialogueTrigger: не назначен DialogueData.", this);
             return;
+        }
 
         HidePrompt();
-        DialogueManager.Instance.StartDialogue(dialogue);
+        if (DialogueManager.Instance != null)
+            DialogueManager.Instance.StartDialogue(dialogue);
+        else
+            Debug.LogError("DialogueTrigger: в сцене не найден DialogueManager.", this);
     }
 
     private void OnDisable()
     {
         HidePrompt();
+        if (hint != null) hint.SetActive(false);
     }
 }
