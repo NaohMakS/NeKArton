@@ -13,6 +13,8 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject hint;
 
     private Transform player;
+    private Collider2D interactionCollider;
+    private Collider2D playerCollider;
     private Button interactionButton;
     private Transform uiRoot;
     private bool playerInRange;
@@ -25,6 +27,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Start()
     {
+        interactionCollider = GetComponent<Collider2D>();
         FindPlayer();
         FindDialogueCanvas();
 
@@ -41,7 +44,15 @@ public class DialogueTrigger : MonoBehaviour
         if (player == null) FindPlayer();
         if (uiRoot == null) FindDialogueCanvas();
 
-        playerInRange = player != null && Vector2.Distance(player.position, transform.position) <= interactionRange;
+        if (player != null && playerCollider == null)
+            playerCollider = player.GetComponentInChildren<Collider2D>();
+
+        bool collidersTouching = interactionCollider != null && playerCollider != null &&
+            interactionCollider.Distance(playerCollider).distance <= 0f;
+        bool withinConfiguredRange = player != null &&
+            Vector2.Distance(player.position, transform.position) <= interactionRange;
+        // Prefer existing collider overlap; keep the configured distance as a fallback.
+        playerInRange = collidersTouching || withinConfiguredRange;
         bool canInteract = playerInRange && !DialogueManager.IsActive;
 
         if (hint != null) hint.SetActive(canInteract);
@@ -100,11 +111,62 @@ public class DialogueTrigger : MonoBehaviour
             DialogueManager.Instance == null || uiRoot == null)
             return;
 
-        interactionButton = DialogueManager.Instance.CreateInteractionButton(
-            uiRoot, "Поговорить", BeginDialogue);
+        if (DialogueManager.Instance != null)
+            interactionButton = DialogueManager.Instance.CreateInteractionButton(
+                uiRoot, "Поговорить", BeginDialogue);
 
+        // A missing dialogue-button prefab must not block interaction.
         if (interactionButton == null)
-            Debug.LogError("DialogueTrigger: кнопка не создана. Проверьте Choice Button Prefab в DialogueManager.", this);
+            interactionButton = CreateFallbackButton();
+
+        if (interactionButton != null)
+        {
+            interactionButton.gameObject.SetActive(true);
+            interactionButton.transform.SetAsLastSibling();
+        }
+        else
+            Debug.LogError("DialogueTrigger: не удалось создать кнопку. Проверьте Canvas и GraphicRaycaster.", this);
+    }
+
+    private Button CreateFallbackButton()
+    {
+        if (uiRoot == null) return null;
+
+        GameObject root = new GameObject("TalkToNastyaButton", typeof(RectTransform),
+            typeof(CanvasRenderer), typeof(Image), typeof(Button));
+        root.transform.SetParent(uiRoot, false);
+
+        RectTransform rect = root.GetComponent<RectTransform>();
+        rect.anchorMin = new Vector2(0.5f, 0f);
+        rect.anchorMax = new Vector2(0.5f, 0f);
+        rect.pivot = new Vector2(0.5f, 0f);
+        rect.anchoredPosition = new Vector2(0f, 48f);
+        rect.sizeDelta = new Vector2(260f, 64f);
+
+        Image image = root.GetComponent<Image>();
+        image.color = new Color(0.12f, 0.12f, 0.16f, 0.95f);
+
+        Button button = root.GetComponent<Button>();
+        button.targetGraphic = image;
+        button.onClick.AddListener(BeginDialogue);
+
+        GameObject labelObject = new GameObject("Label", typeof(RectTransform),
+            typeof(CanvasRenderer), typeof(Text));
+        labelObject.transform.SetParent(root.transform, false);
+        RectTransform labelRect = labelObject.GetComponent<RectTransform>();
+        labelRect.anchorMin = Vector2.zero;
+        labelRect.anchorMax = Vector2.one;
+        labelRect.offsetMin = new Vector2(8f, 4f);
+        labelRect.offsetMax = new Vector2(-8f, -4f);
+
+        Text label = labelObject.GetComponent<Text>();
+        label.text = "Поговорить";
+        label.alignment = TextAnchor.MiddleCenter;
+        label.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+        label.fontSize = 24;
+        label.color = Color.white;
+        label.raycastTarget = false;
+        return button;
     }
 
     private void HidePrompt()
